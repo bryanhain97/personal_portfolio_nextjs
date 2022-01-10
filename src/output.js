@@ -11,3 +11,4 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 var rootElement = document.querySelector('#root');
 
 _reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(_App["default"], null), rootElement);
+
