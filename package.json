@@ -4,7 +4,7 @@
   "description": "repo for personal portfolio website",
   "scripts": {
     "development": "npx webpack-dev-server --hot --open",
-    "scss": "npx node-sass ./src/index.scss -wo ./public"
+    "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map"
   },
   "author": "Bryan Hain",
   "license": "ISC",
@@ -19,7 +19,7 @@
     "@babel/core": "^7.16.7",
     "@babel/preset-env": "^7.16.7",
     "@babel/preset-react": "^7.16.7",
-    "node-sass": "^7.0.1",
+    "sass": "^1.47.0",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.7.2"
