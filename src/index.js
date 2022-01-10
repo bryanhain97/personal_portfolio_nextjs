@@ -1,8 +1,13 @@
-import App from './components/App';
-import React from 'react';
-import ReactDOM from 'react-dom';
+"use strict";
 
+var _App = _interopRequireDefault(require("./components/App.jsx"));
 
+var _react = _interopRequireDefault(require("react"));
 
-const rootElement = document.querySelector('#root');
-ReactDOM.render(<App />, rootElement);
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var rootElement = document.querySelector('#root');
+
+_reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(_App["default"], null), rootElement);

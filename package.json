@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "repo for personal portfolio website",
   "scripts": {
-    "transpile": "npx babel ./src/index.js >> ./src/output.js",
+    "transpile": "npx babel ./src/index.js --out-file ./src/index.js",
     "bundle": "npx webpack"
   },
   "author": "Bryan Hain",
