@@ -1,16 +1,18 @@
 import React from 'react'
 import Navbar from './components/Navbar/Navbar.jsx';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './components/Home/Home.jsx';
 
 function App() {
     return (
-        <Router>
+        <BrowserRouter>
             <Navbar />
-            {/* ROUTE TO COMPONENT*/}
-            {/* ROUTE TO COMPONENT*/}
-            {/* ROUTE TO COMPONENT*/}
-            {/* ROUTE TO COMPONENT*/}
-        </Router>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                {/* <Route path="/about" component={About} />
+                <Route path="/contact" component={Contact} /> */}
+            </Routes>
+        </BrowserRouter >
     )
 }
 
