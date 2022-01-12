@@ -4,7 +4,8 @@
   "description": "repo for personal portfolio website",
   "scripts": {
     "development": "npm run sass & npx webpack-dev-server --hot --open",
-    "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map"
+    "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map",
+    "build": "npx babel ./src/index.jsx --out-file ./src/output.js && npx webpack"
   },
   "author": "Bryan Hain",
   "license": "ISC",
