@@ -5,7 +5,7 @@
   "scripts": {
     "development": "npm run sass & npx webpack-dev-server --hot --open",
     "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map",
-    "build": "npx babel ./src/index.jsx --out-file ./src/output.js && npx webpack"
+    "build": "npx babel ./src/index.jsx --out-file ./src/output.js && npx webpack --mode=production"
   },
   "author": "Bryan Hain",
   "license": "ISC",
@@ -14,7 +14,8 @@
     "dotenv": "^10.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "react-router-dom": "^6.2.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
