@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "repo for personal portfolio website",
   "scripts": {
-    "development": "npx webpack-dev-server --hot --open",
+    "development": "npm run sass & npx webpack-dev-server --hot --open",
     "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map"
   },
   "author": "Bryan Hain",
@@ -12,7 +12,8 @@
     "babel-loader": "^8.2.3",
     "dotenv": "^10.0.0",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",
