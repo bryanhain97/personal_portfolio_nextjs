@@ -13,6 +13,13 @@ function App() {
     useEffect(toggleHidden, [])
     return (
         <div className="app-container">
+            <div className="menu-container">
+                <ul className="menu">
+                    <li className="menu-element">home</li>
+                    <li className="menu-element">about</li>
+                    <li className="menu-element">contact</li>
+                </ul>
+            </div>
             <Navbar />
             <section id="home" className="section section1">
                 <div id="h1-text-container-1" className="h1-text-container">

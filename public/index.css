@@ -12,20 +12,21 @@ html {
 }
 
 body {
+  max-width: 100vw;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
 }
 
 #root {
-  height: min-content;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
 #app-container {
-  height: min-content;
+  height: 100%;
   width: 100vw;
   max-width: 100vw;
   overflow-x: hidden;
@@ -33,6 +34,7 @@ body {
 
 .hidden {
   opacity: 0;
+  pointer-events: none;
 }
 
 div.navbar-container {
@@ -65,13 +67,17 @@ div.navbar-container > nav.navbar > ul.navbar-list a {
   }
 }
 div.navbar-container > nav.navbar-small {
+  margin: 20px;
+  padding-right: 15px;
   display: flex;
-  height: 50px;
   align-items: center;
 }
-div.navbar-container > nav.navbar-small a .navbar-small-icon {
-  width: 30px;
-  height: 30px;
+div.navbar-container > nav.navbar-small button {
+  border: none;
+  background: transparent;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #838282;
 }
 @media (min-width: 1024px) {
   div.navbar-container > nav.navbar-small {
@@ -82,6 +88,25 @@ div.navbar-container > nav.navbar-small a .navbar-small-icon {
   div.navbar-container > nav.navbar-small {
     justify-content: flex-end;
   }
+}
+
+.menu-container {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: rgba(134, 134, 134, 0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  transition: left 0.75s ease;
+}
+.menu-container .menu {
+  width: 100%;
+  height: 100%;
+  list-style: none;
+}
+.menu-container.hide {
+  left: 60%;
 }
 
 section {
@@ -96,6 +121,11 @@ section {
   background-image: url("./pictures/background.jpeg");
   background-size: cover;
   background-attachment: fixed;
+}
+@media (max-width: 1023px) {
+  .section1 {
+    background-position: 45%;
+  }
 }
 .section1 > div.h1-text-container {
   text-align: center;
