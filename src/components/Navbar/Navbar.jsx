@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import {VscChromeClose} from 'react-icons/vsc'
 
-function Navbar() {
-    const [menuOpen, setMenuOpen] = useState(null);
+function Navbar({menuOpen, setMenuOpen}) {
     useEffect(() => {
         setMenuOpen(false);
     }, [])

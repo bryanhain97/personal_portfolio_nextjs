@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 
 function App() {
@@ -11,6 +11,10 @@ function App() {
         }, 4000)
     }
     useEffect(toggleHidden, [])
+    const [menuOpen, setMenuOpen] = useState(null)
+    useEffect(() => {
+        console.log(menuOpen)
+    }, [menuOpen])
     return (
         <div className="app-container">
             <div className="menu-container">
@@ -20,7 +24,7 @@ function App() {
                     <a href="#contact"><li className="menu-element">contact</li></a>
                 </ul>
             </div>
-            <Navbar />
+            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
             <section id="home" className="section section1">
                 <div id="h1-text-container-1" className="h1-text-container">
                     <h1 className="h1-text1">Hello. My name is Bryan.</h1>
