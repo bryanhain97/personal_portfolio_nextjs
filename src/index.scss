@@ -1,5 +1,5 @@
-@import './styles/colors';
+@import './styles/variables';
 @import './styles/globals';
-@import './styles/component-styles/navbar/navElement';
+@import './styles/mixins';
 @import './styles/component-styles/navbar/navbar';
-@import './styles//component-styles/home/home'
+@import './styles/component-styles/sections';
