@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from 'react'
-
+import {VscChromeClose} from 'react-icons/vsc'
 
 function Navbar() {
     const [menuOpen, setMenuOpen] = useState(null);
     useEffect(() => {
-        const menuButton = document.querySelector('button.menu-button');
-        menuButton.textContent === 'menu' ? setMenuOpen(true) : setMenuOpen(false);
-        console.log('state of menuOpen: ', menuOpen)
-    })
-    const clickMenuButton = (e) => {
+        setMenuOpen(false);
+    }, [])
+    useEffect(() => {
         const menuContainer = document.querySelector('div.menu-container');
-        if (e.target.textContent === 'menu') {
-            menuContainer.classList.add('hide')
-            e.target.textContent = 'close'
-            setMenuOpen(false)
-        } else {
-            e.target.textContent = 'menu';
-            menuContainer.classList.remove('hide');
-            setMenuOpen(true);
-        }
+        const menuButton = document.querySelector('button.menu-button');
+        menuContainer.classList.toggle('show');
+        menuButton.classList.toggle('red');
+    }, [menuOpen])
+    const clickMenuButton = () => {
+        setMenuOpen(!menuOpen);
     }
     return (
         <div className="navbar-container">
@@ -31,7 +26,7 @@ function Navbar() {
             </nav>
             <nav className="navbar-small">
                 <button className="menu-button" onClick={clickMenuButton}>
-                    menu
+                    {menuOpen ? <VscChromeClose className="menu-button-icon" />: 'menu'}
                 </button>
             </nav>
         </div>

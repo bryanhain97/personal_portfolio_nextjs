@@ -72,12 +72,20 @@ div.navbar-container > nav.navbar-small {
   display: flex;
   align-items: center;
 }
-div.navbar-container > nav.navbar-small button {
+div.navbar-container > nav.navbar-small button.menu-button {
+  z-index: 333;
+  cursor: pointer;
   border: none;
   background: transparent;
   font-size: 1.25rem;
-  text-decoration: none;
-  color: #838282;
+  color: #2b2b2b;
+}
+div.navbar-container > nav.navbar-small button.menu-button.red {
+  color: black;
+}
+div.navbar-container > nav.navbar-small button.menu-button .menu-button-icon {
+  width: 30px;
+  height: 30px;
 }
 @media (min-width: 1024px) {
   div.navbar-container > nav.navbar-small {
@@ -91,21 +99,33 @@ div.navbar-container > nav.navbar-small button {
 }
 
 .menu-container {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 100%;
-  background-color: rgba(134, 134, 134, 0.5);
+  left: 150%;
+  background-color: rgba(182, 182, 182, 0.5);
   height: 100%;
   width: 100%;
   z-index: 100;
   transition: left 0.75s ease;
 }
 .menu-container .menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  row-gap: 55px;
   width: 100%;
   height: 100%;
   list-style: none;
 }
-.menu-container.hide {
+.menu-container .menu a {
+  text-decoration: none;
+  color: black;
+}
+.menu-container .menu li {
+  padding-left: 25px;
+  font-size: 2rem;
+}
+.menu-container.show {
   left: 60%;
 }
 

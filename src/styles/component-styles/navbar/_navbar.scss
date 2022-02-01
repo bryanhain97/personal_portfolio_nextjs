@@ -29,12 +29,20 @@ div.navbar-container {
         padding-right: 15px;
         display: flex;
         align-items: center;
-        button {
+        button.menu-button {
+            z-index: 333;
+            cursor: pointer;
             border: none;
             background: transparent;
             font-size: 1.25rem;
-            text-decoration: none;
-            color: $grey;
+            color: rgb(43, 43, 43);
+            &.red {
+                color: black;
+            }
+            .menu-button-icon {
+                width: 30px;
+                height: 30px;
+            }
         }
         @include desktop(){
             display: none;
@@ -45,20 +53,32 @@ div.navbar-container {
     }
 }
 .menu-container {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 100%;
-    background-color: rgba(134, 134, 134, 0.5);
+    left: 150%;
+    background-color: rgba(182, 182, 182, 0.5);
     height: 100%;
     width: 100%;
     z-index: 100;
     transition: left 0.75s ease;
     .menu {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        row-gap: 55px;
         width: 100%;
         height: 100%;
         list-style: none;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        li {
+            padding-left: 25px;
+            font-size: 2rem;
+        }
     }
-    &.hide {
+    &.show {
         left: 60%;
     }
 }

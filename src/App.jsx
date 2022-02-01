@@ -15,9 +15,9 @@ function App() {
         <div className="app-container">
             <div className="menu-container">
                 <ul className="menu">
-                    <li className="menu-element">home</li>
-                    <li className="menu-element">about</li>
-                    <li className="menu-element">contact</li>
+                    <a href="#home"><li className="menu-element">home</li></a>
+                    <a href="#about"><li className="menu-element">about</li></a>
+                    <a href="#contact"><li className="menu-element">contact</li></a>
                 </ul>
             </div>
             <Navbar />
