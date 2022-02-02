@@ -131,7 +131,7 @@ div.navbar-container > nav.navbar-small button.menu-button .menu-button-icon {
 }
 
 section {
-  border-top: 2px solid black;
+  border-top: 1px solid black;
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -147,6 +147,11 @@ section {
 @media (max-width: 1023px) {
   .section1 {
     background-position: 45%;
+  }
+}
+@media (max-width: 425px) {
+  .section1 {
+    background-position: 55%;
   }
 }
 .section1 > div.h1-text-container {
@@ -168,6 +173,16 @@ section {
 @media (max-width: 1023px) {
   .section1 > div.h1-text-container h1 {
     font-size: 2.5rem;
+  }
+}
+@media (max-width: 768px) {
+  .section1 > div.h1-text-container h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 425px) {
+  .section1 > div.h1-text-container h1 {
+    font-size: 1.5rem;
   }
 }
 

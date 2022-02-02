@@ -21,7 +21,7 @@ div.navbar-container {
                 text-decoration: none;
             }
         }
-        @include tablet(){
+        @include laptop(){
             display: none;
         }
     }
@@ -48,7 +48,7 @@ div.navbar-container {
         @include desktop(){
             display: none;
         }
-        @include tablet(){
+        @include laptop(){
             justify-content: flex-end
         }
     }

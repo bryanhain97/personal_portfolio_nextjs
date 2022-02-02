@@ -1,5 +1,5 @@
 section {
-    border-top: 2px solid black;
+    border-top: 1px solid black;
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -10,8 +10,11 @@ section {
     background-image: url("./pictures/background.jpeg");
     background-size: cover;
     background-attachment: fixed;
-    @include tablet(){
+    @include laptop(){
         background-position: 45%;
+    }
+    @include mobile(){
+        background-position: 55%;
     }
     > div.h1-text-container {
         text-align: center;
@@ -28,9 +31,19 @@ section {
             font-size: 3rem;
             padding: 5px 0px;
         }
-        @include tablet(){
+        @include laptop(){
             h1 {
                 font-size: 2.5rem;
+            }
+        }
+        @include tablet(){
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        @include mobile(){
+            h1 {
+                font-size: 1.5rem;
             }
         }
     }

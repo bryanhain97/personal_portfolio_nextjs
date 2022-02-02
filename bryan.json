@@ -1,0 +1,28 @@
+{
+    "Bryan": {
+        "age": 24,
+        "sex": "male",
+        "born": "15.06.1997",
+        "introverted": true,
+        "location": {
+            "country": "Germany",
+            "city": "Berlin",
+            "district": "Tempelhof"
+        },
+        "proficiencies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React"
+        ],
+        "hobbies": [
+            "reading",
+            "boxing",
+            "exploring"
+        ],
+        "interestedIn": [
+            "engineering",
+            "computing"
+        ]
+    }
+}
