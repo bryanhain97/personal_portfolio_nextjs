@@ -50,52 +50,49 @@ section {
 }
 .section2 {
     background-color: #efeff1;
-    h2,
-    p {
-        position: relative;
-        bottom: -40px;
-        // opacity: 0;
-        transition: all 0.8s ease-out;
-    }
-    .show {
-        opacity: 1;
-        bottom: 0;
-    }
+    // BUILD INTERSECTION OBSERVER
     .section2-head {
-        padding-top: 4rem;
+        padding-top: 7rem;
         width: 95%;
         margin: 0 auto;
         display: flex;
-        .section2-head-text {
+        width: 95%;
+        column-gap: 3rem;
+        transition: all 0.75s ease-out;
+        div * {
+            word-break: break-word;
+            position: relative;
+            transition: all 0.75s ease-out;
+            ul {
+                padding: 1rem 0 0 1rem;
+                list-style: square;
+            }
+        }
+        h2 {
+            color: $darkgrey;
+            border-bottom: 1px solid $grey;
+            margin-bottom: 2rem;
+        }
+        div.head-proficiencies {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        div.head-like {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        div.head-facts {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .selected {
+            flex: 8;
             h2 {
-                border-bottom: 1px solid rgb(203, 203, 203);
-                display: flex;
-                padding: 0 20px;
-                flex-direction: column;
-                align-items: center;
-                flex: 1;
-            }
-            .section2-head-text-1 {
-                color: #1A535C;
-            }
-            .paragraph-container {
-                color: $darkgrey;
-                padding: 4rem 0 0 2rem;
-                display: flex;
-                flex-direction: column;
-                row-gap: 1rem;
-                text-decoration: none;
-                ul {
-                    list-style: square;
-                    display: flex;
-                    flex-wrap: wrap;
-                    padding: 2rem 0 0 1rem;
-                    li {
-                        color: #1A535C;
-                        width: 150px;
-                        line-height: 3rem;
-                    }
-                }
+                color: $blue;
+                top: -1rem;
             }
         }
     }

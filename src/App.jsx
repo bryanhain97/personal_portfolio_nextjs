@@ -30,10 +30,10 @@ function App() {
         }, 4000)
     }
     useEffect(toggleHidden, [])
-    const [menuOpen, setMenuOpen] = useState(null)
+    const [menuOpen, setMenuOpen] = useState(null);
     useEffect(() => {
         console.log(menuOpen)
-    }, [menuOpen])
+    }, [menuOpen]);
     return (
         <div className="app-container">
             <div className="menu-container">
@@ -60,8 +60,26 @@ function App() {
                         <h2 className="section2-head-text-1">proficiencies</h2>
                         <div className="paragraph-container">
                             <p>I specialize on web-development.</p>
-                            <p>I help people to make the right design decision for the needs of their website and build eye-catching experiences.</p>
-                            <p>I mainly focus on the front-end part, but can also build full-stack applications.</p>
+                            <p>I help people find a fitting design for their needs and build eye-catching experiences.</p>
+                            <p>I focus on the front-end, but can also build full-stack applications.</p>
+                            <p>Technologies i commonly use include:</p>
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>MongoDB</li>
+                                    <li>Express</li>
+                                    <li>React</li>
+                                    <li>NodeJS</li>
+                                </ul>
+                        </div>
+                    </div>
+                    <div className="section2-head-text head-like">
+                        <h2 className="section2-head-text-1">what i like</h2>
+                        <div className="paragraph-container">
+                            <p>I specialize on web-development.</p>
+                            <p>I help people find a fitting design for their needs and build eye-catching experiences.</p>
+                            <p>I focus on the front-end, but can also build full-stack applications.</p>
                             <p>Technologies i commonly use include:
                                 <ul>
                                     <li>HTML</li>
@@ -75,11 +93,24 @@ function App() {
                             </p>
                         </div>
                     </div>
-                    <div className="section2-head-text head-like">
-                        <h2 className="section2-head-text2">what i like</h2>
-                    </div>
                     <div className="section2-head-text head-facts">
-                        <h2>10 facts</h2>
+                        <h2 className="section2-head-text-1">10 facts</h2>
+                        <div className="paragraph-container">
+                            <p>I specialize on web-development.</p>
+                            <p>I help people find a fitting design for their needs and build eye-catching experiences.</p>
+                            <p>I focus on the front-end, but can also build full-stack applications.</p>
+                            <p>Technologies i commonly use include:
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>MongoDB</li>
+                                    <li>Express</li>
+                                    <li>React</li>
+                                    <li>NodeJS</li>
+                                </ul>
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div className="section2-head-main"></div>
