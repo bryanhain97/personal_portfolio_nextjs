@@ -10,10 +10,10 @@ section {
     background-image: url("./pictures/background.jpeg");
     background-size: cover;
     background-attachment: fixed;
-    @include laptop(){
+    @include laptop() {
         background-position: 45%;
     }
-    @include mobile(){
+    @include mobile() {
         background-position: 55%;
     }
     > div.h1-text-container {
@@ -23,7 +23,7 @@ section {
         border-radius: 3px;
         top: 43%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         transition: 1s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
         h1 {
             white-space: nowrap;
@@ -31,17 +31,17 @@ section {
             font-size: 3rem;
             padding: 5px 0px;
         }
-        @include laptop(){
+        @include laptop() {
             h1 {
                 font-size: 2.5rem;
             }
         }
-        @include tablet(){
+        @include tablet() {
             h1 {
                 font-size: 2rem;
             }
         }
-        @include mobile(){
+        @include mobile() {
             h1 {
                 font-size: 1.5rem;
             }
@@ -49,5 +49,54 @@ section {
     }
 }
 .section2 {
-    background-color: #EFEFF1;
+    background-color: #efeff1;
+    h2,
+    p {
+        position: relative;
+        bottom: -40px;
+        // opacity: 0;
+        transition: all 0.8s ease-out;
+    }
+    .show {
+        opacity: 1;
+        bottom: 0;
+    }
+    .section2-head {
+        padding-top: 4rem;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        .section2-head-text {
+            h2 {
+                border-bottom: 1px solid rgb(203, 203, 203);
+                display: flex;
+                padding: 0 20px;
+                flex-direction: column;
+                align-items: center;
+                flex: 1;
+            }
+            .section2-head-text-1 {
+                color: #1A535C;
+            }
+            .paragraph-container {
+                color: $darkgrey;
+                padding: 4rem 0 0 2rem;
+                display: flex;
+                flex-direction: column;
+                row-gap: 1rem;
+                text-decoration: none;
+                ul {
+                    list-style: square;
+                    display: flex;
+                    flex-wrap: wrap;
+                    padding: 2rem 0 0 1rem;
+                    li {
+                        color: #1A535C;
+                        width: 150px;
+                        line-height: 3rem;
+                    }
+                }
+            }
+        }
+    }
 }

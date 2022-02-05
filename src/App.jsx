@@ -1,6 +1,25 @@
 import React, { useEffect, useState } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 
+
+
+// function setup() {
+//     const options = {
+//         rootMargin: '0px 0px -200px 0px'
+//     }
+//     const observer = new IntersectionObserver((entries, observer) => {
+//         entries.forEach(entry => {
+//             if (entry.isIntersecting) {
+//                 entry.classList.add('show');
+//                 observer.unobserve(entry.target);
+//             } else {
+//                 return;
+//             }
+//         })
+//     }, options)
+// }
+// window.addEventListener('DOMContentLoaded', setup);
+
 function App() {
     function toggleHidden() {
         const text1Container = document.querySelector('#h1-text-container-1')
@@ -36,6 +55,34 @@ function App() {
                 </div>
             </section>
             <section id="about" className="section section2">
+                <div className="section2-head">
+                    <div className="section2-head-text head-proficiencies">
+                        <h2 className="section2-head-text-1">proficiencies</h2>
+                        <div className="paragraph-container">
+                            <p>I specialize on web-development.</p>
+                            <p>I help people to make the right design decision for the needs of their website and build eye-catching experiences.</p>
+                            <p>I mainly focus on the front-end part, but can also build full-stack applications.</p>
+                            <p>Technologies i commonly use include:
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>JavaScript</li>
+                                    <li>MongoDB</li>
+                                    <li>Express</li>
+                                    <li>React</li>
+                                    <li>NodeJS</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div className="section2-head-text head-like">
+                        <h2 className="section2-head-text2">what i like</h2>
+                    </div>
+                    <div className="section2-head-text head-facts">
+                        <h2>10 facts</h2>
+                    </div>
+                </div>
+                <div className="section2-head-main"></div>
             </section>
             <section id="contact" className="section section3">
             </section>
