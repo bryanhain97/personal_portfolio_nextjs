@@ -113,7 +113,7 @@ div.navbar-container > nav.navbar-small button.menu-button .menu-button-icon {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
-  row-gap: 55px;
+  row-gap: 40px;
   width: 100%;
   height: 100%;
   list-style: none;
@@ -124,7 +124,7 @@ div.navbar-container > nav.navbar-small button.menu-button .menu-button-icon {
 }
 .menu-container .menu li {
   padding-left: 25px;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .menu-container.show {
   left: 60%;
@@ -190,12 +190,19 @@ section {
   background-color: #efeff1;
 }
 .section2 .section2-head {
-  padding-top: 7rem;
+  padding-top: 6rem;
   margin: 0 auto;
   display: flex;
+  row-gap: 3rem;
+  flex-wrap: wrap;
   width: 94%;
   column-gap: 4rem;
   transition: all 0.75s ease-out;
+}
+@media (max-width: 1023px) {
+  .section2 .section2-head {
+    padding-top: 4rem;
+  }
 }
 .section2 .section2-head h2 {
   color: #616060;
@@ -210,6 +217,8 @@ section {
 .section2 .section2-head div.head-like,
 .section2 .section2-head div.head-facts {
   width: 420px;
+  min-width: 380px;
+  flex: 1 1;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

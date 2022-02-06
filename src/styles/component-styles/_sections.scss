@@ -52,12 +52,17 @@ section {
     background-color: #efeff1;
     // BUILD INTERSECTION OBSERVER
     .section2-head {
-        padding-top: 7rem;
+        padding-top: 6rem;
         margin: 0 auto;
         display: flex;
+        row-gap: 3rem;
+        flex-wrap: wrap;
         width: 94%;
         column-gap: 4rem;
         transition: all 0.75s ease-out;
+        @include laptop(){
+            padding-top: 4rem;
+        }
         h2 {
             color: $darkgrey;
             border-bottom: 2px solid $grey;
@@ -71,6 +76,8 @@ section {
         div.head-like,
         div.head-facts {
             width: 420px;
+            min-width: 380px;
+            flex: 1 1;
             margin: 0 auto;
             display: flex;
             flex-direction: column;
