@@ -53,46 +53,50 @@ section {
     // BUILD INTERSECTION OBSERVER
     .section2-head {
         padding-top: 7rem;
-        width: 95%;
         margin: 0 auto;
         display: flex;
-        width: 95%;
-        column-gap: 3rem;
+        width: 94%;
+        column-gap: 4rem;
         transition: all 0.75s ease-out;
-        div * {
-            word-break: break-word;
-            position: relative;
-            transition: all 0.75s ease-out;
-            ul {
-                padding: 1rem 0 0 1rem;
-                list-style: square;
-            }
-        }
         h2 {
             color: $darkgrey;
-            border-bottom: 1px solid $grey;
+            border-bottom: 2px solid $grey;
             margin-bottom: 2rem;
+            letter-spacing: 3px;
+            cursor: pointer;
+            color: $blue;
+            transition: background-color 0.25s ease-in;
+        }
+        div.head-proficiencies,
+        div.head-like,
+        div.head-facts {
+            width: 420px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.75s ease-out;
+            opacity: 0.2;
+            word-break: break-word;
+            &.selected {
+                opacity: 1;
+            }
         }
         div.head-proficiencies {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        div.head-like {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        div.head-facts {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .selected {
-            flex: 8;
-            h2 {
-                color: $blue;
-                top: -1rem;
+            .paragraph-container {
+                p {
+                    padding: 0.5rem 0 0.5rem 0;
+                }
+                ul {
+                    list-style: square;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-wrap: wrap;
+                    margin: 1rem 0 0 1rem;
+                    li {
+                        color: $blue;
+                        padding: 1rem 2rem 0 0;
+                    }
+                }
             }
         }
     }
