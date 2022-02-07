@@ -187,7 +187,18 @@ section {
 }
 
 .section2 {
+  position: relative;
   background-color: #efeff1;
+}
+.section2 .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 1;
 }
 .section2 .section2-head {
   padding-top: 6rem;
@@ -197,6 +208,7 @@ section {
   flex-wrap: wrap;
   width: 94%;
   column-gap: 4rem;
+  z-index: 2;
   transition: all 0.75s ease-out;
 }
 @media (max-width: 1023px) {
@@ -231,33 +243,59 @@ section {
 .section2 .section2-head div.head-facts.selected {
   opacity: 1;
 }
-.section2 .section2-head div.head-proficiencies .paragraph-container p {
+.section2 .section2-head div.head-proficiencies .paragraph-container p,
+.section2 .section2-head div.head-like .paragraph-container p,
+.section2 .section2-head div.head-facts .paragraph-container p {
   position: relative;
   padding: 0.5rem 0 0.5rem 0;
   opacity: 0;
   bottom: -35px;
-  transition: all 0.5s ease-in;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.section2 .section2-head div.head-proficiencies .paragraph-container p.show {
+.section2 .section2-head div.head-proficiencies .paragraph-container p.show,
+.section2 .section2-head div.head-like .paragraph-container p.show,
+.section2 .section2-head div.head-facts .paragraph-container p.show {
   opacity: 1;
   bottom: 0px;
 }
-.section2 .section2-head div.head-proficiencies .paragraph-container ul {
+.section2 .section2-head div.head-proficiencies .paragraph-container ul,
+.section2 .section2-head div.head-like .paragraph-container ul,
+.section2 .section2-head div.head-facts .paragraph-container ul {
   list-style: square;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 1rem 0 0 1rem;
 }
-.section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item {
+.section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item,
+.section2 .section2-head div.head-like .paragraph-container ul li.list-item,
+.section2 .section2-head div.head-facts .paragraph-container ul li.list-item {
   color: #1A535C;
   padding: 1rem 2rem 0 0;
   position: relative;
   opacity: 0;
   bottom: -35px;
-  transition: all 0.5s ease-in;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
-.section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show {
+.section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
+.section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
+.section2 .section2-head div.head-facts .paragraph-container ul li.list-item.show {
   opacity: 1;
   bottom: 0px;
+}
+.section2 .section2-head div.head-proficiencies .paragraph-container ul.facts-list,
+.section2 .section2-head div.head-like .paragraph-container ul.facts-list,
+.section2 .section2-head div.head-facts .paragraph-container ul.facts-list {
+  margin: 0 0 0 1rem;
+  list-style-type: decimal;
+  display: flex;
+  flex-direction: column;
+}
+.section2 .section2-head div.head-proficiencies .paragraph-container ul.facts-list li.list-item,
+.section2 .section2-head div.head-like .paragraph-container ul.facts-list li.list-item,
+.section2 .section2-head div.head-facts .paragraph-container ul.facts-list li.list-item {
+  padding: 0.5rem 0 0.5rem 0;
+  position: relative;
+  bottom: 0;
+  color: black;
 }

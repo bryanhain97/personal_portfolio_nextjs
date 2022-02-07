@@ -37,12 +37,13 @@ function Section2() {
     }
     return (
         <section id="about" className="section section2">
+            <img className="background" src="./pictures/paper.jpeg" alt="background" />
             <div className="section2-head">
                 <div className="section2-head-text head-proficiencies selected">
                     <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>proficiencies</h2>
                     <div className="paragraph-container">
                         <p>I specialize on web-development.</p>
-                        <p>I help people find a fitting design for their needs and build eye-catching experiences.</p>
+                        <p>I help people find a fitting design for their website and build eye-catching experiences.</p>
                         <p>I focus on the front-end, but can also build full-stack applications.</p>
                         <p>Technologies i commonly use include:</p>
                         <ul>
@@ -59,33 +60,20 @@ function Section2() {
                 <div className="section2-head-text head-like">
                     <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>what i like</h2>
                     <div className="paragraph-container">
-                        <p>I specialize on web-development.</p>
-                        <p>I help people find a fitting design for their needs and build eye-catching experiences.</p>
-                        <p>I focus on the front-end, but can also build full-stack applications.</p>
-                        <p>Technologies i commonly use include:</p>
-                        <ul>
-                            <li className="list-item">HTML</li>
-                            <li className="list-item">CSS</li>
-                            <li className="list-item">JavaScript</li>
-                            <li className="list-item">MongoDB</li>
-                            <li className="list-item">Express</li>
-                            <li className="list-item">React</li>
-                            <li className="list-item">NodeJS</li>
-                        </ul>
+                        <p>I like to be productive.</p>
+                        <p>I enjoy being physically active, reading and also listening to podcasts.</p>
+                        <p>I try to eat as healthy as possible while also taking care of my finances and be aware of what i am consuming.</p>
+                        <p>I like taking photos aswell and be creative.</p>
                     </div>
                 </div>
                 <div className="section2-head-text head-facts">
                     <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>10 facts</h2>
                     <div className="paragraph-container">
-                        <p>I specialize on web-development.</p>
-                        <p>I help people find a fitting design for their needs and build eye-catching experiences.</p>
-                        <p>I focus on the front-end, but can also build full-stack applications.</p>
-                        <p>Technologies i commonly use include:</p>
-                        <ul>
-                            <li className="list-item">HTML</li>
-                            <li className="list-item">CSS</li>
-                            <li className="list-item">JavaScript</li>
-                            <li className="list-item">MongoDB</li>
+                        <ul className="facts-list">
+                            <li className="list-item">Favorite book: Code by Charles Petzold</li>
+                            <li className="list-item">Laid back type of person</li>
+                            <li className="list-item">I once ate ass</li>
+                            <li className="list-item">I'm almost 25 and still at my moms.</li>
                             <li className="list-item">Express</li>
                             <li className="list-item">React</li>
                             <li className="list-item">NodeJS</li>
