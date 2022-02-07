@@ -91,7 +91,15 @@ section {
         div.head-proficiencies {
             .paragraph-container {
                 p {
+                    position: relative;
                     padding: 0.5rem 0 0.5rem 0;
+                    opacity: 0;
+                    bottom: -35px;
+                    transition: all 0.5s ease-in;
+                    &.show {
+                        opacity: 1;
+                        bottom: 0px;
+                    }
                 }
                 ul {
                     list-style: square;
@@ -99,9 +107,17 @@ section {
                     justify-content: flex-start;
                     flex-wrap: wrap;
                     margin: 1rem 0 0 1rem;
-                    li {
+                    li.list-item {
                         color: $blue;
                         padding: 1rem 2rem 0 0;
+                        position: relative;
+                        opacity: 0;
+                        bottom: -35px;
+                        transition: all 0.5s ease-in;
+                        &.show {
+                            opacity: 1;
+                            bottom: 0px;
+                        }
                     }
                 }
             }
