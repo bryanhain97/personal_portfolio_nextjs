@@ -4,6 +4,14 @@ import Section1 from './components/Sections/Section1.jsx';
 import Section2 from './components/Sections/Section2.jsx';
 
 function App() {
+    const menuItems = document.querySelectorAll('ul.menu a')
+    const menuContainer = document.querySelector('div.menu-container')
+    menuItems.forEach(menuItem => {
+        menuItem.addEventListener('click', () => {
+            setMenuOpen(false);
+            menuContainer.classList.remove('show');
+        })
+    })
     function toggleHidden() {
         const text1Container = document.querySelector('#h1-text-container-1')
         const text2Container = document.querySelector('#h1-text-container-2')
@@ -15,7 +23,6 @@ function App() {
     useEffect(toggleHidden, [])
     const [menuOpen, setMenuOpen] = useState(null);
     useEffect(() => {
-        console.log(menuOpen)
     }, [menuOpen]);
     return (
         <div className="app-container">

@@ -67,7 +67,7 @@ function Section2() {
                     </div>
                 </div>
                 <div className="section2-head-text head-facts">
-                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>10 facts</h2>
+                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>7 facts</h2>
                     <div className="paragraph-container">
                         <ul className="facts-list">
                             <li className="list-item">Favorite book: Code by Charles Petzold</li>
