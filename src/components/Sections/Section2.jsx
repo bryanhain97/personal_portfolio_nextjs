@@ -67,16 +67,16 @@ function Section2() {
                     </div>
                 </div>
                 <div className="section2-head-text head-facts">
-                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>7 facts</h2>
+                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>7 facts about me</h2>
                     <div className="paragraph-container">
                         <ul className="facts-list">
-                            <li className="list-item">Favorite book: Code by Charles Petzold</li>
-                            <li className="list-item">Laid back type of person</li>
-                            <li className="list-item">I once ate ass</li>
-                            <li className="list-item">I'm almost 25 and still at my moms.</li>
-                            <li className="list-item">Express</li>
-                            <li className="list-item">React</li>
-                            <li className="list-item">NodeJS</li>
+                            <li className="list-item">Took a shower outside next to a bus station in the rain once</li>
+                            <li className="list-item">Likes to buy books but don't read them till the end</li>
+                            <li className="list-item">Martial-Arts enthusiast</li>
+                            <li className="list-item">Seems to never listen to his girlfriend</li>
+                            <li className="list-item">Likes to keep it simple</li>
+                            <li className="list-item">Bites his nails when he's concentrated or focused</li>
+                            <li className="list-item">Laid-back type of person</li>
                         </ul>
                     </div>
                 </div>
