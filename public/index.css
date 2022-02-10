@@ -211,7 +211,6 @@ section {
 .section2 .section2-head {
   margin: 0 auto;
   display: flex;
-  row-gap: 3.5rem;
   flex-wrap: wrap;
   width: 92%;
   column-gap: 4rem;
@@ -299,4 +298,44 @@ section {
 .section2 .section2-head div.head-facts .paragraph-container ul.facts-list li.list-item.show {
   opacity: 1;
   bottom: 0px;
+}
+
+.section3 {
+  height: min-content;
+  padding: 4rem 0;
+  background-color: #002300;
+  color: white;
+}
+.section3 h3 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section3 .wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: "socials email";
+  width: 92%;
+  margin: 0 auto;
+}
+.section3 .email-container {
+  width: 400px;
+  grid-area: "socials";
+}
+.section3 .email-container .form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.4rem;
+}
+.section3 .email-container .form textarea {
+  height: 100px;
+}
+.section3 .email-container .form input[type=submit] {
+  border-radius: 3px;
+  margin-left: auto;
+  border: none;
+  width: 150px;
+  color: white;
+  background-color: #616060;
+  padding: 1rem 0;
 }
