@@ -188,10 +188,10 @@ section {
 
 .section2 {
   position: relative;
-  background-color: #efeff1;
+  background-color: #EDEEF0;
+  color: #1e1e1e;
   height: min-content;
   padding: 5rem 0;
-  box-shadow: 1rem 1rem 5rem rgba(22, 22, 22, 0.281);
 }
 @media (max-width: 425px) {
   .section2 {
@@ -219,12 +219,10 @@ section {
   transition: all 0.75s ease-out;
 }
 .section2 .section2-head h2 {
-  color: #616060;
   border-bottom: 2px solid #838282;
   margin-bottom: 2rem;
   letter-spacing: 3px;
-  cursor: pointer;
-  color: #1A535C;
+  color: #203338;
   transition: background-color 0.25s ease-in;
 }
 .section2 .section2-head div.head-proficiencies,
@@ -237,13 +235,8 @@ section {
   display: flex;
   flex-direction: column;
   transition: all 0.75s ease-out;
-  opacity: 0.2;
-  word-break: break-word;
-}
-.section2 .section2-head div.head-proficiencies.selected,
-.section2 .section2-head div.head-like.selected,
-.section2 .section2-head div.head-facts.selected {
   opacity: 1;
+  word-break: break-word;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container p,
 .section2 .section2-head div.head-like .paragraph-container p,
@@ -296,8 +289,14 @@ section {
 .section2 .section2-head div.head-proficiencies .paragraph-container ul.facts-list li.list-item,
 .section2 .section2-head div.head-like .paragraph-container ul.facts-list li.list-item,
 .section2 .section2-head div.head-facts .paragraph-container ul.facts-list li.list-item {
+  color: #1e1e1e;
   padding: 0.5rem 0 0.5rem 0;
   position: relative;
-  bottom: 0;
-  color: black;
+  bottom: -35px;
+}
+.section2 .section2-head div.head-proficiencies .paragraph-container ul.facts-list li.list-item.show,
+.section2 .section2-head div.head-like .paragraph-container ul.facts-list li.list-item.show,
+.section2 .section2-head div.head-facts .paragraph-container ul.facts-list li.list-item.show {
+  opacity: 1;
+  bottom: 0px;
 }

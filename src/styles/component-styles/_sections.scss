@@ -50,10 +50,10 @@ section {
 }
 .section2 {
     position: relative;
-    background-color: #efeff1;
+    background-color: $section2bg;
+    color: rgb(30, 30, 30);
     height: min-content;
     padding: 5rem 0;
-    box-shadow: 1rem 1rem 5rem rgba(22, 22, 22, 0.281);
     @include mobile(){
         padding: 4rem 0;
     }
@@ -78,12 +78,10 @@ section {
         z-index: 2;
         transition: all 0.75s ease-out;
         h2 {
-            color: $darkgrey;
             border-bottom: 2px solid $grey;
             margin-bottom: 2rem;
             letter-spacing: 3px;
-            cursor: pointer;
-            color: $blue;
+            color: $h2blue;
             transition: background-color 0.25s ease-in;
         }
         div.head-proficiencies,
@@ -96,11 +94,8 @@ section {
             display: flex;
             flex-direction: column;
             transition: all 0.75s ease-out;
-            opacity: 0.2;
+            opacity: 1;
             word-break: break-word;
-            &.selected {
-                opacity: 1;
-            }
         }
         div.head-proficiencies,
         div.head-like,
@@ -141,10 +136,14 @@ section {
                         display: flex;
                         flex-direction: column;
                         li.list-item {
+                            color: rgb(30, 30, 30);
                             padding: 0.5rem 0 0.5rem 0;
                             position: relative;
-                            bottom: 0;
-                            color: black;
+                            bottom: -35px;
+                            &.show {
+                                opacity: 1;
+                                bottom: 0px;
+                            }
                         }
                     }
                 }

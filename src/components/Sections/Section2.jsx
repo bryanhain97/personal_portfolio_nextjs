@@ -6,7 +6,6 @@ function Section2() {
     useEffect(() => {
         listItems = document.querySelectorAll('ul li.list-item');
         paragraphs = document.querySelectorAll('.paragraph-container p')
-        console.log(listItems);
         const options = {
             rootMargin: '-150px 0px -30px 0px'
         };
@@ -26,21 +25,11 @@ function Section2() {
             observer.observe(paragraph);
         })
     }, [])
-    function selectTitle(e) {
-        const allTitles = [...document.querySelectorAll('h2.section2-title')];
-        e.target.parentNode.classList.add('selected');
-        allTitles.forEach(title => {
-            if (allTitles.indexOf(title) !== allTitles.indexOf(e.target)) {
-                title.parentNode.classList.remove('selected');
-            }
-        })
-    }
     return (
         <section id="about" className="section section2">
-            <img className="background" src="./pictures/paper.jpeg" alt="background" />
             <div className="section2-head">
-                <div className="section2-head-text head-proficiencies selected">
-                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>proficiencies</h2>
+                <div className="section2-head-text head-proficiencies">
+                    <h2 className="section2-head-text-1 section2-title">proficiencies</h2>
                     <div className="paragraph-container">
                         <p>I specialize on web-development.</p>
                         <p>I help people find a fitting design for their website and build eye-catching experiences.</p>
@@ -58,16 +47,16 @@ function Section2() {
                     </div>
                 </div>
                 <div className="section2-head-text head-like">
-                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>what i like</h2>
+                    <h2 className="section2-head-text-1 section2-title">what i like</h2>
                     <div className="paragraph-container">
                         <p>I like to be productive.</p>
                         <p>I enjoy being physically active, reading and also listening to podcasts.</p>
                         <p>I try to eat as healthy as possible while also taking care of my finances and be aware of what i am consuming.</p>
-                        <p>I like taking photos aswell and be creative.</p>
+                        <p>I like taking pictures aswell and be creative.</p>
                     </div>
                 </div>
                 <div className="section2-head-text head-facts">
-                    <h2 className="section2-head-text-1 section2-title" onClick={selectTitle}>7 facts about me</h2>
+                    <h2 className="section2-head-text-1 section2-title">7 facts about me</h2>
                     <div className="paragraph-container">
                         <ul className="facts-list">
                             <li className="list-item">Took a shower outside next to a bus station in the rain once</li>
@@ -81,7 +70,6 @@ function Section2() {
                     </div>
                 </div>
             </div>
-            <div className="section2-head-main"></div>
         </section>
     )
 }
