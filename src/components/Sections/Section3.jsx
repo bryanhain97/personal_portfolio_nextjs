@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import emailjs from '@emailjs/browser'
-// import icons from 'react-icons'
+import { TiSocialTwitter, TiSocialLinkedin, TiSocialInstagram, TiSocialGithub } from 'react-icons/ti';
 
 
 function Section3() {
@@ -30,6 +30,12 @@ function Section3() {
                         <textarea name="message" />
                         <input type="submit" value="Send" />
                     </form>
+                </div>
+                <div className="socials">
+                    <a href="" className="social"><TiSocialGithub className="social-icon" />GitHub</a>
+                    <a href="" className="social"><TiSocialInstagram className="social-icon" />Instagram</a>
+                    <a href="" className="social"><TiSocialTwitter className="social-icon" />Twitter</a>
+                    <a href="" className="social"><TiSocialLinkedin className="social-icon" />LinkedIn</a>
                 </div>
             </div>
         </section >
