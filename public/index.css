@@ -140,7 +140,6 @@ section {
 }
 
 .section1 {
-  background-image: url("./pictures/background.jpeg");
   background-size: cover;
   background-attachment: fixed;
 }
