@@ -336,6 +336,9 @@ section {
   row-gap: 0.4rem;
 }
 .section3 .wrapper .email-container .form textarea {
+  padding: 5px;
+  font-size: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
   height: 100px;
 }
 .section3 .wrapper .email-container .form input[type=submit] {
