@@ -152,7 +152,7 @@ section {
 }
 .section3 {
     height: min-content;
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 4rem 0;
     background-color: rgb(0, 35, 0);
     color: white;
     h3 {
@@ -164,6 +164,7 @@ section {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr;
         grid-template-areas: "socials email";
+        gap: 2rem;
         width: 92%;
         margin: 0 auto;
         @include tablet() {
@@ -188,7 +189,7 @@ section {
                 textarea {
                     padding: 5px;
                     font-size: 1rem;
-                    font-family:Arial, Helvetica, sans-serif;
+                    font-family: Arial, Helvetica, sans-serif;
                     height: 100px;
                 }
                 input[type="submit"] {
@@ -207,28 +208,39 @@ section {
         }
         .socials {
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            margin-top: 1rem;
-            .social {
+            .social-container {
+                padding-right: 2rem;
                 display: flex;
-                color: white;
-                margin: 0.5rem 0;
-                width: 150px;
-                height: 50px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 1rem;
-                text-decoration: none;
-                transition: background-color 0.3s ease-in-out;
-                &:hover {
-                    background-color: $blue;
+                flex-direction: column;
+                height: 100%;
+                justify-content: space-evenly;
+                .social {
+                    padding: 0.5rem 0 0.1rem 0;
+                    display: flex;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 25px;
+                    &:hover {
+                        background-color: $blue;
+                    }
+                    .social-icon {
+                        transform: scale(1.5);
+                        margin-right: 1rem;
+                    }
                 }
-                .social-icon {
-                    transform: scale(1.5);
-                    margin-right: 1rem;
+            }
+            .img-container {
+                width: 100%;
+                display: flex;
+                align-items: flex-start;
+                max-height: 260px;
+                max-width: 260px;
+                img {
+                    border-radius: 50%;
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
