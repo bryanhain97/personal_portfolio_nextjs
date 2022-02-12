@@ -23,7 +23,7 @@ function Section1() {
         }, 4000)
     }, [loaded])
     return (
-        <section id="home" className="section section1" data-src="./pictures/background.jpeg">
+        <section id="home" className="section section1" data-src="./pictures/background.png">
             {loaded && (
                 <>
                     <div id="h1-text-container-1" className="h1-text-container">
