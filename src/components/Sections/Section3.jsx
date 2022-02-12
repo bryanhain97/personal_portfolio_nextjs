@@ -32,10 +32,10 @@ function Section3() {
                     </form>
                 </div>
                 <div className="socials">
-                    <a href="" className="social"><TiSocialGithub className="social-icon" />GitHub</a>
-                    <a href="" className="social"><TiSocialInstagram className="social-icon" />Instagram</a>
-                    <a href="" className="social"><TiSocialTwitter className="social-icon" />Twitter</a>
-                    <a href="" className="social"><TiSocialLinkedin className="social-icon" />LinkedIn</a>
+                    <a href="https://github.com/bryanhain97" target="_blank" className="social"><TiSocialGithub className="social-icon" />GitHub</a>
+                    <a href="https://www.instagram.com/bry4n_h/" target="_blank" className="social"><TiSocialInstagram className="social-icon" />Instagram</a>
+                    <a href="https://twitter.com/Bryan47588123" target="_blank" className="social"><TiSocialTwitter className="social-icon" />Twitter</a>
+                    <a href="https://www.linkedin.com/in/bryan-hain-572568206/" target="_blank" className="social"><TiSocialLinkedin className="social-icon" />LinkedIn</a>
                 </div>
             </div>
         </section >

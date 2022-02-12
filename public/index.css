@@ -123,6 +123,7 @@ div.navbar-container > nav.navbar-small button.menu-button .menu-button-icon {
   color: black;
 }
 .menu-container .menu li {
+  line-height: 2rem;
   padding-left: 25px;
   font-size: 1.5rem;
 }
@@ -141,7 +142,7 @@ section {
 
 .section1 {
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 @media (max-width: 1023px) {
   .section1 {
@@ -230,7 +231,7 @@ section {
   width: 420px;
   min-width: 340px;
   flex: 1 1;
-  margin: 0 auto;
+  margin: 1rem auto;
   display: flex;
   flex-direction: column;
   transition: all 0.75s ease-out;
@@ -269,7 +270,7 @@ section {
   position: relative;
   opacity: 0;
   bottom: -35px;
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1s ease-in-out;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
@@ -302,7 +303,7 @@ section {
 
 .section3 {
   height: min-content;
-  padding: 4rem 0;
+  padding: 4rem 0 2rem 0;
   background-color: #002300;
   color: white;
 }
@@ -336,6 +337,9 @@ section {
   flex-direction: column;
   row-gap: 0.4rem;
 }
+.section3 .wrapper .email-container .form * {
+  padding: 0.5rem 0 0.1rem 0;
+}
 .section3 .wrapper .email-container .form textarea {
   padding: 5px;
   font-size: 1rem;
@@ -343,25 +347,39 @@ section {
   height: 100px;
 }
 .section3 .wrapper .email-container .form input[type=submit] {
-  border-radius: 3px;
-  margin-left: auto;
+  padding: 12px 0;
+  text-align: center;
+  width: 150px;
+  margin: 0.5rem 0 0 auto;
+  font-size: 1rem;
+  border-radius: 8px;
   border: none;
   width: 150px;
   color: white;
-  background-color: #616060;
-  padding: 1rem 2rem;
+  background-color: #1A535C;
 }
 .section3 .wrapper .socials {
   display: flex;
   flex-direction: column;
-  row-gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
 }
 .section3 .wrapper .socials .social {
+  display: flex;
+  color: white;
+  margin: 0.5rem 0;
   width: 150px;
   height: 50px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
   text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+.section3 .wrapper .socials .social:hover {
+  background-color: #1A535C;
 }
 .section3 .wrapper .socials .social .social-icon {
   transform: scale(1.5);
