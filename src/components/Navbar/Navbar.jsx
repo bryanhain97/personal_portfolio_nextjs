@@ -1,8 +1,14 @@
 import React, { useEffect } from 'react'
-import { VscChromeClose } from 'react-icons/vsc'
+import { VscChromeClose } from 'react-icons/vsc';
 
 function Navbar({ menuOpen, setMenuOpen }) {
     useEffect(() => {
+        const navbar = document.querySelector('nav.navbar');
+        let scrollHeight;
+        window.addEventListener('scroll', () => {
+            scrollHeight = window.scrollY;
+            navbar.classList.toggle('scrolled', scrollHeight >= 20)
+        })
         const menuElements = document.querySelectorAll('li.menu-element');
         menuElements.forEach(element => {
             element.addEventListener('click', () => {
