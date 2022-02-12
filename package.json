@@ -5,7 +5,7 @@
   "scripts": {
     "development": "npm run sass & npx webpack-dev-server --hot --open",
     "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map",
-    "build": "npx babel ./src/index.jsx && npx webpack --mode=production && git commit -am 'update continous' && git push"
+    "build": "npx babel ./src/index.jsx && npx webpack --mode=production"
   },
   "author": "Bryan Hain",
   "license": "ISC",
