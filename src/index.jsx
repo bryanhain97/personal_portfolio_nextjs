@@ -4,3 +4,4 @@ import App from './App.jsx';
 
 const rootElement = document.querySelector('#root');
 ReactDOM.render(<App />, rootElement)
+console.log('run CD on netlify!!')
