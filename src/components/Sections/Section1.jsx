@@ -5,7 +5,6 @@ function Section1() {
     useEffect(() => {
         const section1 = document.querySelector('section.section.section1');
         const source = section1.getAttribute('data-src');
-        console.log(source);
         const img = document.createElement('img');
         img.src = source;
         img.addEventListener('load', () => {
