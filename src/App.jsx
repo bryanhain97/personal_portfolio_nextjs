@@ -14,15 +14,6 @@ function App() {
             menuContainer.classList.remove('show');
         })
     })
-    function toggleHidden() {
-        const text1Container = document.querySelector('#h1-text-container-1')
-        const text2Container = document.querySelector('#h1-text-container-2')
-        setInterval(() => {
-            text1Container.classList.toggle('hidden')
-            text2Container.classList.toggle('hidden')
-        }, 4000)
-    }
-    useEffect(toggleHidden, [])
     return (
         <div className="app-container">
             <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />

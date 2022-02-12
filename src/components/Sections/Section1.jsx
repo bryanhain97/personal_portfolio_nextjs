@@ -12,6 +12,14 @@ function Section1() {
             setLoaded(true);
         })
     }, [])
+    useEffect(() => {
+        const text1Container = document.querySelector('#h1-text-container-1')
+        const text2Container = document.querySelector('#h1-text-container-2')
+        setInterval(() => {
+            text1Container.classList.toggle('hidden')
+            text2Container.classList.toggle('hidden')
+        }, 4000)
+    }, [loaded])
     return (
         <section id="home" className="section section1" data-src="./pictures/background.jpeg">
             {loaded && (
