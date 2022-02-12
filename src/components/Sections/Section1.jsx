@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 
 function Section1() {
     const [loaded, setLoaded] = useState(false);
+    let text1Container;
+    let text2Container;
     useEffect(() => {
         const section1 = document.querySelector('section.section.section1');
         const source = section1.getAttribute('data-src');
@@ -13,11 +15,12 @@ function Section1() {
         })
     }, [])
     useEffect(() => {
-        const text1Container = document.querySelector('#h1-text-container-1')
-        const text2Container = document.querySelector('#h1-text-container-2')
+        text1Container = document.getElementById('h1-text-container-1')
+        text2Container = document.getElementById('h1-text-container-2')
+        console.log(text1Container, text2Container)
         setInterval(() => {
-            text1Container.classList.toggle('hidden')
-            text2Container.classList.toggle('hidden')
+            text1Container?.classList.toggle('hidden')
+            text2Container?.classList.toggle('hidden')
         }, 4000)
     }, [loaded])
     return (
