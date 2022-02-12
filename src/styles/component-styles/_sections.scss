@@ -87,7 +87,7 @@ section {
         div.head-like,
         div.head-facts {
             width: 420px;
-            min-width: 380px;
+            min-width: 340px;
             flex: 1 1;
             margin: 0 auto;
             display: flex;
@@ -175,7 +175,8 @@ section {
         }
         .email-container {
             margin: 0 auto;
-            width: 380px;
+            flex: 1 1;
+            min-width: 340px;
             grid-area: "socials";
             .form {
                 display: flex;

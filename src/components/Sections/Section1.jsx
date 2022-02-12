@@ -17,7 +17,6 @@ function Section1() {
     useEffect(() => {
         text1Container = document.getElementById('h1-text-container-1')
         text2Container = document.getElementById('h1-text-container-2')
-        console.log(text1Container, text2Container)
         setInterval(() => {
             text1Container?.classList.toggle('hidden')
             text2Container?.classList.toggle('hidden')

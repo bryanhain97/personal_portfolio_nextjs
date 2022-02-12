@@ -228,7 +228,7 @@ section {
 .section2 .section2-head div.head-like,
 .section2 .section2-head div.head-facts {
   width: 420px;
-  min-width: 380px;
+  min-width: 340px;
   flex: 1 1;
   margin: 0 auto;
   display: flex;
@@ -327,7 +327,8 @@ section {
 }
 .section3 .wrapper .email-container {
   margin: 0 auto;
-  width: 380px;
+  flex: 1 1;
+  min-width: 340px;
   grid-area: "socials";
 }
 .section3 .wrapper .email-container .form {
