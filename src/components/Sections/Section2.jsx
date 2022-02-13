@@ -51,7 +51,7 @@ function Section2() {
                     <div className="paragraph-container">
                         <p>I like to be productive.</p>
                         <p>I enjoy being physically active, reading and also listening to podcasts.</p>
-                        <p>I try to eat as healthy as possible while also taking care of my finances and be aware of what i am consuming.</p>
+                        <p>I try to eat as healthy as possible while also taking care of my finances.</p>
                         <p>I like taking pictures aswell and be creative.</p>
                     </div>
                 </div>
@@ -60,7 +60,7 @@ function Section2() {
                     <div className="paragraph-container">
                         <ul className="facts-list">
                             <li className="list-item">Took a shower outside next to a bus station in the rain once</li>
-                            <li className="list-item">Likes to buy books but don't read them till the end</li>
+                            <li className="list-item">Likes to buy books but don't always read them till the end</li>
                             <li className="list-item">Martial-Arts enthusiast</li>
                             <li className="list-item">Seems to never listen to his girlfriend</li>
                             <li className="list-item">Likes to keep it simple</li>
