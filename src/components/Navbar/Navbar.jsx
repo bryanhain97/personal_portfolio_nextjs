@@ -39,6 +39,9 @@ function Navbar({ menuOpen, setMenuOpen }) {
 
             <div className="navbar-container">
                 <nav className="navbar">
+                    <div className="logo-container">
+                        <a href="#home"><img src="./pictures/logo.png" alt="logo" className="navbar-logo" /></a>
+                    </div>
                     <ul className="navbar-list">
                         <a href="#home"><li className="navbar-element">Home</li></a>
                         <a href="#about"><li className="navbar-element">About</li></a>
