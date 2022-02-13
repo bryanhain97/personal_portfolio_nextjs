@@ -6,7 +6,7 @@
 }
 
 html {
-  font-family: "Comfortaa", cursive;
+  font-family: "Comfortaa", sans-serif;
   font-size: 16px;
   scroll-behavior: smooth;
 }
@@ -53,6 +53,7 @@ div.navbar-container > nav.navbar {
 }
 div.navbar-container > nav.navbar.scrolled {
   background-color: rgba(128, 128, 128, 0.25);
+  box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.3);
 }
 div.navbar-container > nav.navbar.scrolled ul a li {
   color: white;
@@ -69,6 +70,11 @@ div.navbar-container > nav.navbar > ul.navbar-list {
 div.navbar-container > nav.navbar > ul.navbar-list a {
   color: #838282;
   text-decoration: none;
+}
+@media (min-width: 1024px) {
+  div.navbar-container > nav.navbar > ul.navbar-list a {
+    font-size: 1.35rem;
+  }
 }
 @media (max-width: 1023px) {
   div.navbar-container > nav.navbar {
@@ -169,28 +175,34 @@ section {
   border-radius: 3px;
   top: 43%;
   left: 50%;
+  min-width: 340px;
   transform: translate(-50%, -50%);
   transition: 1s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .section1 > div.h1-text-container h1 {
-  white-space: nowrap;
+  word-break: break-word;
+  white-space: wrap;
   color: rgba(22, 22, 22, 0.781);
-  font-size: 3rem;
   padding: 5px 0px;
+}
+@media (min-width: 1024px) {
+  .section1 > div.h1-text-container h1 {
+    font-size: 3.5rem;
+  }
 }
 @media (max-width: 1023px) {
   .section1 > div.h1-text-container h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 }
 @media (max-width: 768px) {
   .section1 > div.h1-text-container h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 }
 @media (max-width: 425px) {
   .section1 > div.h1-text-container h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -231,7 +243,6 @@ section {
   margin-bottom: 2rem;
   letter-spacing: 3px;
   color: #203338;
-  transition: background-color 0.25s ease-in;
 }
 .section2 .section2-head div.head-proficiencies,
 .section2 .section2-head div.head-like,
@@ -253,7 +264,8 @@ section {
   padding: 0.5rem 0 0.5rem 0;
   opacity: 0;
   bottom: -35px;
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 1s ease-in-out;
+  transition-delay: 0.15s;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container p.show,
 .section2 .section2-head div.head-like .paragraph-container p.show,
@@ -279,6 +291,7 @@ section {
   opacity: 0;
   bottom: -35px;
   transition: all 1s ease-in-out;
+  transition-delay: 0.3s;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
@@ -325,7 +338,7 @@ section {
   grid-template-rows: 1fr;
   grid-template-areas: "socials email";
   gap: 2rem;
-  width: 92%;
+  width: 90%;
   margin: 0 auto;
 }
 @media (max-width: 768px) {
@@ -355,7 +368,7 @@ section {
   font-family: Arial, Helvetica, sans-serif;
   height: 100px;
 }
-.section3 .wrapper .email-container .form input[type=submit] {
+.section3 .wrapper .email-container .form input.input-submit {
   padding: 12px 0;
   text-align: center;
   width: 150px;
@@ -380,18 +393,28 @@ section {
   justify-content: space-evenly;
 }
 .section3 .wrapper .socials .social-container .social {
-  padding: 0.5rem 0 0.1rem 0;
+  position: relative;
+  padding: 0.5rem 0 0.5rem 0;
   display: flex;
+  justify-content: flex-start;
   color: white;
   text-decoration: none;
-  border-radius: 25px;
-}
-.section3 .wrapper .socials .social-container .social:hover {
-  background-color: #1A535C;
 }
 .section3 .wrapper .socials .social-container .social .social-icon {
-  transform: scale(1.5);
-  margin-right: 1rem;
+  transform: scale(2);
+  margin: 0 1.5rem;
+}
+.section3 .wrapper .socials .social-container .social::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  left: 0;
+  width: 0px;
+  border-bottom: 2px solid white;
+  transition: all 0.5s ease-in-out;
+}
+.section3 .wrapper .socials .social-container .social:hover::after {
+  width: 100%;
 }
 .section3 .wrapper .socials .img-container {
   width: 100%;
