@@ -26,14 +26,14 @@ section {
         transform: translate(-50%, -50%);
         transition: 1s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
         h1 {
-            word-break: break-word;
             white-space: wrap;
+            word-break: break-word;
             color: rgba(22, 22, 22, 0.781);
             padding: 5px 0px;
         }
         @include desktop() {
             h1 {
-                font-size: 3.5rem;
+                font-size: 3.2rem;
             }
         }
         @include laptop() {
@@ -111,7 +111,6 @@ section {
                     opacity: 0;
                     bottom: -35px;
                     transition: all 1s ease-in-out;
-                    transition-delay: 0.15s;
                     &.show {
                         opacity: 1;
                         bottom: 0px;
@@ -130,7 +129,6 @@ section {
                         opacity: 0;
                         bottom: -35px;
                         transition: all 1s ease-in-out;
-                        transition-delay: 0.3s;
                         &.show {
                             opacity: 1;
                             bottom: 0px;

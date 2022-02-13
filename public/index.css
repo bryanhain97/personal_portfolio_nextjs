@@ -180,14 +180,14 @@ section {
   transition: 1s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .section1 > div.h1-text-container h1 {
-  word-break: break-word;
   white-space: wrap;
+  word-break: break-word;
   color: rgba(22, 22, 22, 0.781);
   padding: 5px 0px;
 }
 @media (min-width: 1024px) {
   .section1 > div.h1-text-container h1 {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
   }
 }
 @media (max-width: 1023px) {
@@ -265,7 +265,6 @@ section {
   opacity: 0;
   bottom: -35px;
   transition: all 1s ease-in-out;
-  transition-delay: 0.15s;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container p.show,
 .section2 .section2-head div.head-like .paragraph-container p.show,
@@ -291,7 +290,6 @@ section {
   opacity: 0;
   bottom: -35px;
   transition: all 1s ease-in-out;
-  transition-delay: 0.3s;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
