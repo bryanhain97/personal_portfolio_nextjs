@@ -8,7 +8,7 @@ section {
 }
 .section1 {
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     @include laptop() {
         background-position: 45%;
     }
