@@ -33,13 +33,18 @@ function Section3() {
                 </div>
                 <div className="socials">
                     <div className="social-container">
-                        <a href="https://github.com/bryanhain97" target="_blank" className="social"><TiSocialGithub className="social-icon" />GitHub</a>
-                        <a href="https://twitter.com/Bryan47588123" target="_blank" className="social"><TiSocialTwitter className="social-icon" />Twitter</a>
-                        <a href="https://www.linkedin.com/in/bryan-hain-572568206/" target="_blank" className="social"><TiSocialLinkedin className="social-icon" />LinkedIn</a>
-                        <a href="https://www.instagram.com/bry4n_h/" target="_blank" className="social"><TiSocialInstagram className="social-icon" />Instagram</a>
+                        <a href="https://github.com/bryanhain97" target="_blank" className="social"><TiSocialGithub className="social-icon social-icon-github" />GitHub</a>
+                        <a href="https://twitter.com/Bryan47588123" target="_blank" className="social"><TiSocialTwitter className="social-icon social-icon-twitter" />Twitter</a>
+                        <a href="https://www.linkedin.com/in/bryan-hain-572568206/" target="_blank" className="social"><TiSocialLinkedin className="social-icon social-icon-linkedin" />LinkedIn</a>
+                        <a href="https://www.instagram.com/bry4n_h/" target="_blank" className="social"><TiSocialInstagram className="social-icon social-icon-instagram" />Instagram</a>
                     </div>
                     <div className="img-container">
                         <img loading="lazy" src="./pictures/self.png" alt="selfie" />
+                    </div>
+                </div>
+                <div className="coffee-container">
+                    <div className="coffee">
+                        <h3>Or buy me a <span>coffee!</span></h3>
                     </div>
                 </div>
             </div>

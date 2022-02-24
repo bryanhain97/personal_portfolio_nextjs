@@ -327,7 +327,7 @@ section {
 
 .section3 {
   height: min-content;
-  padding: 4rem 0 4rem 0;
+  padding: 2rem 0 1rem 0;
   background-color: #002300;
   color: white;
 }
@@ -340,7 +340,7 @@ section {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-template-areas: "socials email";
-  gap: 2rem;
+  gap: 1rem;
   width: 90%;
   margin: 0 auto;
 }
@@ -354,6 +354,7 @@ section {
 .section3 .wrapper .email-container {
   margin: 0 auto;
   flex: 1 1;
+  padding: 0 1rem;
   min-width: 340px;
   grid-area: "socials";
 }
@@ -381,9 +382,10 @@ section {
   border: none;
   width: 150px;
   color: white;
-  background-color: #32ad94;
+  background-color: #586b55;
 }
 .section3 .wrapper .socials {
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,6 +409,18 @@ section {
   transform: scale(2);
   margin: 0 1.5rem;
 }
+.section3 .wrapper .socials .social-container .social .social-icon.social-icon-github {
+  color: #b7b7b7;
+}
+.section3 .wrapper .socials .social-container .social .social-icon.social-icon-twitter {
+  color: #3883f4;
+}
+.section3 .wrapper .socials .social-container .social .social-icon.social-icon-linkedin {
+  color: #2831e2;
+}
+.section3 .wrapper .socials .social-container .social .social-icon.social-icon-instagram {
+  color: #927061;
+}
 .section3 .wrapper .socials .social-container .social::after {
   position: absolute;
   content: "";
@@ -427,7 +441,26 @@ section {
   max-width: 260px;
 }
 .section3 .wrapper .socials .img-container img {
+  border: 2px solid white;
   border-radius: 50%;
   width: 100%;
   height: 100%;
+}
+.section3 .wrapper .coffee-container {
+  padding: 1rem 0 1rem 0;
+}
+.section3 .wrapper .coffee-container * {
+  margin: 0;
+  padding: 0;
+}
+.section3 .wrapper .coffee-container .coffee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section3 .wrapper .coffee-container .coffee h3 {
+  color: #ecc7aa;
+}
+.section3 .wrapper .coffee-container .coffee h3 span {
+  color: #aa5917;
 }

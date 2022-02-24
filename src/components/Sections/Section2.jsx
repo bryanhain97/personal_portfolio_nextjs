@@ -7,7 +7,7 @@ function Section2() {
         listItems = document.querySelectorAll('ul li.list-item');
         paragraphs = document.querySelectorAll('.paragraph-container p')
         const options = {
-            rootMargin: '-50px 0px -20px 0px'
+            rootMargin: '-50px 0px 0px 0px'
         };
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
