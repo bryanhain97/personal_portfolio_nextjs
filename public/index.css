@@ -159,7 +159,7 @@ section {
 
 .section1 {
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed, scroll;
   max-width: 100vw;
   height: 100vh;
 }
@@ -294,7 +294,7 @@ section {
   position: relative;
   opacity: 0;
   bottom: -35px;
-  transition: all 0.35s ease-in-out;
+  transition: all 0.75s ease-in-out;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
@@ -381,7 +381,7 @@ section {
   border: none;
   width: 150px;
   color: white;
-  background-color: #1A535C;
+  background-color: #4d88ff;
 }
 .section3 .wrapper .socials {
   display: flex;

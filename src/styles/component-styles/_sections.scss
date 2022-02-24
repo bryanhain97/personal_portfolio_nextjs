@@ -8,7 +8,7 @@ section {
 }
 .section1 {
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed, scroll;
     max-width: 100vw;
     height: 100vh;
     @include laptop() {
@@ -130,7 +130,7 @@ section {
                         position: relative;
                         opacity: 0;
                         bottom: -35px;
-                        transition: all 0.35s ease-in-out;
+                        transition: all 0.75s ease-in-out;
                         &.show {
                             opacity: 1;
                             bottom: 0px;
@@ -209,7 +209,7 @@ section {
                     border: none;
                     width: 150px;
                     color: white;
-                    background-color: $blue;
+                    background-color: rgb(77, 136, 255);
                 }
             }
         }
