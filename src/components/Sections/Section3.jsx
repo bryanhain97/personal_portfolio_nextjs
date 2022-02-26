@@ -1,11 +1,30 @@
-import React, { useRef } from 'react'
+import React, { useRef, useEffect} from 'react'
 import emailjs from '@emailjs/browser'
 import { TiSocialTwitter, TiSocialLinkedin, TiSocialInstagram, TiSocialGithub } from 'react-icons/ti';
 
 
 function Section3() {
     const form = useRef()
-
+    useEffect(() => {
+        const section3title = document.querySelector('.section3-title')
+        const socials = document.querySelectorAll('.social')
+        const options = {
+            rootMargin: '-50px 0px 0px 0px'
+        };
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add('show', entry.isIntersecting);
+                observer.unobserve(entry.target);
+            })
+        }, options);
+        observer.observe(section3title)
+        socials.forEach(social => {
+            observer.observe(social)
+        })
+    }, [])
     const sendEmail = (e) => {
         e.preventDefault();
         emailjs.sendForm('service_90ikj9l', 'template_xv6bpb7', form.current, 'user_p3bpXLoExjrQXv3GH5P7m')
@@ -18,7 +37,7 @@ function Section3() {
     }
     return (
         <section id="contact" className="section section3" >
-            <h3>Send me a message!</h3>
+            <h3 className="section3-title">Send me a message!</h3>
             <div className="wrapper">
                 <div className="email-container">
                     <form className="form" ref={form} onSubmit={sendEmail}>

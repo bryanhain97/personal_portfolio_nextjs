@@ -58,9 +58,9 @@ section {
 .section2 {
     position: relative;
     background-color: $section2bg;
-    color: rgb(30, 30, 30);
+    color: #cccccc;
     height: min-content;
-    padding: 5rem 0;
+    padding: 4rem 0 4rem 0;
     @include mobile() {
         padding: 4rem 0;
     }
@@ -85,10 +85,17 @@ section {
         z-index: 2;
         transition: all 0.75s ease-out;
         h2 {
-            border-bottom: 2px solid $grey;
+            text-align: center;
+            padding: 5px 0;
+            text-transform: uppercase;
+            border-top: 2px solid #eeeeee;
+            border-bottom: 2px solid #eeeeee;
             margin-bottom: 2rem;
-            letter-spacing: 3px;
+            letter-spacing: 0.5rem;
             color: $h2blue;
+            @include tablet(){
+                letter-spacing: 5px;
+            }
         }
         div.head-proficiencies,
         div.head-like,
@@ -137,12 +144,12 @@ section {
                         }
                     }
                     &.facts-list {
-                        margin: 0 0 0 1rem;
-                        list-style-type: decimal;
+                        margin: 0;
+                        list-style-type: none;
                         display: flex;
                         flex-direction: column;
                         li.list-item {
-                            color: rgb(30, 30, 30);
+                            color: #cccccc;
                             padding: 0.5rem 0 0.5rem 0;
                             position: relative;
                             bottom: -35px;
@@ -160,11 +167,20 @@ section {
 .section3 {
     height: min-content;
     padding: 2rem 0 1rem 0;
-    background-color: rgb(0, 35, 0);
+    background-color: #11503a;
     color: white;
-    h3 {
+    .section3-title {
+        text-transform: uppercase;
         text-align: center;
+        letter-spacing: 1px;
         margin-bottom: 2rem;
+        opacity: 0;
+        bottom: -35px;
+        transition: all 0.75s ease-in-out;
+        &.show {
+            opacity: 1;
+            bottom: 0px;
+        }
     }
     .wrapper {
         display: grid;
@@ -204,6 +220,7 @@ section {
                     padding: 12px 0;
                     text-align: center;
                     width: 150px;
+                    cursor: pointer;
                     margin: 0.5rem 0 0 auto;
                     font-size: 1rem;
                     border-radius: 8px;
@@ -220,7 +237,7 @@ section {
             align-items: center;
             justify-content: center;
             .social-container {
-                padding-right: 2rem;
+                padding-right: 1rem;
                 display: flex;
                 flex-direction: column;
                 height: 100%;
@@ -232,20 +249,27 @@ section {
                     justify-content: flex-start;
                     color: white;
                     text-decoration: none;
+                    opacity: 0;
+                    bottom: -35px;
+                    transition: all 0.75s ease-in-out;
+                    &.show {
+                        opacity: 1;
+                        bottom: 0px;
+                    }
                     .social-icon {
                         transform: scale(2);
                         margin: 0 1.5rem;
                         &.social-icon-github {
-                            color:rgb(183, 183, 183)
+                            color:rgb(27, 27, 27)
                         }
                         &.social-icon-twitter{
-                            color: rgb(56, 131, 244)
+                            color: rgb(0, 102, 255)
                         }
                         &.social-icon-linkedin{
-                            color: rgb(40, 49, 226)
+                            color: rgb(0, 10, 205)
                         }
                         &.social-icon-instagram{
-                            color: rgb(146, 112, 97)
+                            color: rgb(49, 35, 18)
                         }
                     }
                     &::after {
