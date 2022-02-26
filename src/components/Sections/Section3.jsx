@@ -1,4 +1,4 @@
-import React, { useRef, useEffect} from 'react'
+import React, { useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { TiSocialTwitter, TiSocialLinkedin, TiSocialInstagram, TiSocialGithub } from 'react-icons/ti';
 
@@ -14,10 +14,12 @@ function Section3() {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
-                    return;
+                    return
                 }
-                entry.target.classList.add('show', entry.isIntersecting);
-                observer.unobserve(entry.target);
+                else {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target)
+                }
             })
         }, options);
         observer.observe(section3title)
@@ -46,7 +48,7 @@ function Section3() {
                         <label>Email</label>
                         <input type="email" name="user_email" required />
                         <label>Message</label>
-                        <textarea name="message" required/>
+                        <textarea name="message" required />
                         <input className="input-submit" type="submit" value="Send" />
                     </form>
                 </div>

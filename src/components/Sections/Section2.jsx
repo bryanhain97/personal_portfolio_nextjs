@@ -12,10 +12,12 @@ function Section2() {
         const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
-                    return;
+                    return
                 }
-                entry.target.classList.toggle('show', entry.isIntersecting);
-                observer.unobserve(entry.target);
+                else {
+                    entry.target.classList.add('show');
+                    observer.unobserve(entry.target)
+                }
             })
         }, options);
         listItems.forEach(listItem => {
@@ -49,10 +51,11 @@ function Section2() {
                 <div className="section2-head-text head-like">
                     <h2 className="section2-head-text-1 section2-title">what i like</h2>
                     <div className="paragraph-container">
-                        <p>I like to be productive.</p>
-                        <p>I enjoy being physically active, reading and also listening to podcasts.</p>
-                        <p>I try to eat as healthy as possible while also taking care of my finances.</p>
-                        <p>I like taking pictures aswell and be creative.</p>
+                        <p>Generally, i like to be productive</p>
+                        <p>I like being physically active and try to keep my body healthy and strong</p>
+                        <p>I like reading and also listening to podcasts</p>
+                        <p>I like to help people when i can</p>
+                        <p>Sometimes i enjoy having a walk outside and take pictures</p>
                     </div>
                 </div>
                 <div className="section2-head-text head-facts">
@@ -64,7 +67,7 @@ function Section2() {
                             <li className="list-item">Martial-Arts enthusiast</li>
                             <li className="list-item">Seems to never listen to his girlfriend</li>
                             <li className="list-item">Likes to keep it simple</li>
-                            <li className="list-item">Bites his nails when he's concentrated or focused</li>
+                            <li className="list-item">Bites his fingernails when he's concentrated or focused</li>
                             <li className="list-item">Laid-back type of person</li>
                         </ul>
                     </div>
