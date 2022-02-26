@@ -66,6 +66,7 @@ function Section3() {
                 <div className="coffee-container">
                     <div className="coffee">
                         <h3>Or buy me a <span>coffee!</span></h3>
+                        <div className="payment-container"> --- put coffee payment container in here --- </div>
                     </div>
                 </div>
             </div>
