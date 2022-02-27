@@ -12,10 +12,12 @@
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "babel-loader": "^8.2.3",
-    "dotenv": "^10.0.0",
+    "core-js": "^3.21.1",
+    "dotenv": "^16.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "regenerator-runtime": "^0.13.9"
   },
   "devDependencies": {
     "@babel/cli": "^7.16.7",

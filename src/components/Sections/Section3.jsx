@@ -1,10 +1,16 @@
 import React, { useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { TiSocialTwitter, TiSocialLinkedin, TiSocialInstagram, TiSocialGithub } from 'react-icons/ti';
-
+require('regenerator-runtime/runtime');
+require('core-js/stable');
 
 function Section3() {
     const form = useRef()
+    const makeCallToServer = async () => {
+        const res = await fetch('https://thatguybryan-server.herokuapp.com/')
+        const answer = await res.json()
+        console.log(answer) // WORKS, WE CAN TALK TO OUR SERVER NOW!!!! :) 
+    }
     useEffect(() => {
         const section3title = document.querySelector('.section3-title')
         const socials = document.querySelectorAll('.social')
@@ -67,6 +73,7 @@ function Section3() {
                     <div className="coffee">
                         <h3>Or buy me a <span>coffee!</span></h3>
                         <div className="payment-container"> --- put coffee payment container in here --- </div>
+                        <button onClick={makeCallToServer}>server call</button>
                     </div>
                 </div>
             </div>
