@@ -336,7 +336,7 @@ section {
 
 .section3 {
   height: min-content;
-  padding: 2rem 0 1rem 0;
+  padding: 2rem 0;
   background-color: #11503a;
   color: white;
 }
@@ -355,25 +355,31 @@ section {
 }
 .section3 .wrapper {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 5fr 3fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "email socials" "coffee coffee";
+  grid-template-areas: "email socials coffee";
   gap: 1rem;
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
+}
+@media (max-width: 1023px) {
+  .section3 .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "email socials" "coffee coffee";
+  }
 }
 @media (max-width: 768px) {
   .section3 .wrapper {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto;
-    grid-template-areas: "email" "socials" "coffee";
+    gap: 0;
+    grid-template-areas: "email email" "socials socials" "coffee coffee";
   }
 }
 .section3 .wrapper .email-container {
   margin: 0 auto;
-  flex: 1 1;
-  padding: 0 1rem;
-  min-width: 340px;
+  width: 95%;
   grid-area: email;
 }
 .section3 .wrapper .email-container .form {
@@ -410,13 +416,16 @@ section {
 }
 .section3 .wrapper .socials {
   grid-area: socials;
-  padding: 0 1rem;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+@media (max-width: 768px) {
+  .section3 .wrapper .socials {
+    justify-content: space-evenly;
+  }
 }
 .section3 .wrapper .socials .social-container {
-  padding-right: 1rem;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -433,6 +442,12 @@ section {
   bottom: -35px;
   transition: all 0.75s ease-in-out;
 }
+@media (max-width: 768px) {
+  .section3 .wrapper .socials .social-container .social {
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+}
 .section3 .wrapper .socials .social-container .social.show {
   opacity: 1;
   bottom: 0px;
@@ -445,13 +460,13 @@ section {
   color: #1b1b1b;
 }
 .section3 .wrapper .socials .social-container .social .social-icon.social-icon-twitter {
-  color: #0066ff;
+  color: #0f81f3;
 }
 .section3 .wrapper .socials .social-container .social .social-icon.social-icon-linkedin {
-  color: #000acd;
+  color: #0004ff;
 }
 .section3 .wrapper .socials .social-container .social .social-icon.social-icon-instagram {
-  color: #47210b;
+  color: #2c1305;
 }
 .section3 .wrapper .socials .social-container .social::after {
   position: absolute;
@@ -460,7 +475,7 @@ section {
   left: 0;
   width: 0px;
   border-bottom: 2px solid white;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.25s ease-in-out;
 }
 .section3 .wrapper .socials .social-container .social:hover::after {
   width: 100%;
@@ -468,8 +483,10 @@ section {
 .section3 .wrapper .socials .img-container {
   width: 100%;
   display: flex;
+  margin-left: 1rem;
   align-items: flex-start;
   max-height: 260px;
+  min-width: 200px;
   max-width: 260px;
 }
 .section3 .wrapper .socials .img-container img {
@@ -479,9 +496,10 @@ section {
   height: 100%;
 }
 .section3 .wrapper .coffee-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   grid-area: coffee;
-  grid-column: 1/3;
-  padding: 1rem 0 1rem 0;
 }
 .section3 .wrapper .coffee-container * {
   margin: 0;
@@ -490,11 +508,48 @@ section {
 .section3 .wrapper .coffee-container .coffee {
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
+  width: 200px;
+  flex: 1;
+}
+@media (max-width: 1023px) {
+  .section3 .wrapper .coffee-container .coffee {
+    justify-content: flex-start;
+  }
 }
 .section3 .wrapper .coffee-container .coffee h3 {
-  color: #ecc7aa;
+  position: relative;
+  background-image: linear-gradient(90deg, #ecc7aa, #9c6940);
+  background-clip: initial;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 1rem;
+  cursor: pointer;
+  padding-bottom: 1rem;
 }
-.section3 .wrapper .coffee-container .coffee h3 span {
-  color: #aa5917;
+.section3 .wrapper .coffee-container .coffee h3::after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 0%;
+  border-bottom: 2px solid white;
+  transition: width 0.25s ease;
+}
+.section3 .wrapper .coffee-container .coffee h3:hover::after {
+  width: 100%;
+}
+.section3 .wrapper .coffee-container .coffee .coffee-logo {
+  max-width: 140px;
+  height: auto;
+}
+.section3 .wrapper .coffee-container .coffee-text {
+  flex: 1;
+  display: none;
+}
+@media (max-width: 1023px) {
+  .section3 .wrapper .coffee-container .coffee-text {
+    display: flex;
+  }
 }

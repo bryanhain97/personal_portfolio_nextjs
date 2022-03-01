@@ -6,11 +6,11 @@ require('core-js/stable');
 
 function Section3() {
     const form = useRef()
-    const makeCallToServer = async () => {
-        const res = await fetch('https://thatguybryan-server.herokuapp.com/')
-        const answer = await res.json()
-        console.log(answer) // WORKS, WE CAN TALK TO OUR SERVER NOW!!!! :) 
-    }
+    // const makeCallToServer = async () => {
+    //     const res = await fetch('https://thatguybryan-server.herokuapp.com/')
+    //     const answer = await res.json()
+    //     console.log(answer) // WORKS, WE CAN TALK TO OUR SERVER NOW!!!! :) 
+    // }
     useEffect(() => {
         const section3title = document.querySelector('.section3-title')
         const socials = document.querySelectorAll('.social')
@@ -45,7 +45,7 @@ function Section3() {
     }
     return (
         <section id="contact" className="section section3" >
-            <h3 className="section3-title">Send me a message!</h3>
+            <h3 className="section3-title">Feel free to connect!</h3>
             <div className="wrapper">
                 <div className="email-container">
                     <form className="form" ref={form} onSubmit={sendEmail}>
@@ -71,9 +71,11 @@ function Section3() {
                 </div>
                 <div className="coffee-container">
                     <div className="coffee">
-                        <h3>Or buy me a <span>coffee!</span></h3>
-                        <div className="payment-container"> --- put coffee payment container in here --- </div>
-                        <button onClick={makeCallToServer}>server call</button>
+                        <img className="coffee-logo" src="./pictures/coffee.svg" alt="a cup of coffee" />
+                        <h3>share a <span>coffee!</span></h3>
+                    </div>
+                    <div className="coffee-text">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo dolorum nostrum natus, id sunt hic, minus doloremque itaque mollitia totam quos veniam atque. Fuga voluptates necessitatibus ab, veniam eius vel quae laboriosam labore qui quaerat, laborum, nulla ratione quis?</p>
                     </div>
                 </div>
             </div>

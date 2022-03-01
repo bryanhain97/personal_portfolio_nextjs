@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { VscChromeClose } from 'react-icons/vsc';
+import { VscChromeClose, VscMenu } from 'react-icons/vsc';
 
 function Navbar({ menuOpen, setMenuOpen }) {
     useEffect(() => {
@@ -47,7 +47,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                 </nav>
                 <nav className="navbar-small">
                     <button className="menu-button" onClick={clickMenuButton}>
-                        {menuOpen ? <VscChromeClose className="menu-button-icon" /> : 'menu'}
+                        {menuOpen ? <VscChromeClose className="menu-button-icon" /> : <VscMenu className="menu-button-icon" />}
                     </button>
                 </nav>
             </div>
