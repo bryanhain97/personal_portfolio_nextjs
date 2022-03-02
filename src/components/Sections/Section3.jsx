@@ -6,11 +6,6 @@ require('core-js/stable');
 
 function Section3() {
     const form = useRef()
-    // const makeCallToServer = async () => {
-    //     const res = await fetch('https://thatguybryan-server.herokuapp.com/')
-    //     const answer = await res.json()
-    //     console.log(answer) // WORKS, WE CAN TALK TO OUR SERVER NOW!!!! :) 
-    // }
     useEffect(() => {
         const section3title = document.querySelector('.section3-title')
         const socials = document.querySelectorAll('.social')
