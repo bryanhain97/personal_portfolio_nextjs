@@ -11,6 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
+    "@stripe/react-stripe-js": "^1.7.0",
+    "@stripe/stripe-js": "^1.24.0",
     "babel-loader": "^8.2.3",
     "core-js": "^3.21.1",
     "dotenv": "^16.0.0",

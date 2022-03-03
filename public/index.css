@@ -367,7 +367,7 @@ section {
   grid-template-rows: auto;
   grid-template-areas: "email socials coffee";
   gap: 1rem;
-  width: 95%;
+  width: 92%;
   margin: 0 auto;
 }
 @media (max-width: 1023px) {
@@ -433,7 +433,7 @@ section {
 }
 @media (max-width: 768px) {
   .section3 .wrapper .socials {
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 }
 .section3 .wrapper .socials .social-container {
@@ -455,7 +455,8 @@ section {
 }
 @media (max-width: 768px) {
   .section3 .wrapper .socials .social-container .social {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
     font-weight: 500;
   }
 }
@@ -561,17 +562,24 @@ section {
 }
 @media (max-width: 1023px) {
   .section3 .wrapper .coffee-container .coffee-text {
+    padding-left: 1rem;
     display: flex;
   }
 }
 
 .section4 {
-  background-color: black;
+  height: 300px;
+  background: burlywood;
 }
-.section4 .card {
+.section4 .form-element {
+  width: 300px;
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(221, 221, 221, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(209, 213, 219, 0.3);
+  transition: background-color 0.35s ease;
+}
+.section4 .form-element:hover {
+  background-color: rgba(240, 240, 240, 0.795);
 }

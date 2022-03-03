@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Section1 from './components/Sections/Section1.jsx';
 import Section2 from './components/Sections/Section2.jsx';
 import Section3 from './components/Sections/Section3.jsx';
-// import Section4 from './components/Sections/Section4.jsx';
-
+import Product from './components/CardPaymentForm/CardPaymentForm.jsx';
 
 function App() {
     const menuItems = document.querySelectorAll('ul.menu a')
@@ -22,10 +21,9 @@ function App() {
             <Section1 />
             <Section2 />
             <Section3 />
-            {/* <Section4 /> */}
+            <Product />
         </div >
     )
 }
 
 export default App
-
