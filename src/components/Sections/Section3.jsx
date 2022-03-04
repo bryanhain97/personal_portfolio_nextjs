@@ -1,11 +1,33 @@
 import React, { useRef, useEffect } from 'react'
 import emailjs from '@emailjs/browser'
 import { TiSocialTwitter, TiSocialLinkedin, TiSocialInstagram, TiSocialGithub } from 'react-icons/ti';
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js'
 require('regenerator-runtime/runtime');
 require('core-js/stable');
+const stripePromise = loadStripe('pk_test_51KWQn4BU58LFQRGJhygnRUHbjcHl7r9hY1ziNjV50AgIyJyQXwaVMrECs9T7y0aq0ABAgLrqPsybQvYYSpb80uoo00FJu2Penm') // TEST PUBLIC API KEY
 
+const SERVER_URL = 'http://thatguybryan-server/create-checkout-session'
 function Section3() {
     const form = useRef()
+    const makeRequestToServer = async () => {
+        const coffee = { id: 1, quantity: 1 }
+        try {
+            const request = await fetch(SERVER_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    items: [coffee]
+                })
+            });
+            const answer = await request.json();
+            console.log(answer);
+        } catch (e) {
+            console.log(e.message);
+        }
+    }
     useEffect(() => {
         const section3title = document.querySelector('.section3-title')
         const socials = document.querySelectorAll('.social')
@@ -39,42 +61,44 @@ function Section3() {
         e.target.reset()
     }
     return (
-        <section id="contact" className="section section3" >
-            <h3 className="section3-title">Feel free to connect!</h3>
-            <div className="wrapper">
-                <div className="email-container">
-                    <form className="form" ref={form} onSubmit={sendEmail}>
-                        <label>Name</label>
-                        <input type="text" name="from_name" required />
-                        <label>Email</label>
-                        <input type="email" name="user_email" required />
-                        <label>Message</label>
-                        <textarea name="message" required />
-                        <input className="input-submit" type="submit" value="Send" />
-                    </form>
+        <Elements stripe={stripePromise}>
+            <section id="contact" className="section section3" >
+                <h3 className="section3-title">Feel free to connect!</h3>
+                <div className="wrapper">
+                    <div className="email-container">
+                        <form className="form" ref={form} onSubmit={sendEmail}>
+                            <label>Name</label>
+                            <input type="text" name="from_name" required />
+                            <label>Email</label>
+                            <input type="email" name="user_email" required />
+                            <label>Message</label>
+                            <textarea name="message" required />
+                            <input className="input-submit" type="submit" value="Send" />
+                        </form>
+                    </div>
+                    <div className="socials">
+                        <div className="social-container">
+                            <a href="https://github.com/bryanhain97" target="_blank" className="social"><TiSocialGithub className="social-icon social-icon-github" />GitHub</a>
+                            <a href="https://twitter.com/Bryan47588123" target="_blank" className="social"><TiSocialTwitter className="social-icon social-icon-twitter" />Twitter</a>
+                            <a href="https://www.linkedin.com/in/bryan-hain-572568206/" target="_blank" className="social"><TiSocialLinkedin className="social-icon social-icon-linkedin" />LinkedIn</a>
+                            <a href="https://www.instagram.com/bry4n_h/" target="_blank" className="social"><TiSocialInstagram className="social-icon social-icon-instagram" />Instagram</a>
+                        </div>
+                        <div className="img-container">
+                            <img loading="lazy" src="./pictures/self.png" alt="selfie" />
+                        </div>
+                    </div>
+                    <div className="coffee-container">
+                        <div className="coffee">
+                            <img className="coffee-logo" src="./pictures/coffee.svg" alt="a cup of coffee" />
+                            <h3 onClick={makeRequestToServer}>share a <span>coffee!</span></h3>
+                        </div>
+                        <div className="coffee-text">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo dolorum nostrum natus, id sunt hic, minus doloremque itaque mollitia totam quos veniam atque. Fuga voluptates necessitatibus ab, veniam eius vel quae laboriosam labore qui quaerat, laborum, nulla ratione quis?</p>
+                        </div>
+                    </div>
                 </div>
-                <div className="socials">
-                    <div className="social-container">
-                        <a href="https://github.com/bryanhain97" target="_blank" className="social"><TiSocialGithub className="social-icon social-icon-github" />GitHub</a>
-                        <a href="https://twitter.com/Bryan47588123" target="_blank" className="social"><TiSocialTwitter className="social-icon social-icon-twitter" />Twitter</a>
-                        <a href="https://www.linkedin.com/in/bryan-hain-572568206/" target="_blank" className="social"><TiSocialLinkedin className="social-icon social-icon-linkedin" />LinkedIn</a>
-                        <a href="https://www.instagram.com/bry4n_h/" target="_blank" className="social"><TiSocialInstagram className="social-icon social-icon-instagram" />Instagram</a>
-                    </div>
-                    <div className="img-container">
-                        <img loading="lazy" src="./pictures/self.png" alt="selfie" />
-                    </div>
-                </div>
-                <div className="coffee-container">
-                    <div className="coffee">
-                        <img className="coffee-logo" src="./pictures/coffee.svg" alt="a cup of coffee" />
-                        <h3>share a <span>coffee!</span></h3>
-                    </div>
-                    <div className="coffee-text">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo dolorum nostrum natus, id sunt hic, minus doloremque itaque mollitia totam quos veniam atque. Fuga voluptates necessitatibus ab, veniam eius vel quae laboriosam labore qui quaerat, laborum, nulla ratione quis?</p>
-                    </div>
-                </div>
-            </div>
-        </section >
+            </section >
+        </Elements>
     )
 }
 

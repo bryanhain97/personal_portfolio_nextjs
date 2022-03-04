@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Section1 from './components/Sections/Section1.jsx';
 import Section2 from './components/Sections/Section2.jsx';
 import Section3 from './components/Sections/Section3.jsx';
-import Product from './components/CardPaymentForm/CardPaymentForm.jsx';
+
 
 function App() {
     const menuItems = document.querySelectorAll('ul.menu a')
@@ -17,11 +17,10 @@ function App() {
     })
     return (
         <div className="app-container">
-            <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-            <Section1 />
-            <Section2 />
-            <Section3 />
-            <Product />
+                <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+                <Section1 />
+                <Section2 />
+                <Section3 />
         </div >
     )
 }
