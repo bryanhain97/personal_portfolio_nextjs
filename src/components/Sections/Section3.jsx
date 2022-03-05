@@ -7,11 +7,12 @@ require('regenerator-runtime/runtime');
 require('core-js/stable');
 const stripePromise = loadStripe('pk_test_51KWQn4BU58LFQRGJhygnRUHbjcHl7r9hY1ziNjV50AgIyJyQXwaVMrECs9T7y0aq0ABAgLrqPsybQvYYSpb80uoo00FJu2Penm') // TEST PUBLIC API KEY
 
-const SERVER_URL = 'http://thatguybryan-server/create-checkout-session'
+// const LOCAL_SERVER_URL = 'http://localhost:1220/create-checkout-session';
+const SERVER_URL = 'https://thatguybryan-server.herokuapp.com/create-checkout-session'
 function Section3() {
     const form = useRef()
     const makeRequestToServer = async () => {
-        const coffee = { id: 1, quantity: 1 }
+        const cupOfCoffee = { id: 1, quantity: 1 }
         try {
             const request = await fetch(SERVER_URL, {
                 method: "POST",
@@ -19,11 +20,11 @@ function Section3() {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
-                    items: [coffee]
+                    items: [cupOfCoffee]
                 })
             });
-            const answer = await request.json();
-            console.log(answer);
+            const paymentURL = await request.json();
+            window.location = paymentURL
         } catch (e) {
             console.log(e.message);
         }
