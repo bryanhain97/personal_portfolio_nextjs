@@ -9,7 +9,7 @@ section {
 .section1 {
     position: relative;
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     max-width: 100vw;
     max-height: 100vh;
     height: 100vh;
@@ -295,7 +295,7 @@ section {
                             color: rgb(0, 4, 255);
                         }
                         &.social-icon-instagram {
-                            color: rgb(44, 19, 5);
+                            color: rgb(62, 23, 0);
                         }
                     }
                     &::after {

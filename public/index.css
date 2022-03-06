@@ -159,7 +159,7 @@ section {
 .section1 {
   position: relative;
   background-size: cover;
-  background-attachment: scroll;
+  background-attachment: fixed;
   max-width: 100vw;
   max-height: 100vh;
   height: 100vh;
@@ -471,7 +471,7 @@ section {
   color: #0004ff;
 }
 .section3 .wrapper .socials .social-container .social .social-icon.social-icon-instagram {
-  color: #2c1305;
+  color: #3e1700;
 }
 .section3 .wrapper .socials .social-container .social::after {
   position: absolute;
