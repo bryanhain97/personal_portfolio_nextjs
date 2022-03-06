@@ -159,9 +159,9 @@ section {
 .section1 {
   position: relative;
   background-size: cover;
-  background-attachment: fixed;
   max-width: 100vw;
   max-height: 100vh;
+  background-attachment: scroll;
   height: 100vh;
 }
 .section1 .tgb-logo {
@@ -471,7 +471,7 @@ section {
   color: #0004ff;
 }
 .section3 .wrapper .socials .social-container .social .social-icon.social-icon-instagram {
-  color: #3e1700;
+  color: #78360f;
 }
 .section3 .wrapper .socials .social-container .social::after {
   position: absolute;
