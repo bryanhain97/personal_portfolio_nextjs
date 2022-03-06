@@ -97,11 +97,11 @@ section {
             text-align: center;
             padding: 5px 0;
             text-transform: uppercase;
-            border-top: 2px solid #eeeeee;
-            border-bottom: 2px solid #eeeeee;
+            border-top: 2px solid $sec2Border;
+            border-bottom: 2px solid $sec2Border;
             margin-bottom: 2rem;
             letter-spacing: 0.5rem;
-            color: $h2blue;
+            color: $section2Title;
             @include tablet() {
                 letter-spacing: 5px;
             }
@@ -141,7 +141,7 @@ section {
                     flex-wrap: wrap;
                     margin: 1rem 0 0 1rem;
                     li.list-item {
-                        color: $blue;
+                        color: $proficiency;
                         padding: 1rem 2rem 0 0;
                         position: relative;
                         opacity: 0;
@@ -176,7 +176,7 @@ section {
 .section3 {
     height: min-content;
     padding: 2rem 0;
-    background-color: #1a3d31;
+    background-color: $section3bg;
     color: white;
     .section3-title {
         text-transform: uppercase;
@@ -197,7 +197,7 @@ section {
         grid-template-rows: auto;
         grid-template-areas: "email socials coffee";
         gap: 1rem;
-        width: 92%;
+        width: 95%;
         margin: 0 auto;
         @include laptop() {
             grid-template-columns: 1fr 1fr;

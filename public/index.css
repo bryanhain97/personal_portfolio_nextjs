@@ -58,7 +58,7 @@ div.navbar-container > nav.navbar.scrolled {
   background-color: rgba(15, 15, 15, 0.9);
 }
 div.navbar-container > nav.navbar.scrolled ul a li {
-  color: #ecbfbf;
+  color: #f8d59e;
 }
 div.navbar-container > nav.navbar > ul.navbar-list {
   font-size: 1.2rem;
@@ -255,11 +255,11 @@ section {
   text-align: center;
   padding: 5px 0;
   text-transform: uppercase;
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid #eeeeee;
+  border-top: 2px solid #bebebe;
+  border-bottom: 2px solid #bebebe;
   margin-bottom: 2rem;
   letter-spacing: 0.5rem;
-  color: #ecbfbf;
+  color: #f8d59e;
 }
 @media (max-width: 768px) {
   .section2 .section2-head h2 {
@@ -306,7 +306,7 @@ section {
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item,
 .section2 .section2-head div.head-facts .paragraph-container ul li.list-item {
-  color: #edf4b6;
+  color: #b6e5f4;
   padding: 1rem 2rem 0 0;
   position: relative;
   opacity: 0;
@@ -345,7 +345,7 @@ section {
 .section3 {
   height: min-content;
   padding: 2rem 0;
-  background-color: #1a3d31;
+  background-color: #09413f;
   color: white;
 }
 .section3 .section3-title {
@@ -367,7 +367,7 @@ section {
   grid-template-rows: auto;
   grid-template-areas: "email socials coffee";
   gap: 1rem;
-  width: 92%;
+  width: 95%;
   margin: 0 auto;
 }
 @media (max-width: 1023px) {
