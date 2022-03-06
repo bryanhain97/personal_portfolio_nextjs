@@ -69,7 +69,7 @@ section {
     background-color: $section2bg;
     color: #cccccc;
     height: min-content;
-    padding: 4rem 0 4rem 0;
+    padding: 4rem 0 3rem 0;
     @include mobile() {
         padding: 4rem 0;
     }
@@ -176,7 +176,7 @@ section {
 .section3 {
     height: min-content;
     padding: 2rem 0;
-    background-color: #11503a;
+    background-color: #1a3d31;
     color: white;
     .section3-title {
         text-transform: uppercase;

@@ -224,7 +224,7 @@ section {
   background-color: #0f0f0f;
   color: #cccccc;
   height: min-content;
-  padding: 4rem 0 4rem 0;
+  padding: 4rem 0 3rem 0;
 }
 @media (max-width: 425px) {
   .section2 {
@@ -306,7 +306,7 @@ section {
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item,
 .section2 .section2-head div.head-facts .paragraph-container ul li.list-item {
-  color: #2dad82;
+  color: #edf4b6;
   padding: 1rem 2rem 0 0;
   position: relative;
   opacity: 0;
@@ -345,7 +345,7 @@ section {
 .section3 {
   height: min-content;
   padding: 2rem 0;
-  background-color: #11503a;
+  background-color: #1a3d31;
   color: white;
 }
 .section3 .section3-title {
