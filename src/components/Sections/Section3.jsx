@@ -11,8 +11,10 @@ const stripePromise = loadStripe('pk_test_51KWQn4BU58LFQRGJhygnRUHbjcHl7r9hY1ziN
 const SERVER_URL = 'https://thatguybryan-server.herokuapp.com/create-checkout-session'
 function Section3() {
     const form = useRef()
+    const h3Title = useRef();
     const makeRequestToServer = async () => {
         const cupOfCoffee = { id: 1, quantity: 1 }
+        h3Title.current.style.cursor = 'wait'
         try {
             const request = await fetch(SERVER_URL, {
                 method: "POST",
@@ -91,7 +93,7 @@ function Section3() {
                     <div className="coffee-container">
                         <div className="coffee">
                             <img className="coffee-logo" src="./pictures/coffee.svg" alt="a cup of coffee" />
-                            <h3 onClick={makeRequestToServer}>share a <span>coffee!</span></h3>
+                            <h3 ref={h3Title} onClick={makeRequestToServer}>share a <span>coffee!</span></h3>
                         </div>
                         <div className="coffee-text">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam explicabo dolorum nostrum natus, id sunt hic, minus doloremque itaque mollitia totam quos veniam atque. Fuga voluptates necessitatibus ab, veniam eius vel quae laboriosam labore qui quaerat, laborum, nulla ratione quis?</p>

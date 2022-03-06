@@ -221,7 +221,7 @@ section {
             grid-area: email;
             .form {
                 & * {
-                    padding: 0.5rem 0
+                    padding: 0.5rem 0;
                 }
                 display: flex;
                 flex-direction: column;
@@ -346,12 +346,12 @@ section {
                 flex-direction: column;
                 width: 200px;
                 flex: 1;
-                @include laptop(){
+                @include laptop() {
                     justify-content: flex-start;
                 }
                 h3 {
                     position: relative;
-                    background-image: linear-gradient(90deg,rgb(236, 199, 170),rgb(156, 105, 64));
+                    background-image: linear-gradient(90deg, rgb(236, 199, 170), rgb(156, 105, 64));
                     background-clip: initial;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
@@ -367,7 +367,7 @@ section {
                         border-bottom: 2px solid white;
                         transition: width 0.25s ease;
                     }
-                    &:hover{
+                    &:hover {
                         &::after {
                             width: 100%;
                         }
@@ -381,7 +381,7 @@ section {
             .coffee-text {
                 flex: 1;
                 display: none;
-                @include laptop(){
+                @include laptop() {
                     padding-left: 1rem;
                     display: flex;
                 }
