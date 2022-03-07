@@ -45,6 +45,9 @@ function Section2() {
                             <li className="list-item">Express</li>
                             <li className="list-item">React</li>
                             <li className="list-item">NodeJS</li>
+                            <li className="list-item">Git</li>
+                            <li className="list-item">CI/CD</li>
+                            <li className="list-item">Webpack</li>
                         </ul>
                     </div>
                 </div>
