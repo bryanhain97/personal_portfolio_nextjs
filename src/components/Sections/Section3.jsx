@@ -7,7 +7,6 @@ require('regenerator-runtime/runtime');
 require('core-js/stable');
 const stripePromise = loadStripe('pk_test_51KWQn4BU58LFQRGJhygnRUHbjcHl7r9hY1ziNjV50AgIyJyQXwaVMrECs9T7y0aq0ABAgLrqPsybQvYYSpb80uoo00FJu2Penm') // TEST PUBLIC API KEY
 
-// const LOCAL_SERVER_URL = 'http://localhost:1220/create-checkout-session';
 const SERVER_URL = 'https://thatguybryan-server.herokuapp.com/create-checkout-session'
 function Section3() {
     const form = useRef()

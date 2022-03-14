@@ -97,8 +97,9 @@ section {
             text-align: center;
             padding: 5px 0;
             text-transform: uppercase;
-            border-top: 2px solid $sec2Border;
-            border-bottom: 2px solid $sec2Border;
+            border-top: 3px solid $sec2Border;
+            border-bottom: 4px solid $sec2Border;
+            box-shadow: 6px 3px 12px rgb(154, 154, 154);
             margin-bottom: 2rem;
             letter-spacing: 0.5rem;
             color: $section2Title;
@@ -184,8 +185,8 @@ section {
         letter-spacing: 1px;
         margin-bottom: 2rem;
         opacity: 0;
-        bottom: -35px;
-        transition: all 0.75s ease-in-out;
+        bottom: -15px;
+        transition: all .5s ease-in-out;
         &.show {
             opacity: 1;
             bottom: 0px;
@@ -270,14 +271,14 @@ section {
                 justify-content: space-evenly;
                 .social {
                     position: relative;
-                    padding: 0.5rem 0 1rem 0;
+                    padding: 0.5rem 1rem 1rem 0;
                     display: flex;
                     justify-content: flex-start;
                     color: white;
                     text-decoration: none;
                     opacity: 0;
-                    bottom: -35px;
-                    transition: all 0.75s ease-in-out;
+                    bottom: -15px;
+                    transition: all .5s ease-in-out;
                     &.show {
                         opacity: 1;
                         bottom: 0px;
@@ -295,21 +296,26 @@ section {
                             color: rgb(0, 4, 255);
                         }
                         &.social-icon-instagram {
-                            color: rgb(120, 54, 15);
+                            color: rgb(52, 29, 16);
                         }
                     }
                     &::after {
                         position: absolute;
                         content: "";
                         bottom: 0;
-                        left: 0;
-                        width: 0px;
-                        border-bottom: 2px solid white;
-                        transition: all 0.25s ease-in-out;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        border-bottom: 3px solid rgb(255, 255, 255);
+                        border-right: 2px solid rgb(203, 203, 203);
+                        border-radius: 6px;
+                        box-shadow: 6px 3px 10px rgb(154, 154, 154);
+                        transition: all .2s ease-in-out;
                     }
                     &:hover {
+                        bottom: 6px;
                         &::after {
-                            width: 100%;
+                            opacity: 1;
                         }
                     }
                 }
@@ -323,7 +329,7 @@ section {
                 min-width: 200px;
                 max-width: 260px;
                 img {
-                    border: 2px solid rgb(255, 255, 255);
+                    border: 2px solid white;
                     border-radius: 50%;
                     width: 100%;
                     height: 100%;
@@ -360,16 +366,17 @@ section {
                     padding-bottom: 1rem;
                     &::after {
                         position: absolute;
-                        left: 0;
+                        right: 0;
                         bottom: 0;
                         content: "";
-                        width: 0%;
-                        border-bottom: 2px solid white;
-                        transition: width 0.25s ease;
+                        width: 100%;
+                        opacity: 0;
+                        border-bottom: 2px solid rgb(172, 215, 255);
+                        transition: opacity 0.3s ease;
                     }
                     &:hover {
                         &::after {
-                            width: 100%;
+                            opacity: 1;
                         }
                     }
                 }
