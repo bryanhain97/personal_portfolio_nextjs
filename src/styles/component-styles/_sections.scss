@@ -13,13 +13,6 @@ section {
     max-height: 100vh;
     background-attachment: scroll;
     height: 100vh;
-    .tgb-logo {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 30px;
-        margin: 1rem;
-    }
     @include laptop() {
         background-position: 45%;
     }
@@ -99,7 +92,7 @@ section {
             text-transform: uppercase;
             border-top: 3px solid $sec2Border;
             border-bottom: 4px solid $sec2Border;
-            box-shadow: 6px 3px 12px rgb(154, 154, 154);
+            box-shadow: 3px 3px 12px rgb(154, 154, 154);
             margin-bottom: 2rem;
             letter-spacing: 0.5rem;
             color: $section2Title;
@@ -182,7 +175,7 @@ section {
     .section3-title {
         text-transform: uppercase;
         text-align: center;
-        letter-spacing: 1px;
+        letter-spacing: 2px;
         margin-bottom: 2rem;
         opacity: 0;
         bottom: -15px;
@@ -248,10 +241,12 @@ section {
                     width: 150px;
                     color: white;
                     text-transform: uppercase;
-                    background-color: $section2bg;
-                    transition: background-color 0.25s ease;
-                    &:hover {
-                        background-color: rgb(37, 37, 42);
+                    background-color: #052726;
+                    border-right: 1px solid white;
+                    border-bottom: 2px solid white;
+                    &:active {
+                        border: none;
+                        background-color: #021717;
                     }
                 }
             }
@@ -361,9 +356,13 @@ section {
                     background-clip: initial;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    margin-top: 1rem;
+                    margin-top: 0.5rem;
                     cursor: pointer;
-                    padding-bottom: 1rem;
+                    padding: 0.5rem;
+                    padding-bottom: 0.8rem;
+                    padding-top: 0.4rem;
+                    bottom: 0px;
+                    transition: all .5s ease;
                     &::after {
                         position: absolute;
                         right: 0;
@@ -371,16 +370,22 @@ section {
                         content: "";
                         width: 100%;
                         opacity: 0;
-                        border-bottom: 2px solid rgb(172, 215, 255);
-                        transition: opacity 0.3s ease;
+                        height: 100%;
+                        border-bottom: 3px solid white;
+                        border-right: 2px solid white;
+                        box-shadow: 6px 3px 10px rgb(154, 154, 154);
+                        border-radius: 5px;
+                        transition: opacity 0.2s ease;
                     }
                     &:hover {
+                        bottom: 6px;
                         &::after {
                             opacity: 1;
                         }
                     }
                 }
                 .coffee-logo {
+                    margin-bottom: 0.5rem;
                     max-width: 140px;
                     height: auto;
                 }

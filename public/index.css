@@ -164,13 +164,6 @@ section {
   background-attachment: scroll;
   height: 100vh;
 }
-.section1 .tgb-logo {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 30px;
-  margin: 1rem;
-}
 @media (max-width: 1023px) {
   .section1 {
     background-position: 45%;
@@ -257,7 +250,7 @@ section {
   text-transform: uppercase;
   border-top: 3px solid #e2e2e2;
   border-bottom: 4px solid #e2e2e2;
-  box-shadow: 6px 3px 12px #9a9a9a;
+  box-shadow: 3px 3px 12px #9a9a9a;
   margin-bottom: 2rem;
   letter-spacing: 0.5rem;
   color: #e9d6b1;
@@ -352,7 +345,7 @@ section {
 .section3 .section3-title {
   text-transform: uppercase;
   text-align: center;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   margin-bottom: 2rem;
   opacity: 0;
   bottom: -15px;
@@ -420,11 +413,13 @@ section {
   width: 150px;
   color: white;
   text-transform: uppercase;
-  background-color: #0f0f0f;
-  transition: background-color 0.25s ease;
+  background-color: #052726;
+  border-right: 1px solid white;
+  border-bottom: 2px solid white;
 }
-.section3 .wrapper .email-container .form input.input-submit:hover {
-  background-color: #25252a;
+.section3 .wrapper .email-container .form input.input-submit:active {
+  border: none;
+  background-color: #021717;
 }
 .section3 .wrapper .socials {
   grid-area: socials;
@@ -537,9 +532,13 @@ section {
   background-clip: initial;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   cursor: pointer;
-  padding-bottom: 1rem;
+  padding: 0.5rem;
+  padding-bottom: 0.8rem;
+  padding-top: 0.4rem;
+  bottom: 0px;
+  transition: all 0.5s ease;
 }
 .section3 .wrapper .coffee-container .coffee h3::after {
   position: absolute;
@@ -548,13 +547,21 @@ section {
   content: "";
   width: 100%;
   opacity: 0;
-  border-bottom: 2px solid #acd7ff;
-  transition: opacity 0.3s ease;
+  height: 100%;
+  border-bottom: 3px solid white;
+  border-right: 2px solid white;
+  box-shadow: 6px 3px 10px #9a9a9a;
+  border-radius: 5px;
+  transition: opacity 0.2s ease;
+}
+.section3 .wrapper .coffee-container .coffee h3:hover {
+  bottom: 6px;
 }
 .section3 .wrapper .coffee-container .coffee h3:hover::after {
   opacity: 1;
 }
 .section3 .wrapper .coffee-container .coffee .coffee-logo {
+  margin-bottom: 0.5rem;
   max-width: 140px;
   height: auto;
 }

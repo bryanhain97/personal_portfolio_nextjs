@@ -24,7 +24,6 @@ function Section1() {
     }, [loaded])
     return (
         <section id="home" className="section section1" data-src="./pictures/background.png">
-            <img className="tgb-logo" src="./pictures/android-chrome-512x512.png" alt="thatguybryan logo" />
             {loaded && (
                 <>
                     <div id="h1-text-container-1" className="h1-text-container">

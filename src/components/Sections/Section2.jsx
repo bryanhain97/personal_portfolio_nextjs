@@ -69,9 +69,9 @@ function Section2() {
                             <li className="list-item">Took a shower outside next to a bus station in the rain once</li>
                             <li className="list-item">Likes to buy books but don't always read them till the end</li>
                             <li className="list-item">Martial-Arts enthusiast</li>
-                            <li className="list-item">Seems to never listen to his girlfriend</li>
+                            <li className="list-item">Has no problem with going to the cinema alone</li>
                             <li className="list-item">Likes to keep it simple</li>
-                            <li className="list-item">Bites his fingernails when he's concentrated or focused</li>
+                            <li className="list-item">Sometimes a little bit reserved</li>
                             <li className="list-item">Laid-back type of person</li>
                         </ul>
                     </div>
