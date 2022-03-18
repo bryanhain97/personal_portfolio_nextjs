@@ -154,6 +154,7 @@ section {
   width: 100vw;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .section1 {
@@ -280,11 +281,13 @@ section {
   padding: 0.5rem 0 0.5rem 0;
   opacity: 0;
   bottom: -35px;
+  left: -100px;
   transition: all 0.75s ease-in-out;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container p.show,
 .section2 .section2-head div.head-like .paragraph-container p.show,
 .section2 .section2-head div.head-facts .paragraph-container p.show {
+  left: 0px;
   opacity: 1;
   bottom: 0px;
 }
@@ -306,10 +309,12 @@ section {
   opacity: 0;
   bottom: -35px;
   transition: all 0.75s ease-in-out;
+  right: -150px;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-facts .paragraph-container ul li.list-item.show {
+  right: 0px;
   opacity: 1;
   bottom: 0px;
 }
