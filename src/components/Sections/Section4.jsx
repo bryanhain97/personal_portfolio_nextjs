@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import BookCard from '../BookCard/BookCard.jsx'
 
-
 function Section4() {
   const [books, setBooks] = useState([]);
   const [searchBy, setSearchBy] = useState("");
@@ -14,7 +13,7 @@ function Section4() {
   const getBooks = async (searchBy) => {
     const search = JSON.stringify({ searchBy })
     try {
-      const response = await fetch('http://localhost:1220/get-books', {
+      const response = await fetch('https://thatguybryan-server.herokuapp.com/get-books', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
