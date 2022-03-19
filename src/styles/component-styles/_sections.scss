@@ -29,7 +29,7 @@ section {
         left: 50%;
         min-width: 340px;
         transform: translate(-50%, -50%);
-        transition: 1s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+        transition: 1s opacity ease;
         h1 {
             white-space: wrap;
             word-break: break-word;
@@ -56,6 +56,76 @@ section {
                 font-size: 2rem;
             }
         }
+    }
+    > div.hosting-container {
+        position: absolute;
+        background-color: rgba(50, 50, 50, 0.6);
+        color: rgb(233, 233, 233);
+        bottom: 0;
+        padding: 0.5rem;
+        border-radius: 3px;
+        right: 0;
+        margin: 2rem;
+        a {
+            color: $section2Title;
+            text-decoration: none;
+        }
+        .hosting-text {
+            height: 0;
+            display: hidden;
+            opacity: 0;
+            flex-direction: column;
+            transition: all 0.2s ease;
+            &.show {
+                padding-top: 0.5rem;
+                display: flex;
+                opacity: 1;
+                height: 60px;
+            }
+            p {
+                padding: 3px 0;
+            }
+        }
+    }
+    div.code-container,
+    div.hosting-container {
+        position: absolute;
+        background-color: rgba(50, 50, 50, 0.6);
+        color: rgb(233, 233, 233);
+        bottom: 0px;
+        letter-spacing: 3px;
+        cursor: pointer;
+        padding: 0.5rem;
+        border-radius: 3px;
+        margin: 2rem;
+        a {
+            color: $section2Title;
+            text-decoration: none;
+        }
+        .code-text,
+        .hosting-text {
+            height: 0;
+            display: hidden;
+            opacity: 0;
+            flex-direction: column;
+            transition: all 0.2s ease;
+            &.show {
+                padding-top: 0.5rem;
+                display: flex;
+                opacity: 1;
+                height: 60px;
+            }
+            p {
+                padding: 3px 0;
+            }
+        }
+    }
+    div.code-container {
+        right: 200px;
+        padding-right: 2rem;
+    }
+    div.hosting-container {
+        right: 0px;
     }
 }
 .section2 {
@@ -124,7 +194,7 @@ section {
                     opacity: 0;
                     bottom: -35px;
                     left: -100px;
-                    transition: all 0.75s ease-in-out;
+                    transition: all 0.66s ease;
                     &.show {
                         left: 0px;
                         opacity: 1;
@@ -143,7 +213,7 @@ section {
                         position: relative;
                         opacity: 0;
                         bottom: -35px;
-                        transition: all 0.75s ease-in-out;
+                        transition: all 0.66s ease;
                         right: -150px;
                         &.show {
                             right: 0px;
@@ -184,7 +254,7 @@ section {
         margin-bottom: 2rem;
         opacity: 0;
         bottom: -15px;
-        transition: all .5s ease-in-out;
+        transition: all 0.3s ease-in-out;
         &.show {
             opacity: 1;
             bottom: 0px;
@@ -278,7 +348,7 @@ section {
                     text-decoration: none;
                     opacity: 0;
                     bottom: -15px;
-                    transition: all .5s ease-in-out;
+                    transition: all 0.35s ease-in-out;
                     &.show {
                         opacity: 1;
                         bottom: 0px;
@@ -310,7 +380,7 @@ section {
                         border-right: 2px solid rgb(203, 203, 203);
                         border-radius: 6px;
                         box-shadow: 6px 3px 10px rgb(154, 154, 154);
-                        transition: all .2s ease-in-out;
+                        transition: all 0.2s ease-in-out;
                     }
                     &:hover {
                         bottom: 6px;
@@ -367,7 +437,7 @@ section {
                     padding-bottom: 0.8rem;
                     padding-top: 0.4rem;
                     bottom: 0px;
-                    transition: all .5s ease;
+                    transition: all 0.5s ease;
                     &::after {
                         position: absolute;
                         right: 0;
@@ -401,6 +471,27 @@ section {
                 @include laptop() {
                     padding-left: 1rem;
                     display: flex;
+                }
+            }
+        }
+    }
+}
+.section4 {
+    .section4-container {
+        width: 94vw;
+        margin: 0 auto;
+        height: max-content;
+        padding: 4rem 0;
+        .recommendation {
+            h3 {
+                padding: 1rem 0;
+            }
+            form {
+                height: 200px;
+                width: 350px;
+                .form-input {
+                    display: flex;
+                    flex-direction: column;
                 }
             }
         }

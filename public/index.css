@@ -184,7 +184,7 @@ section {
   left: 50%;
   min-width: 340px;
   transform: translate(-50%, -50%);
-  transition: 1s opacity cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: 1s opacity ease;
 }
 .section1 > div.h1-text-container h1 {
   white-space: wrap;
@@ -211,6 +211,85 @@ section {
   .section1 > div.h1-text-container h1 {
     font-size: 2rem;
   }
+}
+.section1 > div.hosting-container {
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: #e9e9e9;
+  bottom: 0;
+  padding: 0.5rem;
+  border-radius: 3px;
+  right: 0;
+  margin: 2rem;
+}
+.section1 > div.hosting-container a {
+  color: #e9d6b1;
+  text-decoration: none;
+}
+.section1 > div.hosting-container .hosting-text {
+  height: 0;
+  display: hidden;
+  opacity: 0;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+.section1 > div.hosting-container .hosting-text.show {
+  padding-top: 0.5rem;
+  display: flex;
+  opacity: 1;
+  height: 60px;
+}
+.section1 > div.hosting-container .hosting-text p {
+  padding: 3px 0;
+}
+.section1 div.code-container,
+.section1 div.hosting-container {
+  position: absolute;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: #e9e9e9;
+  bottom: 0px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 3px;
+  margin: 2rem;
+}
+.section1 div.code-container a,
+.section1 div.hosting-container a {
+  color: #e9d6b1;
+  text-decoration: none;
+}
+.section1 div.code-container .code-text,
+.section1 div.code-container .hosting-text,
+.section1 div.hosting-container .code-text,
+.section1 div.hosting-container .hosting-text {
+  height: 0;
+  display: hidden;
+  opacity: 0;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+.section1 div.code-container .code-text.show,
+.section1 div.code-container .hosting-text.show,
+.section1 div.hosting-container .code-text.show,
+.section1 div.hosting-container .hosting-text.show {
+  padding-top: 0.5rem;
+  display: flex;
+  opacity: 1;
+  height: 60px;
+}
+.section1 div.code-container .code-text p,
+.section1 div.code-container .hosting-text p,
+.section1 div.hosting-container .code-text p,
+.section1 div.hosting-container .hosting-text p {
+  padding: 3px 0;
+}
+.section1 div.code-container {
+  right: 200px;
+  padding-right: 2rem;
+}
+.section1 div.hosting-container {
+  right: 0px;
 }
 
 .section2 {
@@ -282,7 +361,7 @@ section {
   opacity: 0;
   bottom: -35px;
   left: -100px;
-  transition: all 0.75s ease-in-out;
+  transition: all 0.66s ease;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container p.show,
 .section2 .section2-head div.head-like .paragraph-container p.show,
@@ -308,7 +387,7 @@ section {
   position: relative;
   opacity: 0;
   bottom: -35px;
-  transition: all 0.75s ease-in-out;
+  transition: all 0.66s ease;
   right: -150px;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
@@ -354,7 +433,7 @@ section {
   margin-bottom: 2rem;
   opacity: 0;
   bottom: -15px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .section3 .section3-title.show {
   opacity: 1;
@@ -452,7 +531,7 @@ section {
   text-decoration: none;
   opacity: 0;
   bottom: -15px;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.35s ease-in-out;
 }
 .section3 .wrapper .socials .social-container .social.show {
   opacity: 1;
@@ -579,4 +658,22 @@ section {
     padding-left: 1rem;
     display: flex;
   }
+}
+
+.section4 .section4-container {
+  width: 94vw;
+  margin: 0 auto;
+  height: max-content;
+  padding: 4rem 0;
+}
+.section4 .section4-container .recommendation h3 {
+  padding: 1rem 0;
+}
+.section4 .section4-container .recommendation form {
+  height: 200px;
+  width: 350px;
+}
+.section4 .section4-container .recommendation form .form-input {
+  display: flex;
+  flex-direction: column;
 }

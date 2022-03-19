@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
+
 function Section1() {
     const [loaded, setLoaded] = useState(false);
+    const [showHostingInfo, setShowHostingInfo] = useState(false);
+    const [showCodeInfo, setShowCodeInfo] = useState(false);
     let text1Container;
     let text2Container;
     useEffect(() => {
@@ -22,6 +25,18 @@ function Section1() {
             text2Container?.classList.toggle('hidden')
         }, 4000)
     }, [loaded])
+    const toggleHostingInfo = () => {
+        setShowHostingInfo(!showHostingInfo);
+    }
+    const toggleCodeInfo = () => {
+        setShowCodeInfo(!showCodeInfo);
+    }
+    if (showHostingInfo) {
+        setTimeout(() => setShowHostingInfo(false), 3500)
+    }
+    if (showCodeInfo) {
+        setTimeout(() => setShowCodeInfo(false), 3500)
+    }
     return (
         <section id="home" className="section section1" data-src="./pictures/background.png">
             {loaded && (
@@ -35,6 +50,20 @@ function Section1() {
                         <h1 className="h1-text2">from Berlin, Germany.</h1>
                     </div>
                 </>)}
+            <div onClick={toggleCodeInfo} className="code-container">
+                <h3 className="code-heading">CODE</h3>
+                <div className={showCodeInfo ? "code-text show" : "code-text"}>
+                    <p className="code-name"><a className="code-link" href="https://github.com/bryanhain97/personal-portfolio">Client</a></p>
+                    <p className="code-name"><a className="code-link" href="https://github.com/bryanhain97/personal-portfolio-server">Server</a></p>
+                </div>
+            </div>
+            <div onClick={toggleHostingInfo} className="hosting-container">
+                <h3 className="hosting-heading">HOSTING</h3>
+                <div className={showHostingInfo ? "hosting-text show" : "hosting-text"}>
+                    <p className="hosting-name"><a className="hosting-link" href="https://www.netlify.com/">Client, Netlify</a></p>
+                    <p className="hosting-name"><a className="hosting-link" href="https://www.heroku.com/home">Server, Heroku</a></p>
+                </div>
+            </div>
         </section>
     )
 }
