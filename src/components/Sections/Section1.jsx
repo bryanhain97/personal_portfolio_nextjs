@@ -53,15 +53,15 @@ function Section1() {
             <div onClick={toggleCodeInfo} className="code-container">
                 <h3 className="code-heading">CODE</h3>
                 <div className={showCodeInfo ? "code-text show" : "code-text"}>
-                    <p className="code-name"><a className="code-link" href="https://github.com/bryanhain97/personal-portfolio">Client</a></p>
-                    <p className="code-name"><a className="code-link" href="https://github.com/bryanhain97/personal-portfolio-server">Server</a></p>
+                    <p className="code-name"><a className="code-link" target="_blank" href="https://github.com/bryanhain97/personal-portfolio">Client</a></p>
+                    <p className="code-name"><a className="code-link" target="_blank" href="https://github.com/bryanhain97/personal-portfolio-server">Server</a></p>
                 </div>
             </div>
             <div onClick={toggleHostingInfo} className="hosting-container">
                 <h3 className="hosting-heading">HOSTING</h3>
                 <div className={showHostingInfo ? "hosting-text show" : "hosting-text"}>
-                    <p className="hosting-name"><a className="hosting-link" href="https://www.netlify.com/">Client, Netlify</a></p>
-                    <p className="hosting-name"><a className="hosting-link" href="https://www.heroku.com/home">Server, Heroku</a></p>
+                    <p className="hosting-name"><a className="hosting-link" target="_blank" href="https://www.netlify.com/">Client, Netlify</a></p>
+                    <p className="hosting-name"><a className="hosting-link" target="_blank" href="https://www.heroku.com/home">Server, Heroku</a></p>
                 </div>
             </div>
         </section>
