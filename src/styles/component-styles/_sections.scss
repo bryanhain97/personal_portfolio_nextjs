@@ -57,36 +57,6 @@ section {
             }
         }
     }
-    > div.hosting-container {
-        position: absolute;
-        background-color: rgba(50, 50, 50, 0.6);
-        color: rgb(233, 233, 233);
-        bottom: 0;
-        padding: 0.5rem;
-        border-radius: 3px;
-        right: 0;
-        margin: 2rem;
-        a {
-            color: $section2Title;
-            text-decoration: none;
-        }
-        .hosting-text {
-            height: 0;
-            display: hidden;
-            opacity: 0;
-            flex-direction: column;
-            transition: all 0.2s ease;
-            &.show {
-                padding-top: 0.5rem;
-                display: flex;
-                opacity: 1;
-                height: 60px;
-            }
-            p {
-                padding: 3px 0;
-            }
-        }
-    }
     div.code-container,
     div.hosting-container {
         position: absolute;
@@ -105,11 +75,15 @@ section {
         .code-text,
         .hosting-text {
             height: 0;
+            pointer-events: none;
+            cursor: none;
             display: hidden;
             opacity: 0;
             flex-direction: column;
             transition: all 0.2s ease;
             &.show {
+                cursor: pointer;
+                pointer-events: all;
                 padding-top: 0.5rem;
                 display: flex;
                 opacity: 1;
@@ -133,7 +107,7 @@ section {
     background-color: $section2bg;
     color: #cccccc;
     height: min-content;
-    padding: 4rem 0 3rem 0;
+    padding: 4rem 0 2rem 0;
     @include mobile() {
         padding: 4rem 0;
     }
@@ -180,7 +154,7 @@ section {
             margin: 1rem auto;
             display: flex;
             flex-direction: column;
-            transition: all 0.75s ease-out;
+            transition: all 0.4s ease-out;
             opacity: 1;
             word-break: break-word;
         }
@@ -193,8 +167,8 @@ section {
                     padding: 0.5rem 0 0.5rem 0;
                     opacity: 0;
                     bottom: -35px;
-                    left: -100px;
-                    transition: all 0.66s ease;
+                    left: -35px;
+                    transition: all 0.4s ease;
                     &.show {
                         left: 0px;
                         opacity: 1;
@@ -213,8 +187,8 @@ section {
                         position: relative;
                         opacity: 0;
                         bottom: -35px;
-                        transition: all 0.66s ease;
-                        right: -150px;
+                        transition: all 0.4s ease;
+                        right: -35px;
                         &.show {
                             right: 0px;
                             opacity: 1;
@@ -230,7 +204,7 @@ section {
                             color: #cccccc;
                             padding: 0.5rem 0 0.5rem 0;
                             position: relative;
-                            bottom: -35px;
+                            bottom: -20px;
                             &.show {
                                 opacity: 1;
                                 bottom: 0px;
@@ -244,7 +218,7 @@ section {
 }
 .section3 {
     height: min-content;
-    padding: 2rem 0;
+    padding: 4rem 0 2rem 0;
     background-color: $section3bg;
     color: white;
     .section3-title {
@@ -254,7 +228,8 @@ section {
         margin-bottom: 2rem;
         opacity: 0;
         bottom: -15px;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.33s ease-in-out;
+        transition-delay: 0.5s;
         &.show {
             opacity: 1;
             bottom: 0px;
@@ -396,7 +371,7 @@ section {
                 margin-left: 1rem;
                 align-items: flex-start;
                 max-height: 260px;
-                min-width: 200px;
+                min-width: 180px;
                 max-width: 260px;
                 img {
                     border: 2px solid white;
@@ -477,19 +452,60 @@ section {
     }
 }
 .section4 {
+    height: fit-content;
+    padding: 4rem 0;
+    border-top: none;
+    min-height: 500px;
+    color: white;
+    background-image: linear-gradient(to top,  $section2Title 0%,  $section3bg 100%);
     .section4-container {
-        width: 94vw;
+        display: flex;
+        flex-direction: column;
+        width: 92vw;
         margin: 0 auto;
-        height: max-content;
-        padding: 4rem 0;
+        height: fit-content;
         .recommendation {
+            width: 100%;
             h3 {
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 2px;
                 padding: 1rem 0;
+                // opacity: 0;
+                transition: all 0.33s ease-in-out;
+                transition-delay: 0.5s;
+                &.show {
+                    opacity: 1;
+                    bottom: 0px;
+                }
             }
             form {
-                height: 200px;
+                height: fit-content;
+                padding: 2rem 0;
                 width: 350px;
                 .form-input {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+        .book-cards {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: fit-content;
+            column-gap: 1rem;
+            > .book-card {
+                width: 250px;
+                min-width: 200px;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                background-color: rgba(0, 0, 0, 0.128);
+                align-items: center;
+                > .container {
+                    width: 90%;
+                    height: 90%;
                     display: flex;
                     flex-direction: column;
                 }

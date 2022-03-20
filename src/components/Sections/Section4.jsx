@@ -6,7 +6,7 @@ function Section4() {
   const [searchBy, setSearchBy] = useState("");
 
   useEffect(() => {
-    console.log('BOOKS:::::::', books)
+    console.log('bookState has changed. books: ', books)
   }, [books])
 
 
@@ -48,8 +48,9 @@ function Section4() {
           </form>
         </div>
         <div className="book-cards">
-          {books.length > 0 && books.map(book => {
-            return <p>{book.title}</p>
+          {books.length > 0 && books.map((book, key) => {
+            const props = { ...book };
+            return <BookCard key={key} {...props} />
           })}
         </div>
       </div>
@@ -58,3 +59,20 @@ function Section4() {
 }
 
 export default Section4
+
+// authors: (2) ['Mike Tyson', 'Paul Sloman']
+// averageRating: 5
+// categories: ['Biography & Autobiography']
+// description: "A bare-knuckled, tell-all memoir from Mike Tyson, the onetime heavyweight champion of the world—and a legend both in and out of the ring."
+// id: "9FSvNAEACAAJ"
+// images: {}
+// industryIdentifiers: (2) [{…}, {…}]
+// language: "en"
+// link: "https://books.google.com/books/about/Undisputed_Truth_Subtitle_TK.html?hl=&id=9FSvNAEACAAJ"
+// maturityRating: "NOT_MATURE"
+// pageCount: 368
+// printType: "BOOK"
+// publishedDate: "2013-11-12"
+// publisher: "Blue Rider Press"
+// ratingsCount: 2
+// title: "Undisputed Truth: Subtitle TK"
