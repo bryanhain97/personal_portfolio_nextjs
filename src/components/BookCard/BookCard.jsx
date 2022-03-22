@@ -22,6 +22,7 @@ function BookCard({ thumbnail, author, title, description }) {
 
 export default BookCard
 
+
 // authors: (2) ['Mike Tyson', 'Paul Sloman']
 // averageRating: 5
 // categories: ['Biography & Autobiography']
