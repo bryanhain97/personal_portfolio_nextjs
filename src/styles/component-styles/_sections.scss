@@ -107,7 +107,7 @@ section {
     background-color: $section2bg;
     color: #cccccc;
     height: min-content;
-    padding: 4rem 0 4rem 0;
+    padding: 2rem 0;
     @include mobile() {
         padding: 4rem 0;
     }
@@ -218,7 +218,7 @@ section {
 }
 .section3 {
     height: min-content;
-    padding: 4rem 0;
+    padding: 2rem 0;
     background-color: $section3bg;
     color: white;
     .section3-title {
@@ -241,7 +241,7 @@ section {
         grid-template-rows: auto;
         grid-template-areas: "email socials coffee";
         gap: 1rem;
-        width: 95%;
+        width: 92%;
         max-width: 1500px;
         margin: 0 auto;
         @include laptop() {
@@ -342,7 +342,7 @@ section {
                             color: rgb(0, 4, 255);
                         }
                         &.social-icon-instagram {
-                            color: rgb(52, 29, 16);
+                            color: rgb(57, 51, 48);
                         }
                     }
                     &::after {
@@ -384,11 +384,11 @@ section {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            // & * {
-            //     margin: 0;
-            //     padding: 0;
-            // }
             grid-area: coffee;
+            @include mobile(){
+                position: relative;
+                top: -10px;
+            }
             .coffee {
                 display: flex;
                 align-items: center;
