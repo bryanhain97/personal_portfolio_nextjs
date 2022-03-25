@@ -8,8 +8,6 @@ function Section4() {
   useEffect(() => {
     console.log('bookState has changed. books: ', books)
   }, [books])
-
-
   const getBooks = async (searchBy) => {
     const search = JSON.stringify({ searchBy })
     try {
@@ -27,6 +25,7 @@ function Section4() {
       console.log(e.message)
     }
   }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     getBooks(searchBy)
@@ -37,17 +36,17 @@ function Section4() {
   return (
     <section className="section4" >
       <div className="section4-container">
-        <div className="recommendation">
+        <div className="form-container">
           <h3>Recommend a book</h3>
           <form className="form" onSubmit={handleSubmit}>
             <div className="form-input">
-              <label htmlFor="searchBy">Title</label>
+              <label htmlFor="searchBy">Search by Title</label>
               <input onChange={handleChange} name="searchBy" id="searchBy" type="text" value={searchBy} />
             </div>
             <button className="form-button" type="submit">Search</button>
           </form>
         </div>
-        <div className="book-cards">
+        <div onMouseDown={dragEvent} className="book-cards">
           {books.length > 0 && books.map((book, key) => {
             const props = { ...book };
             return <BookCard key={key} {...props} />
@@ -76,3 +75,21 @@ export default Section4
 // publisher: "Blue Rider Press"
 // ratingsCount: 2
 // title: "Undisputed Truth: Subtitle TK"
+
+// get mousePosition on mousedown
+// get dxdy on mousemove and e.target.scrollLeft, e.target.scrollTop
+// remove event listener on mouseup
+
+function dragEvent(e) {
+  const booksContainer = document.querySelector('div.book-cards')
+  booksContainer.style.cursor = 'grab'
+  booksContainer.addEventListener('mousemove', moveList)
+  booksContainer.addEventListener('mouseup', () => {
+    booksContainer.removeEventListener('mousemove', moveList)
+    booksContainer.style.cursor = 'initial'
+  })
+  console.log(booksContainer.scrollLeft)
+  function moveList(e2) {
+    booksContainer.scrollLeft = e.clientX - e2.clientX;
+  }
+}

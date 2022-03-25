@@ -1,6 +1,7 @@
 import React from 'react'
 
-function BookCard({ thumbnail, author, title, description }) {
+function BookCard({ thumbnail, authors, title, description }) {
+    const author = (authors && authors[0]) ?? 'no author'
     if (!thumbnail) return null;
     return (
         <div className="book-card">
@@ -9,9 +10,8 @@ function BookCard({ thumbnail, author, title, description }) {
                     <img loading="lazy" src={thumbnail} />
                 </div>
                 <div className="text-container">
-                    <h4>{title}</h4>
-                    <p className="text-paragragph text-description">{description}</p>
-                    <p className="text-paragragph text-author">{`by ${author}`}</p>
+                    <h4 className="text-title">{title}</h4>
+                    <p className="text-author">{author}</p>
                 </div>
                 <div className="card-buttons">
                 </div>
