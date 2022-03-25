@@ -34,6 +34,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                     <a href="#home"><li className="menu-element">home</li></a>
                     <a href="#about"><li className="menu-element">about</li></a>
                     <a href="#contact"><li className="menu-element">contact</li></a>
+                    <a href="#books"><li className="menu-element">books</li></a>
                 </ul>
             </div>
 
@@ -43,6 +44,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
                         <a href="#home"><li className="navbar-element">Home</li></a>
                         <a href="#about"><li className="navbar-element">About</li></a>
                         <a href="#contact"><li className="navbar-element">Contact</li></a>
+                        <a href="#books"><li className="navbar-element">Books</li></a>
                     </ul>
                 </nav>
                 <nav className="navbar-small">

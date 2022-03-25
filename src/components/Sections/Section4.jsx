@@ -36,7 +36,7 @@ function Section4() {
     setSearchBy(e.target.value)
   }
   return (
-    <section className="section4" >
+    <section id="books" className="section4" >
       <div className="section4-container">
         <div className="form-container">
           <h3>Recommend a book</h3>

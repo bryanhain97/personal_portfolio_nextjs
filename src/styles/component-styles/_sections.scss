@@ -107,7 +107,7 @@ section {
     background-color: $section2bg;
     color: #cccccc;
     height: min-content;
-    padding: 4rem 0 2rem 0;
+    padding: 4rem 0 4rem 0;
     @include mobile() {
         padding: 4rem 0;
     }
@@ -242,6 +242,7 @@ section {
         grid-template-areas: "email socials coffee";
         gap: 1rem;
         width: 95%;
+        max-width: 1500px;
         margin: 0 auto;
         @include laptop() {
             grid-template-columns: 1fr 1fr;
@@ -305,7 +306,7 @@ section {
             grid-area: socials;
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
+            justify-content: space-between;
             @include tablet() {
                 justify-content: space-around;
             }
@@ -383,10 +384,10 @@ section {
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            & * {
-                margin: 0;
-                padding: 0;
-            }
+            // & * {
+            //     margin: 0;
+            //     padding: 0;
+            // }
             grid-area: coffee;
             .coffee {
                 display: flex;
@@ -404,12 +405,12 @@ section {
                     background-clip: initial;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    margin-top: 0.5rem;
+                    margin-top: 0.6rem;
                     cursor: pointer;
                     padding: 0.5rem;
                     padding-bottom: 0.8rem;
-                    padding-top: 0.4rem;
                     bottom: 0px;
+                    text-align: center;
                     transition: all 0.5s ease;
                     &::after {
                         position: absolute;
@@ -436,16 +437,13 @@ section {
                     margin-bottom: 0.5rem;
                     max-width: 120px;
                     height: auto;
-                    @include mobile() {
-                        width: 90px;
-                    }
                 }
             }
             .coffee-text {
                 flex: 1;
                 display: none;
                 @include laptop() {
-                    padding-left: 2rem;
+                    margin-left: 2.5rem;
                     padding-right: 5px;
                     display: flex;
                 }

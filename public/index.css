@@ -271,7 +271,7 @@ section {
   background-color: #0f0f0f;
   color: #cccccc;
   height: min-content;
-  padding: 4rem 0 2rem 0;
+  padding: 4rem 0 4rem 0;
 }
 @media (max-width: 425px) {
   .section2 {
@@ -421,6 +421,7 @@ section {
   grid-template-areas: "email socials coffee";
   gap: 1rem;
   width: 95%;
+  max-width: 1500px;
   margin: 0 auto;
 }
 @media (max-width: 1023px) {
@@ -484,7 +485,7 @@ section {
   grid-area: socials;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 @media (max-width: 768px) {
   .section3 .wrapper .socials {
@@ -566,10 +567,6 @@ section {
   align-items: center;
   grid-area: coffee;
 }
-.section3 .wrapper .coffee-container * {
-  margin: 0;
-  padding: 0;
-}
 .section3 .wrapper .coffee-container .coffee {
   display: flex;
   align-items: center;
@@ -589,12 +586,12 @@ section {
   background-clip: initial;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   cursor: pointer;
   padding: 0.5rem;
   padding-bottom: 0.8rem;
-  padding-top: 0.4rem;
   bottom: 0px;
+  text-align: center;
   transition: all 0.5s ease;
 }
 .section3 .wrapper .coffee-container .coffee h3::after {
@@ -622,18 +619,13 @@ section {
   max-width: 120px;
   height: auto;
 }
-@media (max-width: 425px) {
-  .section3 .wrapper .coffee-container .coffee .coffee-logo {
-    width: 90px;
-  }
-}
 .section3 .wrapper .coffee-container .coffee-text {
   flex: 1;
   display: none;
 }
 @media (max-width: 1023px) {
   .section3 .wrapper .coffee-container .coffee-text {
-    padding-left: 2rem;
+    margin-left: 2.5rem;
     padding-right: 5px;
     display: flex;
   }
