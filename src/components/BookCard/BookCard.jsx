@@ -1,22 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-function BookCard({ thumbnail, authors, title, description }) {
+function BookCard({ thumbnail, authors, title }) {
+    const [selected, setSelected] = useState(false);
     const author = (authors && authors[0]) ?? 'no author'
     if (!thumbnail) return null;
+    const className = selected ? "book-card selected" : "book-card"
+    const toggleSelect = () => {
+        setSelected(!selected)
+    }
+
     return (
-        <div className="book-card">
-            <div className="container">
-                <div className="img-container">
-                    <img loading="lazy" src={thumbnail} />
-                </div>
-                <div className="text-container">
-                    <h4 className="text-title">{title}</h4>
-                    <p className="text-author">{author}</p>
-                </div>
-                <div className="card-buttons">
+        <>
+            <div className={className} onClick={toggleSelect}>
+                <div className="container">
+                    <div className="img-container">
+                        <img loading="lazy" src={thumbnail} />
+                    </div>
+                    <div className="text-container">
+                        <h4 className="text-title">{title}</h4>
+                        <p className="text-author">{author}</p>
+                    </div>
+                    <div className="card-buttons">
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
 

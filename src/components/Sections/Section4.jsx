@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import BookCard from '../BookCard/BookCard.jsx'
+import { BookCard, BookCardSkeleton } from '../BookCard/index.jsx'
 
 function Section4() {
   const [books, setBooks] = useState([]);
   const [searchBy, setSearchBy] = useState("");
-
+  const [loading, setLoading] = useState();
   useEffect(() => {
     console.log('bookState has changed. books: ', books)
   }, [books])
   const getBooks = async (searchBy) => {
+    setLoading(true);
     const search = JSON.stringify({ searchBy })
     try {
       const response = await fetch('https://thatguybryan-server.herokuapp.com/get-books', {
@@ -20,6 +21,7 @@ function Section4() {
         body: search
       });
       const books = await response.json()
+      setLoading(false);
       setBooks(books);
     } catch (e) {
       console.log(e.message)
@@ -47,10 +49,14 @@ function Section4() {
           </form>
         </div>
         <div onMouseDown={dragEvent} className="book-cards">
-          {books.length > 0 && books.map((book, key) => {
-            const props = { ...book };
-            return <BookCard key={key} {...props} />
-          })}
+          {loading ?
+            [1, 2, 3, 4, 5, 6, 7, 8, 9].map(idx => <BookCardSkeleton key={idx} />)
+            :
+            books.map((book, idx) => {
+              const props = { ...book };
+              return <BookCard key={idx} {...props} />
+            })
+          }
         </div>
       </div>
     </section>
