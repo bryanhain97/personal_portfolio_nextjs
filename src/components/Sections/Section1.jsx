@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-
+import { AiFillCloseCircle } from 'react-icons/ai';
 
 function Section1() {
     const [loaded, setLoaded] = useState(false);
@@ -37,6 +37,11 @@ function Section1() {
     if (showCodeInfo) {
         setTimeout(() => setShowCodeInfo(false), 3500)
     }
+    const closeTextContainer = () => {
+        document.querySelectorAll('.h1-text-container').forEach(node => {
+            node.remove()
+        })
+    }
     return (
         <section id="home" className="section section1" data-src="./pictures/background.png">
             {loaded && (
@@ -44,6 +49,7 @@ function Section1() {
                     <div id="h1-text-container-1" className="h1-text-container">
                         <h1 className="h1-text1 h1-text-intro"><span id="hello">Hello</span>My name is Bryan.</h1>
                         <h1 className="h1-text2">I'm a self taught developer.</h1>
+                        <button className="h1-close-button" onClick={closeTextContainer}><AiFillCloseCircle className="close-button-icon" /></button>
                     </div>
                     <div id="h1-text-container-2" className="h1-text-container hidden">
                         <h1 className="h1-text1 h1-text-intro">I'm 24 years old.</h1>

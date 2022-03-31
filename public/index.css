@@ -178,7 +178,7 @@ section {
 .section1 > div.h1-text-container {
   text-align: center;
   position: absolute;
-  background-color: rgba(200, 200, 200, 0.65);
+  background-color: rgba(75, 78, 56, 0.65);
   border-radius: 3px;
   top: 43%;
   border: 1px solid white;
@@ -190,20 +190,34 @@ section {
   padding: 0.5rem;
   box-shadow: 3px 3px 30px 3px #323232;
 }
+.section1 > div.h1-text-container .h1-close-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0.5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.section1 > div.h1-text-container .h1-close-button .close-button-icon {
+  color: #e0b3bc;
+  background-color: black;
+  border-radius: 50%;
+}
 .section1 > div.h1-text-container h1 {
   white-space: wrap;
   word-break: break-word;
   padding: 5px 0px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #0a2a4d;
+  color: #d4e1f0;
 }
 .section1 > div.h1-text-container h1 #hello {
-  color: #404e4d;
+  color: white;
   padding: 0.8rem;
   display: block;
   font-weight: 600;
-  letter-spacing: 1rem;
+  letter-spacing: 1.8rem;
   text-transform: uppercase;
 }
 .section1 > div.h1-text-container h1.h1-text-intro {
@@ -211,12 +225,12 @@ section {
 }
 @media (min-width: 1024px) {
   .section1 > div.h1-text-container h1 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 1023px) {
   .section1 > div.h1-text-container h1 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
   }
 }
 @media (max-width: 768px) {
@@ -350,8 +364,7 @@ section {
   position: relative;
   padding: 0.5rem 0 0.5rem 0;
   opacity: 0;
-  bottom: -35px;
-  left: -35px;
+  bottom: -25px;
   transition: all 0.4s ease;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container p.show,
@@ -377,14 +390,12 @@ section {
   padding: 1rem 2rem 0 0;
   position: relative;
   opacity: 0;
-  bottom: -35px;
+  bottom: -25px;
   transition: all 0.4s ease;
-  right: -35px;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item.show,
 .section2 .section2-head div.head-facts .paragraph-container ul li.list-item.show {
-  right: 0px;
   opacity: 1;
   bottom: 0px;
 }
@@ -402,7 +413,7 @@ section {
   color: #cccccc;
   padding: 0.5rem 0 0.5rem 0;
   position: relative;
-  bottom: -20px;
+  bottom: -25px;
 }
 .section2 .section2-head div.head-proficiencies .paragraph-container ul.facts-list li.list-item.show,
 .section2 .section2-head div.head-like .paragraph-container ul.facts-list li.list-item.show,
@@ -423,7 +434,7 @@ section {
   letter-spacing: 2px;
   margin-bottom: 2rem;
   opacity: 0;
-  bottom: -15px;
+  bottom: -25px;
   transition: all 0.33s ease-in-out;
   transition-delay: 0.5s;
 }
@@ -524,8 +535,8 @@ section {
   color: white;
   text-decoration: none;
   opacity: 0;
-  bottom: -15px;
-  transition: all 0.35s ease-in-out;
+  bottom: -25px;
+  transition: all 0.66s ease-in-out;
 }
 .section3 .wrapper .socials .social-container .social.show {
   opacity: 1;
