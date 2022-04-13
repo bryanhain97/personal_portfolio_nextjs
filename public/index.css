@@ -165,9 +165,19 @@ section {
   background-attachment: scroll;
   height: 100vh;
 }
+@media (min-width: 1024px) {
+  .section1 {
+    background-position: 40%;
+  }
+}
 @media (max-width: 1023px) {
   .section1 {
     background-position: 45%;
+  }
+}
+@media (max-width: 768px) {
+  .section1 {
+    background-position: 50%;
   }
 }
 @media (max-width: 425px) {
@@ -177,32 +187,19 @@ section {
 }
 .section1 > div.h1-text-container {
   text-align: center;
+  backdrop-filter: blur(5px);
   position: absolute;
-  background-color: rgba(75, 78, 56, 0.65);
   border-radius: 3px;
   top: 43%;
-  border: 1px solid white;
+  border: 1px solid #b0b0b0;
+  background-color: rgba(0, 0, 0, 0.176);
   left: 50%;
   border-radius: 4px;
   min-width: 340px;
   transform: translate(-50%, -50%);
   transition: 1s opacity ease;
-  padding: 0.5rem;
-  box-shadow: 3px 3px 30px 3px #323232;
-}
-.section1 > div.h1-text-container .h1-close-button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 0.5rem;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.section1 > div.h1-text-container .h1-close-button .close-button-icon {
-  color: #e0b3bc;
-  background-color: black;
-  border-radius: 50%;
+  padding: 2rem;
+  box-shadow: 3px 3px 40px 3px #3d3d3d;
 }
 .section1 > div.h1-text-container h1 {
   white-space: wrap;
@@ -210,15 +207,7 @@ section {
   padding: 5px 0px;
   font-weight: 500;
   letter-spacing: 1px;
-  color: #d4e1f0;
-}
-.section1 > div.h1-text-container h1 #hello {
-  color: white;
-  padding: 0.8rem;
-  display: block;
-  font-weight: 600;
-  letter-spacing: 1.8rem;
-  text-transform: uppercase;
+  color: #172b45;
 }
 .section1 > div.h1-text-container h1.h1-text-intro {
   letter-spacing: 0;
@@ -239,6 +228,9 @@ section {
   }
 }
 @media (max-width: 425px) {
+  .section1 > div.h1-text-container {
+    top: 35%;
+  }
   .section1 > div.h1-text-container h1 {
     font-size: 1.8rem;
   }
@@ -327,7 +319,7 @@ section {
   column-gap: 4rem;
   row-gap: 2rem;
   z-index: 2;
-  transition: all 0.75s ease-out;
+  transition: all 0.25s ease-out;
 }
 .section2 .section2-head h2 {
   text-align: center;
@@ -386,7 +378,7 @@ section {
 .section2 .section2-head div.head-proficiencies .paragraph-container ul li.list-item,
 .section2 .section2-head div.head-like .paragraph-container ul li.list-item,
 .section2 .section2-head div.head-facts .paragraph-container ul li.list-item {
-  color: #6dc8de;
+  color: #c9c6fe;
   padding: 1rem 2rem 0 0;
   position: relative;
   opacity: 0;
@@ -435,8 +427,8 @@ section {
   margin-bottom: 2rem;
   opacity: 0;
   bottom: -25px;
-  transition: all 0.33s ease-in-out;
-  transition-delay: 0.5s;
+  transition: all 0.44s ease-out;
+  transition-delay: 0.25s;
 }
 .section3 .section3-title.show {
   opacity: 1;
@@ -448,8 +440,7 @@ section {
   grid-template-rows: auto;
   grid-template-areas: "email socials coffee";
   gap: 1rem;
-  width: 92%;
-  max-width: 1500px;
+  width: 94%;
   margin: 0 auto;
 }
 @media (max-width: 1023px) {
@@ -513,21 +504,21 @@ section {
   grid-area: socials;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
-@media (max-width: 768px) {
-  .section3 .wrapper .socials {
-    justify-content: space-around;
-  }
+  justify-content: space-around;
 }
 .section3 .wrapper .socials .social-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   height: 100%;
   justify-content: space-evenly;
 }
+@media (max-width: 425px) {
+  .section3 .wrapper .socials .social-container {
+    font-size: 0.9rem;
+  }
+}
 .section3 .wrapper .socials .social-container .social {
-  margin: 0 0.5rem;
   position: relative;
   padding: 0.5rem 1rem 1rem 0;
   display: flex;
@@ -536,7 +527,7 @@ section {
   text-decoration: none;
   opacity: 0;
   bottom: -25px;
-  transition: all 0.66s ease-in-out;
+  transition: all 0.25s ease-out;
 }
 .section3 .wrapper .socials .social-container .social.show {
   opacity: 1;
@@ -556,7 +547,7 @@ section {
   color: #0004ff;
 }
 .section3 .wrapper .socials .social-container .social .social-icon.social-icon-instagram {
-  color: #393330;
+  color: #c9c6fe;
 }
 .section3 .wrapper .socials .social-container .social::after {
   position: absolute;
@@ -580,10 +571,9 @@ section {
 .section3 .wrapper .socials .img-container {
   width: 100%;
   display: flex;
-  margin: 0 1rem;
   align-items: flex-start;
-  min-width: 200px;
-  max-width: 245px;
+  min-width: 170px;
+  max-width: 235px;
 }
 .section3 .wrapper .socials .img-container img {
   border: 2px solid white;
@@ -592,8 +582,8 @@ section {
 }
 .section3 .wrapper .coffee-container {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+  justify-content: space-between;
   grid-area: coffee;
 }
 @media (max-width: 425px) {
@@ -603,6 +593,7 @@ section {
   }
 }
 .section3 .wrapper .coffee-container .coffee {
+  padding-left: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -626,8 +617,9 @@ section {
   padding: 0.5rem;
   padding-bottom: 0.8rem;
   bottom: 0px;
+  white-space: nowrap;
   text-align: center;
-  transition: all 0.5s ease;
+  transition: all 0.25s ease-out;
 }
 .section3 .wrapper .coffee-container .coffee h3::after {
   position: absolute;
@@ -651,16 +643,15 @@ section {
 }
 .section3 .wrapper .coffee-container .coffee .coffee-logo {
   margin-bottom: 0.5rem;
-  max-width: 120px;
+  max-width: 110px;
   height: auto;
 }
 .section3 .wrapper .coffee-container .coffee-text {
-  flex: 1;
   display: none;
 }
 @media (max-width: 1023px) {
   .section3 .wrapper .coffee-container .coffee-text {
-    margin-left: 2.5rem;
+    margin-left: 1rem;
     padding-right: 5px;
     display: flex;
   }

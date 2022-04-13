@@ -14,55 +14,40 @@ section {
     max-height: 100vh;
     background-attachment: scroll;
     height: 100vh;
+    @include desktop(){
+        background-position: 40%;
+    }
     @include laptop() {
         background-position: 45%;
+    }
+    @include tablet(){
+        background-position: 50%;
     }
     @include mobile() {
         background-position: 55%;
     }
     > div.h1-text-container {
         text-align: center;
+        backdrop-filter: blur(5px);
         position: absolute;
-        background-color: rgba(75, 78, 56, 0.65);
         border-radius: 3px;
         top: 43%;
-        border: 1px solid white;
+        border: 1px solid rgb(176, 176, 176);
+        background-color: rgba(0, 0, 0, 0.176);
         left: 50%;
         border-radius: 4px;
         min-width: 340px;
         transform: translate(-50%, -50%);
         transition: 1s opacity ease;
-        padding: 0.5rem;
-        box-shadow: 3px 3px 30px 3px rgb(50, 50, 50);
-        .h1-close-button {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin: 0.5rem;
-            background-color: transparent;
-            border: none;
-            cursor: pointer;
-            .close-button-icon {
-                color: rgb(224, 179, 188);
-                background-color: black;
-                border-radius: 50%;
-            }
-        }
+        padding: 2rem;
+        box-shadow: 3px 3px 40px 3px rgb(61, 61, 61);
         h1 {
             white-space: wrap;
             word-break: break-word;
             padding: 5px 0px;
             font-weight: 500;
             letter-spacing: 1px;
-            color: rgb(212, 225, 240);
-            #hello {
-                color: rgb(255, 255, 255);
-                padding: 0.8rem;
-                display: block;
-                font-weight: 600;
-                letter-spacing: 1.8rem;
-                text-transform: uppercase;
-            }
+            color: rgb(23, 43, 69);
             &.h1-text-intro {
                 letter-spacing: 0;
             }
@@ -83,6 +68,7 @@ section {
             }
         }
         @include mobile() {
+            top: 35%;
             h1 {
                 font-size: 1.8rem;
             }
@@ -161,7 +147,7 @@ section {
         column-gap: 4rem;
         row-gap: 2rem;
         z-index: 2;
-        transition: all 0.75s ease-out;
+        transition: all 0.25s ease-out;
         h2 {
             text-align: center;
             padding: 5px 0;
@@ -256,8 +242,8 @@ section {
         margin-bottom: 2rem;
         opacity: 0;
         bottom: -25px;
-        transition: all 0.33s ease-in-out;
-        transition-delay: 0.5s;
+        transition: all 0.44s ease-out;
+        transition-delay: 0.25s;
         &.show {
             opacity: 1;
             bottom: 0px;
@@ -269,8 +255,7 @@ section {
         grid-template-rows: auto;
         grid-template-areas: "email socials coffee";
         gap: 1rem;
-        width: 92%;
-        max-width: 1500px;
+        width: 94%;
         margin: 0 auto;
         @include laptop() {
             grid-template-columns: 1fr 1fr;
@@ -334,17 +319,17 @@ section {
             grid-area: socials;
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            @include tablet() {
-                justify-content: space-around;
-            }
+            justify-content: space-around;
             .social-container {
                 display: flex;
                 flex-direction: column;
+                align-items: flex-start;
                 height: 100%;
                 justify-content: space-evenly;
+                @include mobile(){
+                    font-size: 0.9rem
+                }
                 .social {
-                    margin: 0 0.5rem;
                     position: relative;
                     padding: 0.5rem 1rem 1rem 0;
                     display: flex;
@@ -353,7 +338,7 @@ section {
                     text-decoration: none;
                     opacity: 0;
                     bottom: -25px;
-                    transition: all 0.66s ease-in-out;
+                    transition: all 0.25s ease-out;
                     &.show {
                         opacity: 1;
                         bottom: 0px;
@@ -371,7 +356,7 @@ section {
                             color: rgb(0, 4, 255);
                         }
                         &.social-icon-instagram {
-                            color: rgb(57, 51, 48);
+                            color: $proficiency;
                         }
                     }
                     &::after {
@@ -398,10 +383,9 @@ section {
             .img-container {
                 width: 100%;
                 display: flex;
-                margin: 0 1rem;
                 align-items: flex-start;
-                min-width: 200px;
-                max-width: 245px;
+                min-width: 170px;
+                max-width: 235px;
                 img {
                     border: 2px solid white;
                     border-radius: 50%;
@@ -411,14 +395,15 @@ section {
         }
         .coffee-container {
             display: flex;
-            justify-content: flex-start;
             align-items: center;
+            justify-content: space-between;
             grid-area: coffee;
             @include mobile() {
                 position: relative;
                 top: -10px;
             }
             .coffee {
+                padding-left: 1rem;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -439,8 +424,9 @@ section {
                     padding: 0.5rem;
                     padding-bottom: 0.8rem;
                     bottom: 0px;
+                    white-space: nowrap;
                     text-align: center;
-                    transition: all 0.5s ease;
+                    transition: all 0.25s ease-out;
                     &::after {
                         position: absolute;
                         right: 0;
@@ -464,15 +450,14 @@ section {
                 }
                 .coffee-logo {
                     margin-bottom: 0.5rem;
-                    max-width: 120px;
+                    max-width: 110px;
                     height: auto;
                 }
             }
             .coffee-text {
-                flex: 1;
                 display: none;
                 @include laptop() {
-                    margin-left: 2.5rem;
+                    margin-left: 1rem;
                     padding-right: 5px;
                     display: flex;
                 }
