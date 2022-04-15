@@ -473,7 +473,7 @@ section {
 .section4 {
     height: fit-content;
     padding: 4rem 0;
-    max-height: 600px;
+    max-height: fit-content;
     border-top: none;
     min-height: 500px;
     color: white;
@@ -481,15 +481,18 @@ section {
     .section4-container {
         position: relative;
         display: grid;
+        row-gap: 1rem;
         grid-template-areas:
             "form selected"
             "books books";
-        // @include tablet(){
-        //     grid-template-areas:
-        //     "form"
-        //     "selected"
-        //     "books"
-        // }
+        grid-template-columns: 1fr 2fr;
+        @include tablet(){
+            grid-template-areas:
+            "form"
+            "books"
+            "selected";
+            grid-template-columns: 1fr;
+        }
         width: 92vw;
         margin: 0 auto;
         .form-container {
@@ -509,7 +512,7 @@ section {
             form {
                 height: fit-content;
                 padding: 3rem 0;
-                width: 350px;
+                // width: 350px;
                 .form-input {
                     display: flex;
                     flex-direction: column;
@@ -517,7 +520,57 @@ section {
             }
         }
         .selected {
-            grid-area: selected
+            padding: 0 2rem;
+            text-transform: uppercase;
+            grid-area: selected;
+            @include tablet(){
+                padding: 0
+            }
+            .recommend {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+            }
+            h3 {
+                margin-right: 1rem;
+            }
+            button {
+                width: 150px;
+                height: 100%;
+                padding: 0.3rem;
+                color: rgb(0, 0, 0);
+                text-transform: uppercase;
+                margin-left: auto;
+                background-color: antiquewhite;
+                transition: 0.2s ease-in-out;
+                border-radius: 4px;
+                letter-spacing: 4px;
+                border-color: transparent;
+                font-weight: 500;
+                &:hover {
+                    top: 0;
+                    border-color: rgb(222, 191, 191);
+                }
+            }
+            .selection {
+                padding: 0.3rem;
+                background-color: $proficiency;
+                max-height: 100px;
+                overflow-y: scroll;
+                color: rgb(59, 59, 59);
+            }
+            ul {
+                height: 100%;
+                width: 100%;
+                overflow-y: scroll;
+                list-style: none;
+            }
+            li.selection-list-item{
+                display: flex;
+                width: 100%;
+                justify-content: space-between;
+                padding-bottom: 0.5rem;
+            }
         }
         .book-cards {
             grid-area: books;
@@ -581,7 +634,7 @@ section {
                 }
                 &.selected {
                     transform: scale(0.9);
-                    background-color: rgba(231, 233, 185, 0.75);
+                    background-color: antiquewhite;
                 }
             }
             .book-card-skeleton {

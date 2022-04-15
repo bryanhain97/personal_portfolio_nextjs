@@ -6,10 +6,11 @@ function BookCard({ thumbnail, authors, title, selectedBooks, setSelectedBooks }
     const [selected, setSelected] = useState(false);
     const author = (authors && authors[0]) ?? 'no author'
     useEffect(() => {
+        const selection = `${title} - ${author}`
         if (selected) {
-            setSelectedBooks([...selectedBooks, title])
+            setSelectedBooks([...selectedBooks, selection])
         } else {
-            setSelectedBooks([...selectedBooks].filter(titles => titles !== title))
+            setSelectedBooks([...selectedBooks].filter(sel => sel !== selection))
         }
     }, [selected])
     const className = selected ? "book-card selected" : "book-card"

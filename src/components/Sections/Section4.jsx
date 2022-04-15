@@ -60,12 +60,22 @@ function Section4() {
           {selectedBooks && selectedBooks.length > 0 ?
             (
               <>
-                <h3>currently selected</h3>
-                <ul>
-                  {selectedBooks.map((book, key) => (
-                    <li key={key}>{book}</li>
-                  ))}
-                </ul>
+                <div className="recommend">
+                  <h3>selected books</h3>
+                  <button>recommend</button>
+                </div>
+                <div className="selection">
+                  <ul>
+                    {selectedBooks.map((book, key) => {
+                      const [title, author] = book.split(" - ");
+                      return (
+                        <li className="selection-list-item" key={key}>
+                          <span className="book-title">{title}</span>
+                          <span className="book-author">{author}</span>
+                        </li>)
+                    })}
+                  </ul>
+                </div>
               </>)
             :
             <h3>no selected books</h3>

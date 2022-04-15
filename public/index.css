@@ -665,7 +665,7 @@ section {
 .section4 {
   height: fit-content;
   padding: 4rem 0;
-  max-height: 600px;
+  max-height: fit-content;
   border-top: none;
   min-height: 500px;
   color: white;
@@ -674,9 +674,17 @@ section {
 .section4 .section4-container {
   position: relative;
   display: grid;
+  row-gap: 1rem;
   grid-template-areas: "form selected" "books books";
+  grid-template-columns: 1fr 2fr;
   width: 92vw;
   margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .section4 .section4-container {
+    grid-template-areas: "form" "books" "selected";
+    grid-template-columns: 1fr;
+  }
 }
 .section4 .section4-container .form-container {
   grid-area: form;
@@ -696,14 +704,65 @@ section {
 .section4 .section4-container .form-container form {
   height: fit-content;
   padding: 3rem 0;
-  width: 350px;
 }
 .section4 .section4-container .form-container form .form-input {
   display: flex;
   flex-direction: column;
 }
 .section4 .section4-container .selected {
+  padding: 0 2rem;
+  text-transform: uppercase;
   grid-area: selected;
+}
+@media (max-width: 768px) {
+  .section4 .section4-container .selected {
+    padding: 0;
+  }
+}
+.section4 .section4-container .selected .recommend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.section4 .section4-container .selected h3 {
+  margin-right: 1rem;
+}
+.section4 .section4-container .selected button {
+  width: 150px;
+  height: 100%;
+  padding: 0.3rem;
+  color: black;
+  text-transform: uppercase;
+  margin-left: auto;
+  background-color: antiquewhite;
+  transition: 0.2s ease-in-out;
+  border-radius: 4px;
+  letter-spacing: 4px;
+  border-color: transparent;
+  font-weight: 500;
+}
+.section4 .section4-container .selected button:hover {
+  top: 0;
+  border-color: #debfbf;
+}
+.section4 .section4-container .selected .selection {
+  padding: 0.3rem;
+  background-color: #c9c6fe;
+  max-height: 100px;
+  overflow-y: scroll;
+  color: #3b3b3b;
+}
+.section4 .section4-container .selected ul {
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+  list-style: none;
+}
+.section4 .section4-container .selected li.selection-list-item {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
 }
 .section4 .section4-container .book-cards {
   grid-area: books;
@@ -769,7 +828,7 @@ section {
 }
 .section4 .section4-container .book-cards .book-card.selected {
   transform: scale(0.9);
-  background-color: rgba(231, 233, 185, 0.75);
+  background-color: antiquewhite;
 }
 .section4 .section4-container .book-cards .book-card-skeleton {
   position: relative;
