@@ -38,7 +38,7 @@ function BookCard({ thumbnail, authors, title, selectedBooks, setSelectedBooks }
 }
 BookCard.propTypes = {
     thumbnail: PropTypes.string,
-    authors: PropTypes.string,
+    authors: PropTypes.array,
     title: PropTypes.string,
     selectedBooks: PropTypes.array,
     setSelectedBooks: PropTypes.func

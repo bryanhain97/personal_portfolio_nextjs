@@ -28,12 +28,12 @@ section {
     }
     > div.h1-text-container {
         text-align: center;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(3px);
         position: absolute;
         border-radius: 3px;
         top: 43%;
-        border: 1px solid rgb(176, 176, 176);
-        background-color: rgba(0, 0, 0, 0.176);
+        border: 1px solid rgb(255, 255, 255);
+        background-color: rgba(0, 0, 0, 0.077);
         left: 50%;
         border-radius: 4px;
         min-width: 340px;
@@ -338,7 +338,6 @@ section {
                     text-decoration: none;
                     opacity: 0;
                     bottom: -25px;
-                    transition: all 0.25s ease-out;
                     &.show {
                         opacity: 1;
                         bottom: 0px;
@@ -370,7 +369,6 @@ section {
                         border-right: 2px solid rgb(203, 203, 203);
                         border-radius: 6px;
                         box-shadow: 6px 3px 10px rgb(154, 154, 154);
-                        transition: all 0.2s ease-in-out;
                     }
                     &:hover {
                         bottom: 6px;
@@ -472,7 +470,7 @@ section {
 }
 .section4 {
     height: fit-content;
-    padding: 4rem 0;
+    padding: 2rem 0;
     max-height: fit-content;
     border-top: none;
     min-height: 500px;
@@ -504,6 +502,7 @@ section {
                 letter-spacing: 4px;
                 transition: all 0.33s ease-in-out;
                 transition-delay: 0.5s;
+                margin-bottom: 1.5rem;
                 &.show {
                     opacity: 1;
                     bottom: 0px;
@@ -511,8 +510,6 @@ section {
             }
             form {
                 height: fit-content;
-                padding: 3rem 0;
-                // width: 350px;
                 .form-input {
                     display: flex;
                     flex-direction: column;
@@ -520,7 +517,8 @@ section {
             }
         }
         .selected {
-            padding: 0 2rem;
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
             text-transform: uppercase;
             grid-area: selected;
             @include tablet(){
@@ -555,7 +553,7 @@ section {
             .selection {
                 padding: 0.3rem;
                 background-color: $proficiency;
-                max-height: 100px;
+                height: 100px;
                 overflow-y: scroll;
                 color: rgb(59, 59, 59);
             }

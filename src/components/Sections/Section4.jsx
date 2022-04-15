@@ -1,5 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { BookCard, BookCardSkeleton } from '../BookCard/index.jsx'
+import emailjs from '@emailjs/browser'
+
+const EMAILJS_PUBLIC_KEY = 'user_p3bpXLoExjrQXv3GH5P7m'
+const EMAILJS_TEMPLATE = 'template_48dj3gn'
+const EMAILJS_SERVICE_ID = 'service_90ikj9l'
 
 function Section4() {
   const [books, setBooks] = useState([]);
@@ -43,6 +48,24 @@ function Section4() {
   const handleChange = (e) => {
     setSearchBy(e.target.value)
   }
+  const sendRecommendation = (e) => {
+    e.preventDefault();
+    setSelectedBooks([])
+    const selBooks = selectedBooks.map((book, idx) => {
+      const selBook = {
+        [`book${idx}`]: book.split(" - ")[0],
+        [`author${idx}`]: book.split(" - "[1]),
+      }
+      return selBook
+    })
+    const templateParams = Object.assign({}, ...selBooks)
+    console.log(templateParams)
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE, templateParams, EMAILJS_PUBLIC_KEY)
+      .then(() => console.log('recommendation send.'))
+      .catch(e => {
+        console.log(e)
+      })
+  }
   return (
     <section id="books" className="section4" >
       <div className="section4-container">
@@ -62,7 +85,7 @@ function Section4() {
               <>
                 <div className="recommend">
                   <h3>selected books</h3>
-                  <button>recommend</button>
+                  <button onClick={sendRecommendation}>recommend</button>
                 </div>
                 <div className="selection">
                   <ul>
