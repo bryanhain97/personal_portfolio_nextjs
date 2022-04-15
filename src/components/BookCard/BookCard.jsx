@@ -1,14 +1,22 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
 
-function BookCard({ thumbnail, authors, title }) {
+
+function BookCard({ thumbnail, authors, title, selectedBooks, setSelectedBooks }) {
     const [selected, setSelected] = useState(false);
     const author = (authors && authors[0]) ?? 'no author'
-    if (!thumbnail) return null;
+    useEffect(() => {
+        if (selected) {
+            setSelectedBooks([...selectedBooks, title])
+        } else {
+            setSelectedBooks([...selectedBooks].filter(titles => titles !== title))
+        }
+    }, [selected])
     const className = selected ? "book-card selected" : "book-card"
     const toggleSelect = () => {
         setSelected(!selected)
     }
-
+    if (!thumbnail) return null;
     return (
         <>
             <div className={className} onClick={toggleSelect}>
@@ -27,7 +35,13 @@ function BookCard({ thumbnail, authors, title }) {
         </>
     )
 }
-
+BookCard.propTypes = {
+    thumbnail: PropTypes.string,
+    authors: PropTypes.string,
+    title: PropTypes.string,
+    selectedBooks: PropTypes.array,
+    setSelectedBooks: PropTypes.func
+}
 export default BookCard
 
 

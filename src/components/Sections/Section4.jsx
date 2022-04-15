@@ -5,9 +5,16 @@ function Section4() {
   const [books, setBooks] = useState([]);
   const [searchBy, setSearchBy] = useState("");
   const [loading, setLoading] = useState();
+  const [selectedBooks, setSelectedBooks] = useState([]);
+
   useEffect(() => {
     console.log('bookState has changed. books: ', books)
   }, [books])
+
+  useEffect(() => {
+    console.log('selected books: ', selectedBooks)
+  }, [selectedBooks])
+
   const getBooks = async (searchBy) => {
     setLoading(true);
     const search = JSON.stringify({ searchBy })
@@ -30,6 +37,7 @@ function Section4() {
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setSelectedBooks([])
     getBooks(searchBy)
   }
   const handleChange = (e) => {
@@ -43,23 +51,38 @@ function Section4() {
           <form className="form" onSubmit={handleSubmit}>
             <div className="form-input">
               <label htmlFor="searchBy">Search by Title</label>
-              <input onChange={handleChange} name="searchBy" id="searchBy" type="text" value={searchBy} />
+              <input onChange={handleChange} required name="searchBy" id="searchBy" type="text" value={searchBy} />
             </div>
             <button className="form-button" type="submit">Search</button>
           </form>
         </div>
-        <div onMouseDown={dragEvent} className="book-cards">
+        <div className="selected">
+          {selectedBooks && selectedBooks.length > 0 ?
+            (
+              <>
+                <h3>currently selected</h3>
+                <ul>
+                  {selectedBooks.map((book, key) => (
+                    <li key={key}>{book}</li>
+                  ))}
+                </ul>
+              </>)
+            :
+            <h3>no selected books</h3>
+          }
+        </div>
+        <div className="book-cards">
           {loading ?
             [1, 2, 3, 4, 5, 6, 7, 8, 9].map(idx => <BookCardSkeleton key={idx} />)
             :
             books.map((book, idx) => {
-              const props = { ...book };
+              const props = { ...book, selectedBooks, setSelectedBooks };
               return <BookCard key={idx} {...props} />
             })
           }
         </div>
       </div>
-    </section>
+    </section >
   )
 }
 
@@ -85,17 +108,3 @@ export default Section4
 // get mousePosition on mousedown
 // get dxdy on mousemove and e.target.scrollLeft, e.target.scrollTop
 // remove event listener on mouseup
-
-function dragEvent(e) {
-  const booksContainer = document.querySelector('div.book-cards')
-  booksContainer.style.cursor = 'grab'
-  booksContainer.addEventListener('mousemove', moveList)
-  booksContainer.addEventListener('mouseup', () => {
-    booksContainer.removeEventListener('mousemove', moveList)
-    booksContainer.style.cursor = 'initial'
-  })
-  console.log(booksContainer.scrollLeft)
-  function moveList(e2) {
-    booksContainer.scrollLeft = e.clientX - e2.clientX;
-  }
-}

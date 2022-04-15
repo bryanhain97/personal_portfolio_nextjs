@@ -482,8 +482,14 @@ section {
         position: relative;
         display: grid;
         grid-template-areas:
-            "form"
-            "books";
+            "form selected"
+            "books books";
+        // @include tablet(){
+        //     grid-template-areas:
+        //     "form"
+        //     "selected"
+        //     "books"
+        // }
         width: 92vw;
         margin: 0 auto;
         .form-container {
@@ -510,6 +516,9 @@ section {
                 }
             }
         }
+        .selected {
+            grid-area: selected
+        }
         .book-cards {
             grid-area: books;
             color: black;
@@ -530,8 +539,9 @@ section {
                 display: flex;
                 justify-content: center;
                 min-width: 170px;
-                max-width: 220px;
+                max-width: 200px;
                 height: 300px;
+                cursor: pointer;
                 padding: 0.5rem;
                 align-items: center;
                 transition: 100ms ease-in-out;
@@ -571,7 +581,7 @@ section {
                 }
                 &.selected {
                     transform: scale(0.9);
-                    background-color: rgba(219, 219, 219, 0.75);
+                    background-color: rgba(231, 233, 185, 0.75);
                 }
             }
             .book-card-skeleton {
