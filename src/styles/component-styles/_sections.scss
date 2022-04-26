@@ -303,14 +303,14 @@ section {
                     text-transform: uppercase;
                     margin-left: auto;
                     background-color: antiquewhite;
-                    transition: 0.2s ease-in-out;
+                    transition: 0.3s ease-out;
                     border-radius: 4px;
                     letter-spacing: 4px;
                     border-color: transparent;
                     font-weight: 500;
                     &:hover {
                         top: 0;
-                        border-color: rgb(222, 191, 191);
+                        border-color: rgb(249, 249, 249);
                     }
                 }
             }
@@ -338,6 +338,7 @@ section {
                     text-decoration: none;
                     opacity: 0;
                     bottom: -25px;
+                    transition: 0.3s ease-out;
                     &.show {
                         opacity: 1;
                         bottom: 0px;
@@ -424,7 +425,7 @@ section {
                     bottom: 0px;
                     white-space: nowrap;
                     text-align: center;
-                    transition: all 0.25s ease-out;
+                    transition: 0.3s ease-out;
                     &::after {
                         position: absolute;
                         right: 0;
@@ -437,7 +438,7 @@ section {
                         border-right: 2px solid white;
                         box-shadow: 6px 3px 10px rgb(154, 154, 154);
                         border-radius: 5px;
-                        transition: opacity 0.2s ease;
+                        transition: 0.3s ease-out;
                     }
                     &:hover {
                         bottom: 6px;
