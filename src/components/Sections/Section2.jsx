@@ -41,6 +41,7 @@ function Section2() {
                             <li className="list-item">HTML</li>
                             <li className="list-item">CSS</li>
                             <li className="list-item">JavaScript</li>
+                            <li className="list-item">TypeScript</li>
                             <li className="list-item">MongoDB</li>
                             <li className="list-item">Express</li>
                             <li className="list-item">React</li>
@@ -49,6 +50,7 @@ function Section2() {
                             <li className="list-item">Webpack</li>
                             <li className="list-item">Testing Library</li>
                             <li className="list-item">Jest</li>
+                            <li className="list-item">Three.js</li>
                         </ul>
                     </div>
                 </div>
