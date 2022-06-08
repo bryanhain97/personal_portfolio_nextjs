@@ -1,2 +1,1 @@
-# personal-portfolio
-client-side code of thatguybryan.com
+## Client Side Code of thatguybryan.com

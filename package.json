@@ -1,38 +1,25 @@
 {
-  "name": "personal_portfolio",
-  "version": "1.0.0",
-  "description": "repo for personal portfolio website",
+  "name": "personal-portfolio",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "development": "npm run sass & npx webpack-dev-server --hot --open",
-    "sass": "npx sass ./src/index.scss --watch ./public/index.css --no-source-map",
-    "build": "npx babel ./src/index.jsx --out-file index-babel.js && npx webpack --mode=production"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "author": "Bryan Hain",
-  "license": "ISC",
   "dependencies": {
-    "@emailjs/browser": "^3.4.0",
-    "@mui/material": "^5.5.1",
-    "@stripe/react-stripe-js": "^1.7.0",
-    "@stripe/stripe-js": "^1.24.0",
-    "babel-loader": "^8.2.3",
-    "core-js": "^3.21.1",
-    "dotenv": "^16.0.0",
-    "prop-types": "^15.8.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-icons": "^4.3.1",
-    "react-multi-carousel": "^2.8.0",
-    "regenerator-runtime": "^0.13.9"
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.16.7",
-    "@babel/core": "^7.16.7",
-    "@babel/preset-env": "^7.16.7",
-    "@babel/preset-react": "^7.16.7",
-    "sass": "^1.47.0",
-    "terser-webpack-plugin": "^5.3.1",
-    "webpack": "^5.65.0",
-    "webpack-cli": "^4.9.1",
-    "webpack-dev-server": "^4.7.2"
+    "@types/node": "17.0.41",
+    "@types/react": "18.0.12",
+    "@types/react-dom": "18.0.5",
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6",
+    "sass": "^1.52.2",
+    "typescript": "4.7.3"
   }
 }

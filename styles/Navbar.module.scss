@@ -1,0 +1,19 @@
+@import './variables.module.scss';
+
+.container, .nav {
+    width: 100%;
+}
+.container {
+    height: $NavFootHeight;
+    padding: $NavFootElementPadding;
+}
+.nav {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.a {
+    padding: $NavFootElementPadding;
+    color: inherit;
+    text-decoration: none;
+}
