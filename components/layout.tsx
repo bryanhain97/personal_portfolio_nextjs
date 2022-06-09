@@ -1,10 +1,11 @@
+import React, { FC, ReactNode } from 'react'
 import Navbar from './Navbar'
 
 interface LAYOUT {
-    children: React.ReactNode | React.ReactNode[]
+    children: ReactNode | ReactNode[]
 }
 
-const Layout: React.FC<LAYOUT> = ({ children }) => {
+const Layout: FC<LAYOUT> = ({ children }: LAYOUT) => {
     return (
         <>
             <Navbar />
