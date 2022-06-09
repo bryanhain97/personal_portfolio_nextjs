@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import type { NextPage } from 'next';
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.scss';
 

@@ -10,7 +10,8 @@
 .nav {
     height: 100%;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
 }
 .a {
     padding: $NavFootElementPadding;

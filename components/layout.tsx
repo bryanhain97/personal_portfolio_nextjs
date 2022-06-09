@@ -1,5 +1,6 @@
-import React, { FC, ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
 import Navbar from './Navbar'
+import styles from '../styles/Layout.module.scss'
 
 interface LAYOUT {
     children: ReactNode | ReactNode[]
@@ -9,8 +10,9 @@ const Layout: FC<LAYOUT> = ({ children }: LAYOUT) => {
     return (
         <>
             <Navbar />
-            {children}
-            {/* <Footer / */}
+            <div className={styles.layoutContainer}>
+                {children}
+            </div>
         </>
     )
 }
