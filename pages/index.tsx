@@ -8,6 +8,8 @@ const Home: FC<NextPage> = () => {
     <>
       <Head>
         <title>thatguybryan | Home</title>
+        <link rel='icon' type='image/png' href='/favicons/favicon-16x16.png'/>
+        <link rel='icon' type='image/png' href='/favicons/favicon-32x32.png'/>
       </Head>
       <main>
         <p className={styles.placeholder}>
