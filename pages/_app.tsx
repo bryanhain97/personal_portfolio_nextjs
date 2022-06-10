@@ -2,7 +2,7 @@ import '../styles/globals.scss'
 import type { AppProps } from 'next/app'
 import NextNProgress from 'nextjs-progressbar'
 import Layout from '../components/layout'
-import theme from './Theme'
+import theme from '../components/Theme'
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 
 
