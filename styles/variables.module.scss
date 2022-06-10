@@ -1,14 +1,22 @@
-$backgroundColor: #353A47;
+@use './googleFonts.module.scss';
+$backgroundColorDark: #353A47;
+$backgroundColorLight: #edf0e0;
+$fontColorDarkMode: #FCFFFD;
+$fontColorLightMode: #07170d;
 $fontFamily: 
-'Gill Sans',
-'Gill Sans MT',
-'Calibri',
-'Trebuchet MS',
-sans-serif;
-$fontColor: #FCFFFD;
+'M PLUS Rounded 1c', sans-serif,
+'Shadows Into Light', cursive,;
 
 // NAVBAR _ FOOTER 
 $NavFootHeight: 55px;
 $NavFootElementPadding: 1rem;
 $SunIconColor: #FDE74C;
-$MoonIconColor: #150578
+$MoonIconColor: #150578;
+
+:export {
+    backgroundColorDark: $backgroundColorDark;
+    backgroundColorLight: $backgroundColorLight;
+    fontColorDarkMode: $fontColorDarkMode;
+    fontColorLightMode: $fontColorLightMode;
+    fontFamily: $fontFamily
+}
