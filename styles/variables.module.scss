@@ -1,17 +1,29 @@
 @use './googleFonts.module.scss';
+
 $backgroundColorDark: #353A47;
 $backgroundColorLight: #edf0e0;
 $fontColorDarkMode: #FCFFFD;
 $fontColorLightMode: #07170d;
 $fontFamily: 
-'M PLUS Rounded 1c', sans-serif,
-'Shadows Into Light', cursive,;
+'M PLUS Rounded 1c',
+sans-serif,
+'Shadows Into Light',
+cursive,
+;
 
 // NAVBAR _ FOOTER 
 $NavFootHeight: 55px;
 $NavFootElementPadding: 1rem;
 $SunIconColor: #FDE74C;
 $MoonIconColor: #150578;
+
+
+// PROFILE CARD
+$containerBackgroundLight: rgba(198, 255, 239, 0.287);
+$containerShadowLight: 0 8px 32px 0 rgba(35, 39, 40, 0.37);
+// ---------------------------------
+$containerBackgroundDark: rgba(125, 241, 167, 0.287);
+$containerShadowDark: 0 8px 32px 0 rgba(133, 150, 128, 0.37);
 
 :export {
     backgroundColorDark: $backgroundColorDark;

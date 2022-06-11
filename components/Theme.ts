@@ -12,16 +12,17 @@ const {
 
 
 const theme: ThemeConfig = extendTheme({
+    initialColorMode: 'light',
     styles: {
         global: (props: any) => ({
             body: {
                 fontFamily: fontFamily,
-                color: mode(fontColorDarkMode, fontColorLightMode)(props),
-                bg: mode(backgroundColorDark, backgroundColorLight)(props),
+                color: mode(fontColorLightMode, fontColorDarkMode)(props),
+                bg: mode(backgroundColorLight, backgroundColorDark)(props),
                 lineHeight: 'base',
             },
         }),
-    }
+    },
 })
 
 export default theme
