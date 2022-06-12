@@ -24,7 +24,6 @@ const Home: FC<NextPage> = () => {
         <link rel='icon' type='image/png' href='/favicons/favicon-32x32.png' />
       </Head>
       <main className={styles.container}>
-        {/* <ProfileCard /> */}
         <div className={styles.canvasContainer}>
           <Canvas>
             <OrbitControls />
