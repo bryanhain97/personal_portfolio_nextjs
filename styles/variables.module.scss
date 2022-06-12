@@ -26,6 +26,10 @@ $containerShadowLight: 0 8px 32px 0 #24211b57;
 $containerBackgroundDark: #5C6B73;
 $containerShadowDark: 0 8px 32px 0 rgba(14, 21, 29, 0.331);
 
+// Canvas
+$canvasParticlesLight: #000000;
+$canvasParticlesDark:#ffffff;
+
 :export {
     backgroundColorDark: $backgroundColorDark;
     backgroundColorLight: $backgroundColorLight;
@@ -35,5 +39,7 @@ $containerShadowDark: 0 8px 32px 0 rgba(14, 21, 29, 0.331);
     iconBackgroundLight: $iconBackgroundLight;
     sunIconColor: $SunIconColor;
     moonIconColor: $MoonIconColor;
-    fontFamily: $fontFamily
+    fontFamily: $fontFamily;
+    canvasParticlesLight: $canvasParticlesLight;
+    canvasParticlesDark: $canvasParticlesDark;
 }

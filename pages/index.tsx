@@ -1,28 +1,38 @@
-import type { NextPage } from 'next'
+import { NextPage } from 'next'
 import { FC } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
-import ProfileCard from '../components/ProfileCard'
-import { Grid, GridItem } from '@chakra-ui/react'
+// import ProfileCard from '../components/ProfileCard'
+import Background from '../components/three/background';
+import { Canvas } from '@react-three/fiber'
+import { OrbitControls } from '@react-three/drei'
+import { useColorMode } from '@chakra-ui/react';
+import variables from '../styles/variables.module.scss'
+
+const {
+  canvasParticlesLight,
+  canvasParticlesDark
+} = variables;
 
 const Home: FC<NextPage> = () => {
+  const { colorMode } = useColorMode()
   return (
     <>
       <Head>
-        <title>thatguybryan | Home</title>
+        <title>thatguybryan | Homepage</title>
         <link rel='icon' type='image/png' href='/favicons/favicon-16x16.png' />
         <link rel='icon' type='image/png' href='/favicons/favicon-32x32.png' />
       </Head>
       <main className={styles.container}>
-        <Grid
-          templateRows='repeat(2, 1fr)'
-          templateColumns='repeat(3, 1fr)'
-          gap={4}
-        >
-          <GridItem>
-            <ProfileCard />
-          </GridItem>
-        </Grid>
+        {/* <ProfileCard /> */}
+        <div className={styles.canvasContainer}>
+          <Canvas>
+            <OrbitControls />
+            <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
+            <ambientLight />
+            <pointLight position={[10, 10, 10]} />
+          </Canvas>
+        </div>
       </main>
     </>
   )
