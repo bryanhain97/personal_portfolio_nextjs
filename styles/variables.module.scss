@@ -1,14 +1,16 @@
 @use './googleFonts.module.scss';
 
-$backgroundColorDark: #353A47;
-$backgroundColorLight: #edf0e0;
-$fontColorDarkMode: #FCFFFD;
-$fontColorLightMode: #07170d;
-$fontFamily: 'M PLUS Rounded 1c',
+$backgroundColorDark: #253237;
+$backgroundColorLight: #FDFFFC;
+$fontColorDarkMode: #E0FBFC;
+$fontColorLightMode: #261c0d;
+$fontFamily: 'Quicksand',
 sans-serif,
 'Shadows Into Light',
 cursive,
-;
+'M PLUS Rounded 1c',
+sans-serif;
+$fontSize: 1.25rem;
 
 // NAVBAR _ FOOTER 
 $NavFootHeight: 55px;
@@ -16,17 +18,17 @@ $NavFootElementPadding: 1rem;
 
 // ICON
 $iconBackgroundDark:#2d3349;
-$iconBackgroundLight: #8db0b3;
+$iconBackgroundLight: #537073;
 $SunIconColor: #FDE74C;
 $MoonIconColor: #9cb6cf;
 
 
 // PROFILE CARD
-$containerBackgroundLight: rgba(198, 255, 239, 0.287);
-$containerShadowLight: 0 8px 32px 0 rgba(35, 39, 40, 0.37);
+$containerBackgroundLight: #cecece;
+$containerShadowLight: 0 8px 32px 0 #24211b57;
 // ---------------------------------
-$containerBackgroundDark: rgba(125, 241, 167, 0.287);
-$containerShadowDark: 0 8px 32px 0 rgba(133, 150, 128, 0.37);
+$containerBackgroundDark: #5C6B73;
+$containerShadowDark: 0 8px 32px 0 rgba(14, 21, 29, 0.331);
 
 :export {
     backgroundColorDark: $backgroundColorDark;
