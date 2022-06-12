@@ -15,9 +15,7 @@ const Navbar: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <div className={styles.container}>
-      <HStack
-        align='center'
-      >
+      <HStack align='center'>
         <Box className={styles.nav}>
           <Link href='/'>
             <a className={styles.a}>Home</a>

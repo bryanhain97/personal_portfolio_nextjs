@@ -1,15 +1,11 @@
 import type { NextPage } from 'next'
-import { FC, useEffect } from 'react'
+import { FC } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
-import { useColorMode, Grid, GridItem } from '@chakra-ui/react'
+import { Grid, GridItem } from '@chakra-ui/react'
 
 const Home: FC<NextPage> = () => {
-  const { colorMode } = useColorMode()
-  useEffect(() => {
-    console.log(colorMode)
-  })
   return (
     <>
       <Head>

@@ -1,23 +1,31 @@
 import { motion } from 'framer-motion'
 import styles from '../styles/ProfileCard.module.scss'
-import { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import { useColorMode } from '@chakra-ui/react'
 
-
-const ProfileCard: FC = () => {
-    const { colorMode } = useColorMode()
+type Children = {
+    children: ReactNode | ReactNode[]
+}
+const AnimationWrapper = ({ children }: Children) => {
     return (
         <motion.div
             animate={{ x: '1rem' }}
             transition={{ duration: 0.75 }}
         >
-            <div className={
-                colorMode === 'light' ?
+            {children}
+        </motion.div>
+    )
+}
+const ProfileCard: FC = () => {
+    const { colorMode } = useColorMode()
+    return (
+        <AnimationWrapper>
+            <div className={colorMode === 'light' ?
                     styles.light : styles.dark
             }>
                 hello.
             </div>
-        </motion.div>
+        </AnimationWrapper>
     )
 }
 

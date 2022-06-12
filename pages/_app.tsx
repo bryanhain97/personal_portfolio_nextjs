@@ -10,9 +10,9 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <ChakraProvider theme={theme}>
+        <ColorModeScript initialColorMode={theme.initialColorMode} />
+        <NextNProgress />
         <Layout>
-          <ColorModeScript initialColorMode={theme.initialColorMode} />
-          <NextNProgress />
           <Component {...pageProps} />
         </Layout>
       </ChakraProvider>
