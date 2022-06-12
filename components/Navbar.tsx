@@ -3,6 +3,13 @@ import { Box, Button, HStack, useColorMode } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import Link from 'next/link';
 import styles from '../styles/Navbar.module.scss';
+import exportedScss from '../styles/variables.module.scss';
+const {
+  iconBackgroundLight,
+  iconBackgroundDark,
+  moonIconColor,
+  sunIconColor
+} = exportedScss;
 
 const Navbar: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
@@ -26,10 +33,10 @@ const Navbar: FC = () => {
       <Box className={styles.box}>
         <Button
           size='sm'
-          bg={colorMode === 'light' ? '#eeeeee' : '#4C5B5C'}
+          bg={colorMode === 'light' ? iconBackgroundDark : iconBackgroundLight}
           onClick={toggleColorMode}
         >
-          {colorMode === 'light' ? <MoonIcon color='#011638' /> : <SunIcon color='#FDFF4C' />}
+          {colorMode === 'light' ? <MoonIcon color={moonIconColor} /> : <SunIcon color={sunIconColor} />}
         </Button>
       </Box>
     </div>

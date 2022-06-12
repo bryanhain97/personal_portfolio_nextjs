@@ -4,8 +4,7 @@ $backgroundColorDark: #353A47;
 $backgroundColorLight: #edf0e0;
 $fontColorDarkMode: #FCFFFD;
 $fontColorLightMode: #07170d;
-$fontFamily: 
-'M PLUS Rounded 1c',
+$fontFamily: 'M PLUS Rounded 1c',
 sans-serif,
 'Shadows Into Light',
 cursive,
@@ -14,8 +13,12 @@ cursive,
 // NAVBAR _ FOOTER 
 $NavFootHeight: 55px;
 $NavFootElementPadding: 1rem;
+
+// ICON
+$iconBackgroundDark:#2d3349;
+$iconBackgroundLight: #8db0b3;
 $SunIconColor: #FDE74C;
-$MoonIconColor: #150578;
+$MoonIconColor: #9cb6cf;
 
 
 // PROFILE CARD
@@ -30,5 +33,9 @@ $containerShadowDark: 0 8px 32px 0 rgba(133, 150, 128, 0.37);
     backgroundColorLight: $backgroundColorLight;
     fontColorDarkMode: $fontColorDarkMode;
     fontColorLightMode: $fontColorLightMode;
+    iconBackgroundDark: $iconBackgroundDark;
+    iconBackgroundLight: $iconBackgroundLight;
+    sunIconColor: $SunIconColor;
+    moonIconColor: $MoonIconColor;
     fontFamily: $fontFamily
 }

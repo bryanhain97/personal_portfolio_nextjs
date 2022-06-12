@@ -3,7 +3,7 @@ import { FC, useEffect } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
-import { useColorMode } from '@chakra-ui/react'
+import { useColorMode, Grid, GridItem } from '@chakra-ui/react'
 
 const Home: FC<NextPage> = () => {
   const { colorMode } = useColorMode()
@@ -17,11 +17,16 @@ const Home: FC<NextPage> = () => {
         <link rel='icon' type='image/png' href='/favicons/favicon-16x16.png' />
         <link rel='icon' type='image/png' href='/favicons/favicon-32x32.png' />
       </Head>
-      <main>
-        <p className={styles.placeholder}>
-          thatguybryan.com | This website is getting a full update soon.
-        </p>
-        <ProfileCard />
+      <main className={styles.container}>
+        <Grid
+          templateRows='repeat(2, 1fr)'
+          templateColumns='repeat(3, 1fr)'
+          gap={4}
+        >
+          <GridItem>
+            <ProfileCard />
+          </GridItem>
+        </Grid>
       </main>
     </>
   )
