@@ -14,7 +14,7 @@ const {
   sunIconColor
 } = exportedScss;
 
-const Navbar: FC<NextPage> = () => {
+const Navbar: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <>
