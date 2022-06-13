@@ -1,14 +1,16 @@
 @use './googleFonts.module.scss';
 
 $backgroundColorDark: #253237;
-$backgroundColorLight: #FDFFFC;
+$backgroundColorLight: #fefefe;
 $fontColorDarkMode: #E0FBFC;
-$fontColorLightMode: #261c0d;
+$fontColorLightMode: #4f4f4f;
 $fontFamily: 'Roboto', sans-serif;
 
 // NAVBAR _ FOOTER 
 $NavFootHeight: 65px;
 $NavFootElementPadding: 0 1rem;
+$NavbarBorderColor: #ff0000;
+$NavbarBorderThickness: 2px;
 
 // ICON
 $iconBackgroundDark:#2d3349;
@@ -18,15 +20,15 @@ $MoonIconColor: #9cb6cf;
 
 
 // PROFILE CARD
-$containerBackgroundLight: #cecece;
+$containerBackgroundLight: #ffffff;
 $containerShadowLight: 0 8px 32px 0 #24211b57;
 // ---------------------------------
 $containerBackgroundDark: #5C6B73;
 $containerShadowDark: 0 8px 32px 0 rgba(14, 21, 29, 0.331);
 
 // Canvas
-$canvasParticlesLight: #261c0d;
-$canvasParticlesDark:#E0FBFC;
+$canvasParticlesLight: #182069;
+$canvasParticlesDark:#feb4f6;
 
 :export {
     backgroundColorDark: $backgroundColorDark;

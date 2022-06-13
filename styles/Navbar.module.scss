@@ -10,11 +10,12 @@
     padding: $NavFootElementPadding;
     display: flex;
     align-items: center;
+    border-bottom: $NavbarBorderThickness solid $NavbarBorderColor;
 }
 
 .nav {
     height: 100%;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .a {

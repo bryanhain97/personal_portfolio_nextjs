@@ -26,10 +26,10 @@ const Home: FC<NextPage> = () => {
       <main className={styles.container}>
         <div className={styles.canvasContainer}>
           <Canvas>
-            <OrbitControls />
+            <OrbitControls enableZoom={false} />
             <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
             <ambientLight />
-            <pointLight position={[10, 10, 10]} />
+            <pointLight position={[0, 0, 0]} />
           </Canvas>
         </div>
       </main>

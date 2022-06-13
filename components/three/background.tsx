@@ -1,13 +1,13 @@
 import React, { useMemo, useRef } from 'react';
-import { BufferAttribute, Mesh } from 'three';
-import { useFrame } from '@react-three/fiber'
+import { BufferAttribute, Mesh, TextureLoader, AdditiveBlending } from 'three';
+import { useFrame, useLoader } from '@react-three/fiber'
 
 function BufferPoints({ count = 1200, color }: any) {
-    const rotationSpeed = 0.001
+    const rotationSpeed = 0.00025
     const pointsRef = useRef<Mesh | null | any>(null)
-
+    const textureMap = useLoader(TextureLoader, '/particles/circle_02.png')
     const points = useMemo(() => {
-        const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 7.5)
+        const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 10)
         return new BufferAttribute(new Float32Array(p), 3)
     }, [count])
 
@@ -23,8 +23,12 @@ function BufferPoints({ count = 1200, color }: any) {
                 <bufferAttribute attach={'attributes-position'} {...points} />
             </bufferGeometry>
             <pointsMaterial
-                size={0.02}
+                size={0.16}
                 color={color}
+                map={textureMap}
+                alphaMap={textureMap}
+                depthWrite={false}
+                blending={AdditiveBlending}
                 sizeAttenuation={true}
             />
         </points>
