@@ -3,14 +3,17 @@ import { BufferAttribute, Mesh } from 'three';
 import { useFrame } from '@react-three/fiber'
 
 function BufferPoints({ count = 1200, color }: any) {
+    const rotationSpeed = 0.001
     const pointsRef = useRef<Mesh | null | any>(null)
+
     const points = useMemo(() => {
         const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 7.5)
         return new BufferAttribute(new Float32Array(p), 3)
     }, [count])
+
     useFrame((): void => {
         if (pointsRef !== null) {
-            pointsRef.current.rotation.y += 0.0005
+            pointsRef.current.rotation.y += rotationSpeed
         }
     })
     return (
