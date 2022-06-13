@@ -7,7 +7,6 @@ const {
     backgroundColorLight,
     fontColorDarkMode,
     fontColorLightMode,
-    fontFamily
 } = exportedScssThemes
 
 
@@ -16,7 +15,6 @@ const theme: ThemeConfig = extendTheme({
     styles: {
         global: (props: any) => ({
             body: {
-                fontFamily: fontFamily,
                 color: mode(fontColorLightMode, fontColorDarkMode)(props),
                 bg: mode(backgroundColorLight, backgroundColorDark)(props),
                 lineHeight: 'base',

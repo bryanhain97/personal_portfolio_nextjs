@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Head from 'next/head'
 import styles from '../styles/Navbar.module.scss';
 import exportedScss from '../styles/variables.module.scss';
+import { NextPage } from 'next';
 
 const {
   iconBackgroundLight,
@@ -13,7 +14,7 @@ const {
   sunIconColor
 } = exportedScss;
 
-const Navbar: FC = () => {
+const Navbar: FC<NextPage> = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <>
