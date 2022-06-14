@@ -1,7 +1,19 @@
 @import './variables.module.scss';
 
 .layoutContainer {
-    padding: 1rem;
-    width: 100%;
-    height: calc(100vh - $NavFootHeight);
+    width: 60%;
+
+    @include belowViewport(768px) {
+        width: 80%;
+    }
+
+    ;
+
+    @include belowViewport(425px) {
+        width: 90%;
+    }
+
+    ;
+    margin: 0 auto;
+    height: $layoutContainerHeight;
 }

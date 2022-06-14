@@ -1,0 +1,11 @@
+@mixin belowViewport($width) {
+    @media(max-width: $width) {
+        @content
+    }
+};
+
+@mixin aboveViewport($width) {
+    @media(min-width: $width) {
+        @content
+    }
+}
