@@ -32,6 +32,9 @@ const Home: FC<NextPage> = () => {
             <pointLight position={[0, 0, 0]} />
           </Canvas>
         </div> */}
+        <p className={styles.placeholder}>
+          i am currently working on building this website 
+        </p>
       </main>
     </>
   )
