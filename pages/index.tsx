@@ -20,8 +20,6 @@ const Home: FC<NextPage> = () => {
     <>
       <Head>
         <title>thatguybryan | Homepage</title>
-        <link rel='icon' type='image/png' href='/favicons/favicon-16x16.png' />
-        <link rel='icon' type='image/png' href='/favicons/favicon-32x32.png' />
       </Head>
       <main className={styles.container}>
         {/* <div className={styles.canvasContainer}>
