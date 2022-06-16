@@ -10,7 +10,7 @@ const Layout: FC<LAYOUT> = ({ children }: LAYOUT) => {
     return (
         <div className={styles.layoutContainer}>
             <Navbar />
-            <main>
+            <main className={styles.pageContent}>
                 {children}
             </main>
         </div>
