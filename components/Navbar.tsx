@@ -70,8 +70,8 @@ const Navbar: FC = () => {
             </Menu>
           </Box>
           <motion.div
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
+            animate={colorMode === 'light' ? { y: [-100, 0] } : { y: [0, -100, 0] }}
+            transition={{ duration: 0.2 }}
           >
             <Button
               size='md'
