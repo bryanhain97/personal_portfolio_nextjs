@@ -60,10 +60,10 @@ const Navbar: FC = () => {
               <MenuList>
                 <MenuGroup title='Menu'>
                   <MenuItem>
-                    <Link href='about'><a>About</a></Link>
+                    <Link href='/about'><a>About</a></Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link href='contact'><a>Contact</a></Link>
+                    <Link href='/contact'><a>Contact</a></Link>
                   </MenuItem>
                 </MenuGroup>
               </MenuList>
