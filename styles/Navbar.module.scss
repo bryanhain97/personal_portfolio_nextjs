@@ -44,8 +44,13 @@
         justify-content: flex-end;
     }
 }
+
 .menu {
-    @include aboveViewport(769px){
+    @include aboveViewport(769px) {
         display: none
+    }
+
+    a {
+        width: 100%;
     }
 }
