@@ -11,6 +11,7 @@
   "dependencies": {
     "@chakra-ui/icons": "^2.0.2",
     "@chakra-ui/react": "^2.2.1",
+    "@emotion/react": "^11.9.3",
     "@react-three/drei": "^9.13.0",
     "@react-three/fiber": "^8.0.23",
     "framer-motion": "^6.3.11",
@@ -18,6 +19,7 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-icons": "^4.4.0",
+    "react-simple-typewriter": "^3.0.1",
     "three": "^0.141.0"
   },
   "devDependencies": {

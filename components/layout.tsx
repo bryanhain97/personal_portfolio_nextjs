@@ -8,12 +8,15 @@ interface LAYOUT {
 
 const Layout: FC<LAYOUT> = ({ children }: LAYOUT) => {
     return (
-        <div className={styles.layoutContainer}>
-            <Navbar />
-            <main className={styles.pageContent}>
-                {children}
-            </main>
-        </div>
+        <>
+            <div className={styles.layoutContainer}>
+                <Navbar />
+                <main className={styles.pageContent}>
+                    {/* Insert canvas here? */}
+                    {children}
+                </main>
+            </div>
+        </>
     )
 }
 
