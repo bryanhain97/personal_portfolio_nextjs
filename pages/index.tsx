@@ -17,9 +17,6 @@ const Home: FC<NextPage> = () => {
       </Head>
       <main className={styles.container}>
         <ProfileCard />
-        <p className={styles.placeholder}>
-          i am currently working on building this website 
-        </p>
       </main>
     </>
   )
