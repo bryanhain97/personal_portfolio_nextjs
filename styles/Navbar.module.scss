@@ -15,6 +15,7 @@
 
 .a {
     @include anchorTag;
+    text-decoration: underline;
 }
 
 .MoonIcon {
