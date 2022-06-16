@@ -1,39 +1,66 @@
 import { motion } from 'framer-motion'
 import styles from '../styles/ProfileCard.module.scss'
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, useEffect, useState } from 'react'
 import { useColorMode } from '@chakra-ui/react'
-import { useTypewriter } from 'react-simple-typewriter'
 
-type Children = {
-    children: ReactNode | ReactNode[]
+type Animation = {
+    children: ReactNode | ReactNode[],
+    delay: number
 }
-const AnimationWrapper = ({ children }: Children) => {
+const AnimationWrapper = ({ children, delay }: Animation) => {
     return (
         <motion.div
-            animate={{ x: '1rem' }}
-            transition={{ duration: 1 }}
+            className={styles.motionDiv}
+            animate={{ x: [-16, 0], opacity: [0, 1] }}
+            transition={{ duration: 1, delay: delay }}
         >
             {children}
         </motion.div >
     )
 }
 
-
 const ProfileCard: FC = () => {
+    const textDelay = 2.5
+    const getTime = () => {
+        return new Date().toLocaleTimeString()
+    }
     const { colorMode } = useColorMode()
-    const { text } = useTypewriter({
-        words: ['I am Bryan. I am a self taught developer from Berlin, Germany.'],
-        loop: 1,
-        typeSpeed: 70, onLoopDone: () => console.log('loopDone')
-    })
+    const [time, setTime] = useState<string | null>(null)
+    useEffect(() => {
+        const clock = setInterval(() => {
+            setTime(getTime())
+        }, 1000)
+        return () => clearInterval(clock)
+    }, [time])
+
     return (
-        <AnimationWrapper>
-            <div className={colorMode === 'light' ? styles.light : styles.dark}>
-                <div className={styles.textContainer}>
-                    {text}
+        <div className={colorMode === 'light' ?
+            styles.profileCardContainer_light :
+            styles.profileCardContainer_dark
+        }>
+            <sup className={styles.textClock}>{time}</sup>
+            <AnimationWrapper delay={textDelay * 0}>
+                <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
+                    <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
+                        <strong>Hello, i am Bryan.</strong>
+                    </div>
                 </div>
-            </div>
-        </AnimationWrapper>
+            </AnimationWrapper>
+            <AnimationWrapper delay={textDelay * 1}>
+                <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
+                    <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
+                        <strong>I am a front end developer from Berlin, Germany.</strong>
+                    </div>
+                </div>
+            </AnimationWrapper>
+            <AnimationWrapper delay={textDelay * 2}>
+                <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
+                    <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
+                        <strong>Currently, i am learning 3D animation rendering.</strong>
+                    </div>
+                </div>
+            </AnimationWrapper>
+        </div>
     )
 }
 

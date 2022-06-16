@@ -2,7 +2,7 @@
 @import './mixins';
 
 $backgroundColorDark: #253237;
-$backgroundColorLight: #faf2e9;
+$backgroundColorLight: #eae9e9;
 $fontColorDarkMode: #E0FBFC;
 $fontColorLightMode: #212121;
 $fontFamily: 'Roboto',
@@ -29,11 +29,15 @@ $MoonIconColor: #f1f1f1;
 
 
 // PROFILE CARD
-$containerBackgroundLight: #82a7c6;
-$containerShadowLight: 0 8px 32px 0 #00000036;
-// ---------------------------------
-$containerBackgroundDark: #5C6B73;
-$containerShadowDark: 0 8px 32px 0 #ffffff36;
+$profileCardContainerLight: #3d3d3d;
+$containerBackgroundLight: #bbe6c393;
+$containerShadowLight: 0 8px 32px 0 #0000002e;
+$textLight: #ffffff;
+// ------------
+$profileCardContainerDark: #556458;
+$containerBackgroundDark: #3c3c3c;
+$containerShadowDark: 0 8px 32px 0 #ffffff1f;
+$textDark: #ffffff;
 
 // Canvas
 // $canvasParticlesLight: #182069;

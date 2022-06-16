@@ -6,13 +6,13 @@
     display: flex;
     flex-direction: column;
     @include belowViewport(768px) {
-        width: 80%;
+        width: 85%;
     }
 
     ;
 
     @include belowViewport(425px) {
-        width: 90%;
+        width: 95%;
     }
 
     ;

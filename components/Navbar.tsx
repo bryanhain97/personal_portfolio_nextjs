@@ -33,8 +33,8 @@ const Navbar: FC = () => {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <Container
-      pt='1rem'
-      m='0 auto 1rem'
+      p='1rem'
+      m='0 auto'
     >
       <Flex
         minWidth='max-content'
