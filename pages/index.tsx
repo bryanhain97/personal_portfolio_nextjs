@@ -6,7 +6,6 @@ import ProfileCard from '../components/ProfileCard'
 import Background from '../components/three/background'
 import { Canvas, Color } from '@react-three/fiber'
 import { useColorMode } from '@chakra-ui/react'
-import { OrbitControls } from '@react-three/drei'
 import exportedCSS from '../styles/variables.module.scss'
 
 const {
@@ -24,7 +23,7 @@ const Home: FC<NextPage> = () => {
       <main className={styles.container}>
         <div className={styles.canvasContainer}>
           <Canvas>
-            <OrbitControls enableZoom={false} />
+            {/* <OrbitControls enableZoom={false} /> */}
             <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
           </Canvas>
         </div>
