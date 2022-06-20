@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { FC } from 'react'
+import { FC, Suspense } from 'react'
 import Head from 'next/head'
 import styles from '../styles/Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
@@ -23,8 +23,9 @@ const Home: FC<NextPage> = () => {
       <main className={styles.container}>
         <div className={styles.canvasContainer}>
           <Canvas>
-            {/* <OrbitControls enableZoom={false} /> */}
-            <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
+            <Suspense fallback={null}>
+              <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
+            </Suspense>
           </Canvas>
         </div>
         <ProfileCard />
