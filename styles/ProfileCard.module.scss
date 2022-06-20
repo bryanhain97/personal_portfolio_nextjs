@@ -48,43 +48,17 @@
 }
 
 /* profileCardContainer*/
-@mixin profileCardContainer {
-    position: relative;
+.profileCardContainer {
     width: min(100%, 600px);
     border-radius: 6px;
     margin: 0 auto;
-    padding: 1.5rem 1rem 1rem;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url('/textBackground.jpeg');
-        opacity: 0.05
-    }
-}
-
-.profileCardContainer_dark,
-.profileCardContainer_light {
-    @include profileCardContainer;
-}
-
-.profileCardContainer_light {
-    background-color: $profileCardContainerLight;
-}
-
-.profileCardContainer_dark {
-    background-color: $profileCardContainerDark;
+    margin-top: 1rem;
 }
 
 
 /*div animated text*/
 .motionDiv {
     padding-bottom: 1rem;
-
     &:last-child {
         padding-bottom: 0
     }

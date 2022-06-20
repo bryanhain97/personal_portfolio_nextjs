@@ -33,11 +33,7 @@ const ProfileCard: FC = () => {
     }, [time])
 
     return (
-        <>
-            {/* <div className={colorMode === 'light' ?
-                styles.profileCardContainer_light :
-                styles.profileCardContainer_dark
-            }> */}
+        <div className={styles.profileCardContainer}>
             <sup className={colorMode === 'light' ? styles.clockLight : styles.clockDark}>{time}</sup>
             <AnimationWrapper delay={textDelay * 0}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
@@ -60,8 +56,7 @@ const ProfileCard: FC = () => {
                     </div>
                 </div>
             </AnimationWrapper>
-            {/* </div> */}
-        </>
+        </div>
     )
 }
 

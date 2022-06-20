@@ -10,10 +10,10 @@ sans-serif;
 
 // Layout
 $layoutContainerHeight: 100vh;
-$NavFootHeight: 65px;
+$NavHeight: 65px;
 
 // Navbar 
-$NavLinkPadding: 0 1rem;
+$NavLinkPadding: 0 1rem 0 0;
 // ----- Menu
 $menuBackgroundLight: #b5b4b4;
 $menuIconColorLight: #000000;
@@ -63,4 +63,5 @@ $canvasParticlesDark:#feb4f6;
     canvasParticlesDark: $canvasParticlesDark;
     clockColorLight: $clockColorLight;
     clockColorDark: $clockColorDark;
+    navHeight: $NavHeight;
 }

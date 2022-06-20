@@ -7,8 +7,8 @@
 
 .canvasContainer {
     position: fixed;
-    top: $NavFootHeight;
+    top: $NavHeight;
     left: 0;
-    height: calc(100% - 2*$NavFootHeight);
+    height: 100%;
     width: 100%;
 }

@@ -26,7 +26,8 @@ const {
   menuBackgroundDark,
   menuBackgroundLight,
   menuIconColorDark,
-  menuIconColorLight
+  menuIconColorLight,
+  navHeight
 } = exportedScss;
 
 const Navbar: FC = () => {
@@ -35,6 +36,7 @@ const Navbar: FC = () => {
     <Container
       p='1rem'
       m='0 auto'
+      height={navHeight}
     >
       <Flex
         minWidth='max-content'
