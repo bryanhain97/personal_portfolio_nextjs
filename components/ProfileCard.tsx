@@ -7,12 +7,12 @@ type Animation = {
     children: ReactNode | ReactNode[],
     delay: number
 }
-const AnimationWrapper = ({ children, delay }: Animation) => {
+const AnimationWrapper: FC<Animation> = ({ children, delay }) => {
     return (
         <motion.div
             className={styles.motionDiv}
             animate={{ x: [-16, 0], opacity: [0, 1] }}
-            transition={{ duration: 1, delay: delay }}
+            transition={{ duration: 0.5, delay: delay }}
         >
             {children}
         </motion.div >

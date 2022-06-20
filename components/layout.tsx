@@ -1,13 +1,12 @@
 import { FC, ReactNode } from 'react'
 import Navbar from './Navbar'
 import styles from '../styles/Layout.module.scss'
-import { Canvas } from '@react-three/fiber'
 
 interface LAYOUT {
     children: ReactNode | ReactNode[]
 }
 
-const Layout: FC<LAYOUT> = ({ children }: LAYOUT) => {
+const Layout: FC<LAYOUT> = ({ children }) => {
     return (
         <>
             <div className={styles.layoutContainer}>
