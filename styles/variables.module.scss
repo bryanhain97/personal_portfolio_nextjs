@@ -1,8 +1,8 @@
 @use './googleFonts.module.scss';
 @import './mixins';
 
-$backgroundColorDark: #253237;
-$backgroundColorLight: #eae9e9;
+$backgroundColorDark: #0e1619;
+$backgroundColorLight: #f1f1f1;
 $fontColorDarkMode: #E0FBFC;
 $fontColorLightMode: #212121;
 $fontFamily: 'Roboto',
@@ -29,19 +29,21 @@ $MoonIconColor: #f1f1f1;
 
 
 // PROFILE CARD
-$profileCardContainerLight: #3d3d3d;
-$containerBackgroundLight: #bbe6c393;
+$clockColorLight: #4c4747;
+$profileCardContainerLight: #202020;
+$containerBackgroundLight: #1c555193;
 $containerShadowLight: 0 8px 32px 0 #0000002e;
 $textLight: #ffffff;
 // ------------
+$clockColorDark: #ffffff;
 $profileCardContainerDark: #556458;
-$containerBackgroundDark: #3c3c3c;
+$containerBackgroundDark: #6b7c93;
 $containerShadowDark: 0 8px 32px 0 #ffffff1f;
 $textDark: #ffffff;
 
 // Canvas
-// $canvasParticlesLight: #182069;
-// $canvasParticlesDark:#feb4f6;
+$canvasParticlesLight: #362d4a;
+$canvasParticlesDark:#feb4f6;
 
 :export {
     backgroundColorDark: $backgroundColorDark;
@@ -54,9 +56,11 @@ $textDark: #ffffff;
     moonIconColor: $MoonIconColor;
     fontFamily: $fontFamily;
     menuBackgroundLight: $menuBackgroundLight;
-    menuIconColorLight: $menuIconColorLight; 
+    menuIconColorLight: $menuIconColorLight;
     menuBackgroundDark: $menuBackgroundDark;
     menuIconColorDark: $menuIconColorDark;
-    // canvasParticlesLight: $canvasParticlesLight;
-    // canvasParticlesDark: $canvasParticlesDark;
+    canvasParticlesLight: $canvasParticlesLight;
+    canvasParticlesDark: $canvasParticlesDark;
+    clockColorLight: $clockColorLight;
+    clockColorDark: $clockColorDark;
 }

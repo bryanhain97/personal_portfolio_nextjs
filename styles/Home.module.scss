@@ -5,10 +5,10 @@
     width: 100%;
 }
 
-// .canvasContainer {
-//     position: fixed;
-//     top: $NavFootHeight;
-//     left: 0;
-//     height: calc(100% - 2*$NavFootHeight);
-//     width: 100%;
-// }
+.canvasContainer {
+    position: fixed;
+    top: $NavFootHeight;
+    left: 0;
+    height: calc(100% - 2*$NavFootHeight);
+    width: 100%;
+}

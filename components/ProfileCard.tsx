@@ -21,11 +21,10 @@ const AnimationWrapper = ({ children, delay }: Animation) => {
 
 const ProfileCard: FC = () => {
     const textDelay = 2.5
-    const getTime = () => {
-        return new Date().toLocaleTimeString()
-    }
+    const getTime = () => new Date().toLocaleTimeString()
     const { colorMode } = useColorMode()
     const [time, setTime] = useState<string | null>(null)
+
     useEffect(() => {
         const clock = setInterval(() => {
             setTime(getTime())
@@ -34,11 +33,12 @@ const ProfileCard: FC = () => {
     }, [time])
 
     return (
-        <div className={colorMode === 'light' ?
-            styles.profileCardContainer_light :
-            styles.profileCardContainer_dark
-        }>
-            <sup className={styles.textClock}>{time}</sup>
+        <>
+            {/* <div className={colorMode === 'light' ?
+                styles.profileCardContainer_light :
+                styles.profileCardContainer_dark
+            }> */}
+            <sup className={colorMode === 'light' ? styles.clockLight : styles.clockDark}>{time}</sup>
             <AnimationWrapper delay={textDelay * 0}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
@@ -60,7 +60,8 @@ const ProfileCard: FC = () => {
                     </div>
                 </div>
             </AnimationWrapper>
-        </div>
+            {/* </div> */}
+        </>
     )
 }
 
