@@ -1,18 +1,20 @@
 import { motion } from 'framer-motion'
 import styles from '../styles/ProfileCard.module.scss'
-import { FC, ReactNode, useEffect, useState } from 'react'
+import { FC, ReactNode, useEffect, useState, useRef } from 'react'
 import { useColorMode } from '@chakra-ui/react'
 
 type Animation = {
     children: ReactNode | ReactNode[],
-    delay: number
+    delay: number,
+    onAnimationComplete?: () => void
 }
-const AnimationWrapper: FC<Animation> = ({ children, delay }) => {
+const AnimationWrapper: FC<Animation> = ({ delay, children, onAnimationComplete }) => {
     return (
         <motion.div
             className={styles.motionDiv}
             animate={{ x: [-16, 0], opacity: [0, 1] }}
             transition={{ duration: 0.5, delay: delay }}
+            onAnimationComplete={onAnimationComplete}
         >
             {children}
         </motion.div >
@@ -20,10 +22,12 @@ const AnimationWrapper: FC<Animation> = ({ children, delay }) => {
 }
 
 const ProfileCard: FC = () => {
+    const ref = useRef<HTMLDivElement | null>(null)
     const textDelay = 2.5
     const getTime = () => new Date().toLocaleTimeString()
     const { colorMode } = useColorMode()
     const [time, setTime] = useState<string | null>(null)
+    const [motionComplete, setMotionComplete] = useState<boolean>(false)
 
     useEffect(() => {
         const clock = setInterval(() => {
@@ -32,8 +36,16 @@ const ProfileCard: FC = () => {
         return () => clearInterval(clock)
     }, [time])
 
+    const onAnimationComplete = () => setMotionComplete(true)
+    const removeFromDom = () => ref.current?.remove()
     return (
-        <div className={styles.profileCardContainer}>
+        <motion.div
+            ref={ref}
+            className={styles.profileCardContainer}
+            animate={motionComplete ? { opacity: 0 } : undefined}
+            transition={{ duration: 1.5, delay: 2.5 }}
+            onAnimationComplete={removeFromDom}
+        >
             <sup className={colorMode === 'light' ? styles.clockLight : styles.clockDark}>{time}</sup>
             <AnimationWrapper delay={textDelay * 0}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
@@ -49,14 +61,14 @@ const ProfileCard: FC = () => {
                     </div>
                 </div>
             </AnimationWrapper>
-            <AnimationWrapper delay={textDelay * 2}>
+            <AnimationWrapper delay={textDelay * 2} onAnimationComplete={onAnimationComplete}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
                         <strong>Currently, i am learning 3D animation rendering.</strong>
                     </div>
                 </div>
             </AnimationWrapper>
-        </div>
+        </motion.div >
     )
 }
 
