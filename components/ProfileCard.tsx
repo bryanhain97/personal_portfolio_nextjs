@@ -43,7 +43,7 @@ const ProfileCard: FC = () => {
             ref={ref}
             className={styles.profileCardContainer}
             animate={motionComplete ? { opacity: 0 } : undefined}
-            transition={{ duration: 1.5, delay: 2.5 }}
+            transition={{ duration: 1.5, delay: 4 }}
             onAnimationComplete={removeFromDom}
         >
             <sup className={colorMode === 'light' ? styles.clockLight : styles.clockDark}>{time}</sup>
@@ -57,7 +57,7 @@ const ProfileCard: FC = () => {
             <AnimationWrapper delay={textDelay * 1}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
-                        <strong>I am a front end developer from Berlin, Germany.</strong>
+                        <strong>I am a frontend developer from Berlin, Germany.</strong>
                     </div>
                 </div>
             </AnimationWrapper>
