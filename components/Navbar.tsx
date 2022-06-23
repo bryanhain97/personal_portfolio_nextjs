@@ -56,8 +56,8 @@ const Navbar: FC = () => {
         <Box className={styles.box}>
           <Box className={styles.menu} p='0 0.5rem'>
             <Menu>
-              <MenuButton as={Button} bg={colorMode === 'light' ? menuBackgroundDark : menuBackgroundLight}>
-                <FiMenu color={colorMode === 'light' ? menuIconColorDark : menuIconColorLight} />
+              <MenuButton as={Box} className={styles.menuButton} bg={colorMode === 'light' ? menuBackgroundDark : menuBackgroundLight}>
+                <FiMenu color={colorMode === 'light' ? menuIconColorDark : menuIconColorLight} className={styles.menuLogo} />
               </MenuButton>
               <MenuList>
                 <MenuGroup title='Menu'>

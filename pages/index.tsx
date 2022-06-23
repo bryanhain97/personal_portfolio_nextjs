@@ -7,6 +7,8 @@ import Background from '../components/three/background'
 import { Canvas, Color } from '@react-three/fiber'
 import { useColorMode } from '@chakra-ui/react'
 import exportedCSS from '../styles/variables.module.scss'
+import Hamburger from '../components/three/Hamburger'
+import { OrbitControls } from '@react-three/drei'
 
 const {
   canvasParticlesLight,
@@ -24,7 +26,10 @@ const Home: FC<NextPage> = () => {
         <div className={styles.canvasContainer}>
           <Canvas>
             <Suspense fallback={null}>
+              <OrbitControls enableZoom={false} />
+              <directionalLight args={[-0.3, 2]} />
               <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
+              <Hamburger />
             </Suspense>
           </Canvas>
         </div>

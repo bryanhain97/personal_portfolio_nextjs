@@ -30,14 +30,17 @@
     flex: 1;
     display: flex;
     justify-content: center;
+
     &:first-child {
         justify-content: flex-start;
     }
+
     &:nth-child(2) {
         @include belowViewport(768px) {
             display: none
         }
     }
+
     &:last-child {
         justify-content: flex-end;
     }
@@ -51,4 +54,16 @@
     a {
         width: 100%;
     }
+}
+
+.menuButton {
+    display: flex;
+    align-items: center;
+    width: 48px;
+    height: 40px;
+    border-radius: 6px;
+}
+
+.menuLogo {
+    margin: 0 auto;
 }
