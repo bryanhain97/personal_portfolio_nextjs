@@ -3,7 +3,7 @@ import { BufferAttribute, Mesh, TextureLoader, AdditiveBlending, Points } from '
 import { useFrame, useLoader } from '@react-three/fiber'
 
 function BufferPoints({ count = 1200, color }: any) {
-    const rotationSpeed = 0.00045
+    const rotationSpeed = 0.00145
     const particleSize: number = 0.2
     const pointsRef = useRef<Points | null>(null)
     const textureMap = useLoader(TextureLoader, '/particles/circle_02.png')
