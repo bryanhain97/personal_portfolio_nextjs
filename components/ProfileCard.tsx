@@ -57,7 +57,7 @@ const ProfileCard: FC = () => {
             <AnimationWrapper delay={textDelay * 1}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
-                        <strong>I am a frontend developer from Berlin and aspire to become a creative developer.</strong>
+                        <strong>I am from Berlin and i aspire to become a creative developer.</strong>
                     </div>
                 </div>
             </AnimationWrapper>

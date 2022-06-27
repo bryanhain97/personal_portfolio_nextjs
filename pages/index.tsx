@@ -3,20 +3,12 @@ import { FC, Suspense } from 'react'
 import Head from 'next/head'
 import styles from '../styles/partials/_Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
-// import Background from '../components/three/background'
-import { Canvas, Color } from '@react-three/fiber'
-import { useColorMode } from '@chakra-ui/react'
-import exportedCSS from '../styles/variables.module.scss'
+import { Canvas } from '@react-three/fiber'
 import Hamburger from '../components/three/Hamburger'
 import { OrbitControls } from '@react-three/drei'
 
-const {
-  canvasParticlesLight,
-  canvasParticlesDark
-}: { [key: string]: Color } = exportedCSS
 
 const Home: FC<NextPage> = () => {
-  const { colorMode } = useColorMode()
   return (
     <>
       <Head>
