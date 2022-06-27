@@ -1,9 +1,9 @@
 import { NextPage } from 'next'
 import { FC, Suspense } from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/partials/_Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
-import Background from '../components/three/background'
+// import Background from '../components/three/background'
 import { Canvas, Color } from '@react-three/fiber'
 import { useColorMode } from '@chakra-ui/react'
 import exportedCSS from '../styles/variables.module.scss'
@@ -27,8 +27,8 @@ const Home: FC<NextPage> = () => {
           <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
+              <ambientLight args={['0xffffff', 0.1]} />
               <directionalLight args={[-0.3, 2]} />
-              <Background color={colorMode === 'light' ? canvasParticlesLight : canvasParticlesDark} />
               <Hamburger />
             </Suspense>
           </Canvas>

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import styles from '../styles/ProfileCard.module.scss'
+import styles from '../styles/partials/_ProfileCard.module.scss'
 import { FC, ReactNode, useEffect, useState, useRef } from 'react'
 import { useColorMode } from '@chakra-ui/react'
 
@@ -43,7 +43,7 @@ const ProfileCard: FC = () => {
             ref={ref}
             className={styles.profileCardContainer}
             animate={motionComplete ? { opacity: 0 } : undefined}
-            transition={{ duration: 1.5, delay: 4 }}
+            transition={{ duration: 1.5, delay: 5 }}
             onAnimationComplete={removeFromDom}
         >
             <sup className={colorMode === 'light' ? styles.clockLight : styles.clockDark}>{time}</sup>
@@ -57,14 +57,14 @@ const ProfileCard: FC = () => {
             <AnimationWrapper delay={textDelay * 1}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
-                        <strong>I am a frontend developer from Berlin, Germany.</strong>
+                        <strong>I am a frontend developer from Berlin and aspire to become a creative developer.</strong>
                     </div>
                 </div>
             </AnimationWrapper>
             <AnimationWrapper delay={textDelay * 2} onAnimationComplete={onAnimationComplete}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
-                        <strong>Currently, i am learning 3D animation rendering.</strong>
+                        <strong>Currently, i am learning Blender!</strong>
                     </div>
                 </div>
             </AnimationWrapper>

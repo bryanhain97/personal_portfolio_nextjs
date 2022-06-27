@@ -1,7 +1,6 @@
-@use './googleFonts.module.scss';
 @import './mixins';
 
-$backgroundColorDark: #0e1619;
+$backgroundColorDark: #121212;
 $backgroundColorLight: #f1f1f1;
 $fontColorDarkMode: #E0FBFC;
 $fontColorLightMode: #212121;
@@ -31,13 +30,13 @@ $MoonIconColor: #f1f1f1;
 // PROFILE CARD
 $clockColorLight: #4c4747;
 $profileCardContainerLight: #202020;
-$containerBackgroundLight: #1c555193;
+$containerBackgroundLight: #0d4925;
 $containerShadowLight: 0 8px 32px 0 #0000002e;
 $textLight: #ffffff;
 // ------------
 $clockColorDark: #ffffff;
 $profileCardContainerDark: #556458;
-$containerBackgroundDark: #6b7c93;
+$containerBackgroundDark: #335a91;
 $containerShadowDark: 0 8px 32px 0 #ffffff1f;
 $textDark: #ffffff;
 

@@ -3,7 +3,7 @@ import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import { FiMenu } from 'react-icons/fi'
 import { motion } from 'framer-motion'
 import Link from 'next/link';
-import styles from '../styles/Navbar.module.scss';
+import styles from '../styles/partials/_Navbar.module.scss'
 import exportedScss from '../styles/variables.module.scss';
 import {
   Box,

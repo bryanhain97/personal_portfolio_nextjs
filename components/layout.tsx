@@ -1,6 +1,6 @@
 import { FC, ReactNode } from 'react'
 import Navbar from './Navbar'
-import styles from '../styles/Layout.module.scss'
+import styles from '../styles/partials/_Layout.module.scss'
 
 interface LAYOUT {
     children: ReactNode | ReactNode[]
