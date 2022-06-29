@@ -19,7 +19,7 @@ const Home: FC<NextPage> = () => {
           <Canvas>
             <Suspense fallback={null}>
               <OrbitControls enableZoom={false} />
-              <ambientLight args={['0xffffff', 0.1]} />
+              <ambientLight args={[0xffffff, 0.1]} />
               <directionalLight args={[-0.3, 2]} />
               <Hamburger />
             </Suspense>

@@ -14,7 +14,7 @@ $NavHeight: 65px;
 // Navbar 
 $NavLinkPadding: 0 1rem 0 0;
 // ----- Menu
-$menuBackgroundLight: #bdbdbd;
+$menuBackgroundLight: #929292;
 $menuIconColorLight: #000000;
 $menuBackgroundDark: #dec1c1;
 $menuIconColorDark: #ffffff;
@@ -30,7 +30,7 @@ $MoonIconColor: #f1f1f1;
 // PROFILE CARD
 $clockColorLight: #4c4747;
 $profileCardContainerLight: #202020;
-$containerBackgroundLight: #353535;
+$containerBackgroundLight: #404040;
 $containerShadowLight: 0 8px 32px 0 #0000004d;
 $textLight: #ffffff;
 // ------------
@@ -43,6 +43,10 @@ $textDark: #ffffff;
 // Canvas
 $canvasParticlesLight: #0a526a;
 $canvasParticlesDark:#feb4f6;
+
+// ABOUT
+$cursiveColorLight: #1d1a5c;
+$cursiveColorDark: #eaeac7;
 
 :export {
     backgroundColorDark: $backgroundColorDark;

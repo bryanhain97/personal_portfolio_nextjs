@@ -1,0 +1,51 @@
+@import '../variables.module.scss';
+@import '../mixins.scss';
+
+.container {
+    @include container;
+}
+
+.title,
+.subtitle {
+    font-size: 3rem;
+    margin: 1rem 0 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: crimson;
+}
+
+.text {
+    max-width: 500px;
+    margin: 0 auto;
+    word-wrap: break-all;
+}
+
+.paragraph {
+    line-height: 0.3rem;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    animation-iteration-count: 1;
+    animation: openUp 1s forwards
+}
+
+.cursiveColorDark {
+    color: $cursiveColorDark;
+}
+
+.cursiveColorLight {
+    color: $cursiveColorLight
+}
+
+@keyframes openUp {
+    0% {
+        opacity: 0.5;
+        line-height: 1rem;
+    }
+
+    100% {
+        opacity: 1;
+        line-height: 1.5rem
+    }
+}

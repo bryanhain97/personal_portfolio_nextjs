@@ -1,15 +1,5 @@
 @import '../variables.module.scss';
-
-
-@mixin textContainer {
-    -webkit-backdrop-filter: blur(7.5px);
-    backdrop-filter: blur(7.5px);
-    padding: 8px;
-    border-radius: 6px;
-    display: flex;
-    justify-content: flex-start;
-    opacity: 0.84;
-}
+@import '../mixins.scss';
 
 .textContainerDark,
 .textContainerLight {
