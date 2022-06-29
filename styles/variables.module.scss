@@ -14,14 +14,14 @@ $NavHeight: 65px;
 // Navbar 
 $NavLinkPadding: 0 1rem 0 0;
 // ----- Menu
-$menuBackgroundLight: #b5b4b4;
+$menuBackgroundLight: #bdbdbd;
 $menuIconColorLight: #000000;
 $menuBackgroundDark: #dec1c1;
 $menuIconColorDark: #ffffff;
 
 
 // ICON
-$iconBackgroundDark:#9a97c5;
+$iconBackgroundDark:#38347b;
 $iconBackgroundLight: #fbd38d;
 $SunIconColor: #000000;
 $MoonIconColor: #f1f1f1;
@@ -54,9 +54,9 @@ $canvasParticlesDark:#feb4f6;
     sunIconColor: $SunIconColor;
     moonIconColor: $MoonIconColor;
     fontFamily: $fontFamily;
+    menuBackgroundDark: $menuBackgroundDark;
     menuBackgroundLight: $menuBackgroundLight;
     menuIconColorLight: $menuIconColorLight;
-    menuBackgroundDark: $menuBackgroundDark;
     menuIconColorDark: $menuIconColorDark;
     canvasParticlesLight: $canvasParticlesLight;
     canvasParticlesDark: $canvasParticlesDark;
