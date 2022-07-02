@@ -30,3 +30,13 @@
     justify-content: flex-start;
     opacity: 0.84;
 }
+
+;
+
+@mixin paragraph($color) {
+    line-height: 1.2rem;
+    text-transform: lowercase;
+    letter-spacing: 2px;
+    color: $color;
+    font-family: Arial, Helvetica, sans-serif;
+}

@@ -15,9 +15,9 @@ const About: FC<NextPage> = () => {
                 <section className={styles.about}>
                     <h2 className={styles.title}>about me</h2>
                     <div className={styles.text}>
-                        <p className={styles.paragraph}>
+                        <p className={colorMode === 'light' ? styles.paragraphLight : styles.paragraphDark}>
                             i grew up in the beautiful city of berlin in a district called treptow-köpenick. when i grew up, i loved playing video games and do sports. my first goal was to become a professional e-sports player for a game called <i className={colorMode === 'light' ? styles.cursiveColorLight : styles.cursiveColorDark}
-                            >leagueoflegends</i>. i reached place 7 in europe with my team in 3 versus 3. i figured out a lot later, i&apos;ve always been a very competetive guy. when i was 17, i <i className={colorMode === 'light' ? styles.cursiveColorLight : styles.cursiveColorDark}>started boxing </i>because i was so inspired by mike tyson. back then, it was my biggest dream to become a professional boxer then. unfortunately i couldn&apos;t fulfill my dream because of injuries i sustained from boxing. at around 23 years of age, i figured that i&apos;ve got to look out for another career that i could pursue.
+                            >leagueoflegends</i>. i reached place 7 in europe with my team in 3 versus 3. i figured out, that i&apos;ve always been a very competetive guy. when i was 17, i <i className={colorMode === 'light' ? styles.cursiveColorLight : styles.cursiveColorDark}>started boxing </i>because i was inspired by mike tyson. at that time, it was my biggest dream to become a professional boxer. unfortunately i couldn&apos;t fulfill my dream because of injuries i sustained from boxing. at 23, i realized that i&apos;ve got to look out for another career which would be more realistic to pursue. i searched in the internet for something which would be interesting enough so that i could dedicate myself to it.
                         </p>
                     </div>
                 </section>
