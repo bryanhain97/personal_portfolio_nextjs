@@ -10,6 +10,7 @@ export default function Model({ ...props }) {
     group.current.rotation.y += 0.003
     group.current.rotation.z += 0.003
   })
+
   return (
     <group ref={group} {...props} dispose={null} scale={[0.25, 0.25, 0.25]} position={[0, 0, 0]}>
       <mesh
