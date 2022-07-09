@@ -29,8 +29,8 @@ const Home: FC<NextPage> = () => {
           >
             <Suspense fallback={<Loader />}>
             <OrbitControls enableZoom={false} />
-            <ambientLight args={[0xffffff, 0.1]} />
-            <directionalLight args={[-0.3, 2]} />
+            <ambientLight args={[0xffffff, 1]} />
+            <directionalLight args={[0xffffff, 1]} />
             <Hamburger />
             {/* <Donut /> */}
             </Suspense>

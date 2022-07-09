@@ -1,7 +1,7 @@
 @import './mixins';
 
 $backgroundColorDark: #121212;
-$backgroundColorLight: #f1f1f1;
+$backgroundColorLight: #f5f5f5;
 $fontColorDarkMode: #E0FBFC;
 $fontColorLightMode: #212121;
 $fontFamily: 'Roboto',
@@ -14,14 +14,14 @@ $NavHeight: 65px;
 // Navbar 
 $NavLinkPadding: 0 1rem 0 0;
 // ----- Menu
-$menuBackgroundLight: #929292;
+$menuBackgroundLight: #553f3f;
 $menuIconColorLight: #000000;
-$menuBackgroundDark: #dec1c1;
+$menuBackgroundDark: #f7c1c1;
 $menuIconColorDark: #ffffff;
 
 
 // ICON
-$iconBackgroundDark:#38347b;
+$iconBackgroundDark:#284061;
 $iconBackgroundLight: #fbd38d;
 $SunIconColor: #000000;
 $MoonIconColor: #f1f1f1;
@@ -30,14 +30,14 @@ $MoonIconColor: #f1f1f1;
 // PROFILE CARD
 $clockColorLight: #4c4747;
 $profileCardContainerLight: #202020;
-$containerBackgroundLight: #404040;
-$containerShadowLight: 0 8px 32px 0 #0000004d;
+$containerBackgroundLight: #2a2b2ea3;
+$containerShadowLight: 4px 4px 12px 2px #1f1f1f2a;
 $textLight: #ffffff;
 // ------------
 $clockColorDark: #ffffff;
 $profileCardContainerDark: #556458;
 $containerBackgroundDark: #2a2b2e;
-$containerShadowDark: 0 8px 32px 0 #ffffff09;
+$containerShadowDark: 4px 4px 12px 2px #ffffff09;
 $textDark: #ffffff;
 
 // Canvas
@@ -47,7 +47,7 @@ $canvasParticlesDark:#feb4f6;
 // ABOUT
 $aboutHeaderColor: #dc143c;
 $paragraphColorLight: #252525;
-$cursiveColorLight: #293774;
+$cursiveColorLight: #919aab;
 $paragraphColorDark: #cfcfcf;
 $cursiveColorDark: #eaeac7;
 

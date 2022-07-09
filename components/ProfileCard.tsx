@@ -64,7 +64,7 @@ const ProfileCard: FC = () => {
             <AnimationWrapper delay={textDelay * 2} onAnimationComplete={onAnimationComplete}>
                 <div className={colorMode === 'light' ? styles.textContainerLight : styles.textContainerDark}>
                     <div className={colorMode === 'light' ? styles.textLight : styles.textDark}>
-                        <strong>Currently, i am learning Blender.</strong>
+                        <strong>Currently, i am learning <span className={styles.span}>Blender</span>.</strong>
                     </div>
                 </div>
             </AnimationWrapper>
