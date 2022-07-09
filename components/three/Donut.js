@@ -6,40 +6,40 @@ export default function Model({ ...props }) {
     const group = useRef();
     const { nodes, materials } = useGLTF('/gltf/donut.gltf');
     useFrame(() => {
-        group.current.rotation.y += 0.003
+        group.current.rotation.y += 0.002
     })
     return (
-        <group ref={group} {...props} dispose={null} >
+        <group ref={group} {...props} dispose={null} scale={0.9} rotation={[0.8, 0, 0]} >
             <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Icing.geometry}
                 material={materials.Icing}
                 position={[0.07, 0.73, -0.03]}
-                scale={0.26}
+                scale={0.278}
             />
-            <mesh
+            {/* <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Spirnkle_short.geometry}
                 material={materials.Sprinkle_short_material}
                 position={[-1.01, 0.44, 3.43]}
-            />
-            <mesh
+            /> */}
+            {/* <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Sprinkle_curved.geometry}
                 material={materials.Sprinkle_curved_material}
                 position={[-0.62, 0.44, 1.72]}
-            />
-            <mesh
+            /> */}
+            {/* <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Sprinkle_curved_s.geometry}
                 material={materials.Sprinkle_curved_s_material}
                 position={[0.01, 1, 1.57]}
-            />
-            <mesh
+            /> */}
+            {/* <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Sprinkle_long.geometry}
@@ -52,7 +52,7 @@ export default function Model({ ...props }) {
                 geometry={nodes.Sprinkle_medium.geometry}
                 material={materials.Sprinkle_medium_material}
                 position={[-1.48, 0.44, 2.08]}
-            />
+            /> */}
             <mesh
                 castShadow
                 receiveShadow

@@ -6,13 +6,11 @@ export default function Model({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF('/gltf/hamburger.gltf');
   useFrame(() => {
-    group.current.rotation.x += 0.003
-    group.current.rotation.y += 0.003
-    group.current.rotation.z += 0.003
+    group.current.rotation.y += 0.002
   })
 
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.25, 0.25, 0.25]} position={[0, 0, 0]}>
+    <group ref={group} {...props} dispose={null} scale={[0.25, 0.25, 0.25]} position={[0, 0, 0]} rotation={[0.5, 0, 0]}>
       <mesh
         castShadow
         receiveShadow

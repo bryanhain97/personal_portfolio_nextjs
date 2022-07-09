@@ -5,14 +5,16 @@ import styles from '../styles/partials/_Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
+import { useColorMode } from '@chakra-ui/react'
 import {
-  // Donut,
+  Donut,
   Hamburger,
   Loader
 } from '../components/three'
 
 
 const Home: FC<NextPage> = () => {
+  const { colorMode } = useColorMode()
   return (
     <>
       <Head>
@@ -28,11 +30,10 @@ const Home: FC<NextPage> = () => {
             }}
           >
             <Suspense fallback={<Loader />}>
-            <OrbitControls enableZoom={false} />
-            <ambientLight args={[0xffffff, 1]} />
-            <directionalLight args={[0xffffff, 1]} />
-            <Hamburger />
-            {/* <Donut /> */}
+              <OrbitControls enableZoom={false} />
+              <ambientLight args={[0xffffff, 1]} />
+              <directionalLight args={[0xffffff, 1]} />
+              {colorMode === 'light' ? <Hamburger /> : <Donut />}
             </Suspense>
           </Canvas>
         </div>
