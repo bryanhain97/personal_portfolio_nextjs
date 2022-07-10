@@ -24,7 +24,6 @@ const Home: FC<NextPage> = () => {
         <div className={styles.canvasContainer}>
           <Canvas
             onCreated={(canvasCtx) => {
-              console.log(canvasCtx)
               canvasCtx.gl.physicallyCorrectLights = true;
               canvasCtx.setDpr(Math.min(window.devicePixelRatio, 2))
             }}
