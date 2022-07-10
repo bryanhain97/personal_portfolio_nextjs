@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React, { memo, useRef } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
-export default function Model({ ...props }) {
+function Donut({ ...props }) {
     const group = useRef();
     const { nodes, materials } = useGLTF('/gltf/donut.gltf');
     useFrame(() => {
-        group.current.rotation.y += 0.002
+        group.current.rotation.y += 0.0035
     })
     return (
         <group ref={group} {...props} dispose={null} scale={0.9} rotation={[0.8, 0, 0]} >
@@ -45,8 +45,8 @@ export default function Model({ ...props }) {
                 geometry={nodes.Sprinkle_long.geometry}
                 material={materials.Sprinkle_long_material}
                 position={[-0.61, 0.44, 2.96]}
-            />
-            <mesh
+                />
+                <mesh
                 castShadow
                 receiveShadow
                 geometry={nodes.Sprinkle_medium.geometry}
@@ -67,3 +67,5 @@ export default function Model({ ...props }) {
 }
 
 useGLTF.preload('/gltf/donut.gltf')
+
+export default memo(Donut)

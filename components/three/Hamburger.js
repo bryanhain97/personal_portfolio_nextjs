@@ -1,12 +1,12 @@
-import React, { useRef } from 'react';
+import React, { useRef, memo } from 'react';
 import { useGLTF } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 
-export default function Model({ ...props }) {
+function Hamburger({ ...props }) {
   const group = useRef();
   const { nodes, materials } = useGLTF('/gltf/hamburger.gltf');
   useFrame(() => {
-    group.current.rotation.y += 0.002
+    group.current.rotation.y += 0.0035
   })
 
   return (
@@ -49,3 +49,5 @@ export default function Model({ ...props }) {
 }
 
 useGLTF.preload('/gltf/hamburger.gltf')
+
+export default memo(Hamburger)
