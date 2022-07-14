@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import { FC, Suspense } from 'react'
+import { FC } from 'react'
 import Head from 'next/head'
 import styles from '../styles/partials/_Home.module.scss'
 import ProfileCard from '../components/ProfileCard'
@@ -9,7 +9,6 @@ import { useColorMode } from '@chakra-ui/react'
 import {
   Donut,
   Hamburger,
-  Loader
 } from '../components/three'
 
 
@@ -28,12 +27,10 @@ const Home: FC<NextPage> = () => {
               canvasCtx.setDpr(Math.min(window.devicePixelRatio, 2))
             }}
           >
-            <Suspense fallback={<Loader />}>
-              <OrbitControls enableZoom={false} />
-              <ambientLight args={[0xffffff, 1]} />
-              <directionalLight args={[0xffffff, 1]} />
-              {colorMode === 'light' ? <Hamburger /> : <Donut />}
-            </Suspense>
+            <OrbitControls enableZoom={false} />
+            <ambientLight args={[0xffffff, 1]} />
+            <directionalLight args={[0xffffff, 1]} />
+            {colorMode === 'light' ? <Hamburger /> : <Donut />}
           </Canvas>
         </div>
         <ProfileCard />
