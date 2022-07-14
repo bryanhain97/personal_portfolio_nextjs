@@ -1,0 +1,48 @@
+@import '../variables.module.scss';
+@import '../mixins.scss';
+
+.container {
+    @include container;
+}
+
+.title {
+    font-size: 3rem;
+    margin: 1rem 0 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 4px;
+    color: $h2HeaderColor;
+}
+
+.linkedIn,
+.twitter,
+.github {
+    width: 100%;
+    height: 100%;
+
+    a {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+    }
+}
+
+.linkedIn {
+    background-color: #0A66C2;
+}
+
+.twitter {
+    background-color: #4fcdff;
+}
+
+.github {
+    background-color: #24292F;
+}
+
+.linkedIn_icon,
+.twitter_icon,
+.github_icon {
+    @include socialIcon;
+}

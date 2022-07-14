@@ -40,3 +40,8 @@
     color: $color;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+@mixin socialIcon() {
+    transform: scale(4);
+    color: white;
+}

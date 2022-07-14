@@ -4,7 +4,7 @@ import { FC, ReactNode, useEffect, useState, useRef } from 'react'
 import { useColorMode } from '@chakra-ui/react'
 
 type Animation = {
-    children: ReactNode | ReactNode[],
+    children: ReactNode,
     delay: number,
     onAnimationComplete?: () => void
 }
