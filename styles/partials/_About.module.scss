@@ -3,6 +3,8 @@
 
 .container {
     @include container;
+    display: flex;
+    flex-direction: column;
 }
 
 .title,
@@ -18,7 +20,7 @@
 
 .text {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0rem auto 2rem;
     word-wrap: break-all;
 }
 
@@ -36,4 +38,28 @@
 
 .cursiveColorLight {
     color: $cursiveColorLight
+}
+
+.cv_container {
+    max-width: 500px;
+    margin: 1rem auto;
+    margin-top: auto;
+    height: 2rem;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.489);
+    border-radius: 6px;
+
+    &:hover {
+        background-color: rgba(128, 128, 128, 0.414);
+    }
+}
+
+.cv {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
 }

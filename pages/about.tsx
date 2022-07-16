@@ -20,6 +20,11 @@ const About: FC<NextPage> = () => {
                             >leagueoflegends</i>. i reached place 7 in europe with my team in 3 versus 3. i figured out, that i&apos;ve always been a very competetive guy. when i was 17, i <i className={colorMode === 'light' ? styles.cursiveColorLight : styles.cursiveColorDark}>started boxing </i>because i was inspired by mike tyson. at that time, it was my biggest dream to become a professional boxer. unfortunately i couldn&apos;t fulfill my dream because of injuries i sustained from boxing. at 23, i realized that i&apos;ve got to look out for another career which would be more realistic to pursue. i searched in the internet for something which would be interesting enough so that i could dedicate myself to it and found web development.
                         </p>
                     </div>
+                    <div className={styles.cv_container}>
+                        <a className={styles.cv} href='/cv/cv.pdf' download>
+                            Download CV
+                        </a>
+                    </div>
                 </section>
             </main>
         </>
