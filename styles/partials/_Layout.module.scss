@@ -1,32 +1,29 @@
-@import '../variables.module.scss';
+@import "../variables.module.scss";
 
 .layoutContainer {
-    width: 70%;
-    max-height: 100vh;
-    max-width: 100vw;
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 70%;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 
-    @include belowViewport(768px) {
-        width: 90%;
-    }
+  @include belowViewport(768px) {
+    width: 90%;
+  }
 
-    ;
+  @include belowViewport(425px) {
+    width: 95%;
+  }
 
-    @include belowViewport(425px) {
-        width: 95%;
-    }
-
-    ;
-    margin: 0 auto;
-    height: $layoutContainerHeight;
+  margin: 0 auto;
+  height: $layoutContainerHeight;
 }
 
 .pageContent {
-    position: relative;
-    padding: 1rem;
-    width: 100%;
-    height: 100%;
+  position: relative;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
 }
