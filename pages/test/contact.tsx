@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { NextPage } from 'next'
-import styles from '../styles/partials/_Contact.module.scss';
+import styles from '../../styles/partials/_Contact.module.scss';
 import Head from 'next/head'
 import { Grid, GridItem } from '@chakra-ui/react'
 import { TiSocialTwitter, TiSocialLinkedin, TiSocialGithub } from 'react-icons/ti'
