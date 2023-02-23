@@ -1,20 +1,18 @@
+import { ReactNode } from 'react';
 import styles from '../styles/partials/_GitGraph.module.scss';
-import { DiGitBranch } from 'react-icons/di';
-import GitBranch from './GitBranch';
+import { motion } from 'framer-motion';
 
-export default function GitGraph() {
 
+export default function GitGraph({
+    children,
+    ...props
+}: {
+    children: ReactNode,
+    props?: any
+}) {
     return (
-        <div className={styles.gitGraph}>
-            <GitBranch direction='left' color='yellow' />
-            <GitBranch direction='right' color='green' />
-            <GitBranch direction='left' color='grey' />
-            <GitBranch direction='right' color='purple' />
-            <GitBranch direction='left' color='blue' />
-            <GitBranch direction='right' color='green' />
-            <GitBranch direction='left' color='grey' />
-            <GitBranch direction='right' color='purple' />
-            <GitBranch direction='left' color='blue' />
-        </div>
+        <motion.div {...props}>
+            {children}
+        </motion.div>
     )
 }

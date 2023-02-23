@@ -1,32 +1,25 @@
-.gitGraph {
-  display: flex;
-  position: relative;
-  left: 10px;
-  flex-direction: column;
-}
 .branchLeft {
   position: relative;
-  left: 8px;
+  left: 6px;
   transform: scaleX(-1) translateX(50%);
 }
-
 .gitBranch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  height: 50px;
-  width: 50px;
+  color: #111111;
 }
-.grey {
-  color: rgb(128, 128, 128);
+.logo {
+  height: 40px;
+  width: 40px;
 }
-.green {
-  color: green;
+.commit {
+  font-size: 14px;
+  font-weight: 700;
+  margin-right: 6px;
 }
-.yellow {
-  color: rgb(171, 171, 27);
-}
-.purple {
-  color: purple;
-}
-.blue {
-  color: blue;
+.commitMessage {
+  font-size: 16px;
+  margin-left: 2px;
 }

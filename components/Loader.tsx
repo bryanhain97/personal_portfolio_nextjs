@@ -3,8 +3,6 @@ import styles from '../styles/partials/_Loader.module.scss';
 import { useRef, useState, useContext, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LoaderContext } from './layout';
-import { start } from 'repl';
-import { transition } from '@chakra-ui/react';
 
 
 export const LOADER_TRANSITION_TIME = {
@@ -12,6 +10,8 @@ export const LOADER_TRANSITION_TIME = {
     NORMAL: 0.33,
     SLOW: 0.45
 } as const;
+
+
 const Loader = ({
     transitionTime = LOADER_TRANSITION_TIME.FAST,
 }: {
@@ -27,9 +27,9 @@ const Loader = ({
                 <motion.div
                     ref={loaderRef}
                     className={styles.loader}
-                    onAnimationEnd={() => loaderRef.current!.style.display = 'none'}
-                    exit={{ x: [0, -50, 1000] }}
-                    transition={{ duration: 0.55 }}
+                    onAnimationComplete={() => loaderRef.current!.style.display = 'none'}
+                    exit={{ x: [0, -25, 1000] }}
+                    transition={{ duration: transitionTime }}
                 >
                     <motion.button
                         whileHover={{ scale: 1.5 }}
