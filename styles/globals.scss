@@ -1,4 +1,4 @@
-@import './variables.module.scss';
+@import "./variables.module.scss";
 
 * {
   font-family: $fontFamily !important;
@@ -8,5 +8,6 @@
 }
 
 body {
-  transition: background-color 30ms linear !important
+  transition: background-color 30ms linear !important;
+  overflow: hidden;
 }

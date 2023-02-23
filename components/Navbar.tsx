@@ -43,15 +43,7 @@ const Navbar: FC = () => {
         alignItems='center'
       >
         <Box className={styles.box}>
-          <Link href='/'><a className={styles.logo}>thatguybryan</a></Link>
-        </Box>
-        <Box className={styles.box}>
-          <Link href='/about'>
-            <a className={styles.a}>About</a>
-          </Link>
-          <Link href='/contact'>
-            <a className={styles.a}>Contact</a>
-          </Link>
+          <Link href='/'><a className={styles.logo}>Bryan Hain</a></Link>
         </Box>
         <Box className={styles.box}>
           <Box className={styles.menu} p='0 0.5rem'>
@@ -71,7 +63,7 @@ const Navbar: FC = () => {
               </MenuList>
             </Menu>
           </Box>
-          <motion.div
+          {/* <motion.div
             animate={colorMode === 'light' ? { y: [-100, 0] } : { y: [0, -100, 0] }}
             transition={{ duration: 0.2 }}
           >
@@ -83,7 +75,7 @@ const Navbar: FC = () => {
             >
               {colorMode === 'light' ? <MoonIcon color={moonIconColor} /> : <SunIcon color={sunIconColor} />}
             </Button>
-          </motion.div>
+          </motion.div> */}
         </Box>
       </Flex>
     </Container >

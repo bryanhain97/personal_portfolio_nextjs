@@ -1,21 +1,32 @@
-import { FC, ReactNode } from 'react'
-import Navbar from './Navbar'
+import { createContext, FC, ReactNode, SetStateAction, useState, Dispatch } from 'react'
 import styles from '../styles/partials/_Layout.module.scss'
-import { useColorMode } from '@chakra-ui/react'
+import Navbar from './Navbar'
+import Loader, { LOADER_TRANSITION_TIME } from './Loader'
 interface LAYOUT {
     children: ReactNode | ReactNode[]
 }
 
+type LoaderCtx = {
+    showLoader: boolean,
+    setShowLoader?: Dispatch<SetStateAction<boolean>>
+}
+
+export const LoaderContext = createContext<LoaderCtx>({ showLoader: true })
+
+
 const Layout: FC<LAYOUT> = ({ children }) => {
-    const { toggleColorMode } = useColorMode()
+    const [showLoader, setShowLoader] = useState(true);
     return (
         <>
-            <div className={styles.layoutContainer} onClick={() => toggleColorMode()}>
-                {/* <Navbar /> */}
-                <main className={styles.pageContent}>
-                    {children}
-                </main>
-            </div>
+            <LoaderContext.Provider value={{ showLoader, setShowLoader }}>
+                <Loader transitionTime={LOADER_TRANSITION_TIME.SLOW} />
+                <div className={styles.layoutContainer}>
+                    <Navbar />
+                    <main className={styles.pageContent}>
+                        {children}
+                    </main>
+                </div>
+            </LoaderContext.Provider>
         </>
     )
 }
