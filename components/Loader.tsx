@@ -28,12 +28,11 @@ const Loader = ({
                     ref={loaderRef}
                     className={styles.loader}
                     onAnimationEnd={() => loaderRef.current!.style.display = 'none'}
-                    exit={{ opacity: 0, x: [0, -50, 1000] }}
-                    transition={{ duration: 0.75 }}
+                    exit={{ x: [0, -50, 1000] }}
+                    transition={{ duration: 0.55 }}
                 >
                     <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: transitionTime }}
+                        whileHover={{ scale: 1.5 }}
                         onClick={startExperience}
                         className={styles.button}
                     >

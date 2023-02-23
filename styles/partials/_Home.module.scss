@@ -11,8 +11,7 @@
 
 .container {
   @include container;
-  display: grid;
-  place-items: center;
+  padding: 10px;
 }
 
 .headline1_dark,
@@ -61,4 +60,7 @@
 
 h1.headline {
   font-size: 2rem;
+}
+.image {
+  border-radius: 50%;
 }
