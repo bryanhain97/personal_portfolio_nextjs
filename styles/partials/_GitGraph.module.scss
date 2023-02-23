@@ -1,0 +1,32 @@
+.gitGraph {
+  display: flex;
+  position: relative;
+  left: 10px;
+  flex-direction: column;
+}
+.branchLeft {
+  position: relative;
+  left: 8px;
+  transform: scaleX(-1) translateX(50%);
+}
+
+.gitBranch {
+  position: relative;
+  height: 50px;
+  width: 50px;
+}
+.grey {
+  color: rgb(128, 128, 128);
+}
+.green {
+  color: green;
+}
+.yellow {
+  color: rgb(171, 171, 27);
+}
+.purple {
+  color: purple;
+}
+.blue {
+  color: blue;
+}

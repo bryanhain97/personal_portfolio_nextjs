@@ -11,7 +11,9 @@
 
 .container {
   @include container;
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .headline1_dark,
@@ -61,6 +63,17 @@
 h1.headline {
   font-size: 2rem;
 }
+.imageContainer {
+  width: 100%;
+  display: flex;
+  margin-bottom: 3rem;
+  justify-content: center;
+}
 .image {
   border-radius: 50%;
+  filter: saturate(0.75);
+}
+.textContainer {
+  display: flex;
+  flex-direction: column;
 }

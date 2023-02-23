@@ -1,69 +1,70 @@
-@import '../variables.module.scss';
+@import "../variables.module.scss";
 
 @mixin anchorTag {
-    padding: $NavLinkPadding;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 1px;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
 .logo {
-    @include anchorTag;
-    font-size: 1.25rem;
-    font-weight: 600
+  @include anchorTag;
+  font-size: 1.25rem;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .a {
-    @include anchorTag;
-    text-decoration: underline;
+  @include anchorTag;
+  text-decoration: underline;
 }
 
 .MoonIcon {
-    color: $MoonIconColor;
+  color: $MoonIconColor;
 }
 
 .SunIcon {
-    color: $SunIconColor
+  color: $SunIconColor;
 }
 
 .box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 
-    &:first-child {
-        justify-content: flex-start;
-    }
+  &:first-child {
+    justify-content: flex-start;
+  }
 
-    &:nth-child(2) {
-        @include belowViewport(768px) {
-            display: none
-        }
+  &:nth-child(2) {
+    @include belowViewport(768px) {
+      display: none;
     }
+  }
 
-    &:last-child {
-        justify-content: flex-end;
-    }
+  &:last-child {
+    justify-content: flex-end;
+  }
 }
 
 .menu {
-    @include aboveViewport(769px) {
-        display: none
-    }
+  @include aboveViewport(769px) {
+    display: none;
+  }
 
-    a {
-        width: 100%;
-    }
+  a {
+    width: 100%;
+  }
 }
 
 .menuButton {
-    display: flex;
-    align-items: center;
-    width: 48px;
-    height: 40px;
-    border-radius: 6px;
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 40px;
+  border-radius: 6px;
 }
 
 .menuLogo {
-    margin: 0 auto;
+  margin: 0 auto;
 }
