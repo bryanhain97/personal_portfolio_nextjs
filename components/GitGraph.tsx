@@ -1,14 +1,12 @@
 import { useEffect, useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../styles/partials/_GitGraph.module.scss'
-import { API } from './githubApi';
 import GitBranch from './GitBranch';
 import { Octokit } from 'octokit';
 import { Container, Select } from '@chakra-ui/react';
 import { LoaderContext } from './layout';
 
-const octokit = new Octokit({ auth: API.GITHUB_API_ACCESS_TOKEN });
-
+const octokit = new Octokit({ auth: process.env.GITHUB_API_ACCESS_TOKEN });
 const githubProjects = [
     { repository: 'my-remix-test', title: 'My Remix Test' },
     { repository: 'personal_portfolio_nextjs', title: 'Personal Portfolio' },
@@ -73,7 +71,7 @@ export default function GitGraph() {
      */
     async function fetchRepoData(repo: string) {
         const req = await octokit.request('GET /repos/{owner}/{repo}/commits', {
-            owner: API.GITHUB_USERNAME,
+            owner: process.env.GITHUB_USERNAME as string,
             repo,
         });
         setData(req.data);
