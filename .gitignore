@@ -35,4 +35,4 @@ yarn-error.log*
 *.tsbuildinfo
 
 # secrets
-./components/githubApi.ts
+./components/githubApi.tsx
