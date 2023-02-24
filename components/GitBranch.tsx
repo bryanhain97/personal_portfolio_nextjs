@@ -1,37 +1,37 @@
-import { DiGitBranch } from 'react-icons/di';
 import styles from '../styles/partials/_GitGraph.module.scss';
 import { Container } from '@chakra-ui/react';
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 type GitBranchProps = {
-    direction?: 'left' | 'right';
-    color?: any;
     commitMessage?: string,
+    url: string
     commit?: string,
-    variants?: Variants | null
+    delay?: number,
+    date: Date
 }
 
 
 export default function GitBranch({
-    direction = 'left',
-    color = '#123882',
     commitMessage = 'this is some random ass text',
     commit = '1d5f2d4',
-    variants = null
+    url,
+    delay,
+    date
 }: GitBranchProps) {
-    const containerProps = {
-        display: 'flex',
-        p: '0',
-        alignItems: 'center'
-    }
-    const logoClass = `${styles.logo} ${direction === 'left' ? styles.branchLeft : undefined}`
+    const branchDate = new Date(date);
+
     return (
-        <motion.div className={styles.branchContainer}>
-            <Container {...containerProps}>
-                <DiGitBranch className={logoClass} style={{ color }} />
+        <motion.a
+            animate={{ x: [-10, 0], opacity: [0, 1], transition: { delay } }}
+            href={url}
+            rel='noreferrer'
+            target='_blank'
+            className={styles.gitBranch}>
+            <Container display='flex' p='3px' alignItems='center'>
                 <span className={styles.commit}>{`[${commit}]`}</span>
                 <span className={styles.commitMessage}>{commitMessage}</span>
+                <span className={styles.commitDate}>{branchDate.toLocaleString()}</span>
             </Container>
-        </motion.div >
+        </motion.a>
     )
 }

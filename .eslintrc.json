@@ -3,7 +3,6 @@
   "rules": {
     "no-duplicate-imports": "warn",
     "no-undef": "warn",
-    "no-use-before-define": "warn",
     "jsx-quotes": [
       "warn",
       "prefer-single"
