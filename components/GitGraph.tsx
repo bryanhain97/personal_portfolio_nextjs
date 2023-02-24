@@ -6,7 +6,10 @@ import { Octokit } from 'octokit';
 import { Container, Select } from '@chakra-ui/react';
 import { LoaderContext } from './layout';
 
-const octokit = new Octokit({ auth: process.env.GITHUB_API_ACCESS_TOKEN });
+console.log(process.env.GITHUB_API_ACCESS_TOKEN);
+
+const octokit = new Octokit({});
+
 const githubProjects = [
     { repository: 'my-remix-test', title: 'My Remix Test' },
     { repository: 'personal_portfolio_nextjs', title: 'Personal Portfolio' },
@@ -71,7 +74,7 @@ export default function GitGraph() {
      */
     async function fetchRepoData(repo: string) {
         const req = await octokit.request('GET /repos/{owner}/{repo}/commits', {
-            owner: process.env.GITHUB_USERNAME as string,
+            owner: 'bryanhain97',
             repo,
         });
         setData(req.data);
