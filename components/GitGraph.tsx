@@ -6,8 +6,6 @@ import { Octokit } from 'octokit';
 import { Container, Select } from '@chakra-ui/react';
 import { LoaderContext } from './layout';
 
-console.log(process.env.GITHUB_API_ACCESS_TOKEN);
-
 const octokit = new Octokit({});
 
 const githubProjects = [
