@@ -1,4 +1,4 @@
-@import "./variables.module.scss";
+@import './variables.module.scss';
 
 * {
   font-family: $fontFamily !important;
@@ -8,6 +8,9 @@
 }
 
 body {
-  transition: background-color 30ms linear !important;
+  background-image: url('https://images.unsplash.com/photo-1473442240418-452f03b7ae40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80') !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position-x: 180% !important;
   overflow: hidden;
 }

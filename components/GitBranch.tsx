@@ -30,7 +30,7 @@ export default function GitBranch({
             <Container display='flex' p='3px' alignItems='center'>
                 <span className={styles.commit}>{`[${commit}]`}</span>
                 <span className={styles.commitMessage}>{commitMessage}</span>
-                <span className={styles.commitDate}>{branchDate.toLocaleString()}</span>
+                <span className={styles.commitDate}>{branchDate.toLocaleDateString()}</span>
             </Container>
         </motion.a>
     )

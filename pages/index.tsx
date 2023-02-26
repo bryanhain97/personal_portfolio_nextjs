@@ -14,7 +14,7 @@ const Home: FC<NextPage> = () => {
         <title>thatguybryan | Homepage</title>
       </Head>
       <main className={styles.container}>
-        <Container mt='5' p='0' display='flex' flexDirection='column' alignItems='center'>
+        <Container mt='5' mx='0' p='0' >
           <GitGraph />
         </Container>
       </main>

@@ -3,8 +3,9 @@ import { motion } from 'framer-motion';
 import styles from '../styles/partials/_GitGraph.module.scss'
 import GitBranch from './GitBranch';
 import { Octokit } from 'octokit';
-import { Container, Select } from '@chakra-ui/react';
+import { Container, Select, Text, Box } from '@chakra-ui/react';
 import { LoaderContext } from './layout';
+import { DiGithubBadge } from 'react-icons/di';
 
 const octokit = new Octokit({});
 
@@ -19,48 +20,31 @@ export default function GitGraph() {
     const { showLoader } = useContext(LoaderContext)
     const [repo, setRepo] = useState<string>('my-remix-test');
     const [data, setData] = useState<any[] | null>(null);
-    const TRANSITION_DELAY = 0.25
+    const TRANSITION_DELAY = 0.08 // Change this with framer-motion's staggerChildren
 
     useEffect(() => {
-        fetchRepoData(repo)
+        fetchRepoData(repo) // change for React 18 use + Suspense + ErrorBoundary
     }, [repo])
 
-    const options = githubProjects.map(({ repository, title }, idx) => <option value={repository} key={idx}>{title}</option>)
+    const options = githubProjects.map(({ repository, title }, idx) => <option value={repository} key={idx} aria-label={title}>{title}</option>)
+    const branches = data && data.map(({ sha, commit, html_url: url }, idx) =>
+        (<GitBranch key={sha} commit={sha.substring(0, 7)} commitMessage={commit.message} url={url} delay={idx * TRANSITION_DELAY} date={commit.author.date} />))
+
     return (
         <>
             {!showLoader &&
-                <motion.div
-                    className={styles.gitGraph}
-                    animate={{ opacity: [0, 1] }}
-                >
-                    <Select
-                        mb={3}
-                        size='md'
-                        fontWeight={800}
-                        value={repo}
-                        onChange={(e) => setRepo(e.target.value)}
-                    >
+                <motion.div className={styles.gitGraph} animate={{ opacity: [0, 1] }}>
+                    <Box display='flex' mb='1'>
+                        <Text color='blue.700' fontSize='4xl'>Latest commits</Text>
+                        <a href='https://github.com/' target='_blank' rel='noreferrer' className={styles.github}>
+                            <DiGithubBadge className={styles.githubLogo} />
+                        </a>
+                    </Box>
+                    <Select mb={3} size='sm' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value)}>
                         {options}
                     </Select>
-                    <Container
-                        display='flex'
-                        flexDirection='column'
-                        p='0'
-                        rowGap='5px'
-                        maxHeight='200px'
-                        overflowY='scroll'
-                    >
-                        {data && data.length > 0 && data.map(({ sha, commit, html_url: url }, idx) => {
-                            return (
-                                <GitBranch
-                                    key={sha}
-                                    commit={sha.substring(0, 7)}
-                                    commitMessage={commit.message}
-                                    url={url}
-                                    delay={idx * TRANSITION_DELAY}
-                                    date={commit.author.date}
-                                />)
-                        })}
+                    <Container display='flex' flexDirection='column' p='0' rowGap='5px' maxHeight='200px' overflowY='scroll'>
+                        {branches}
                     </Container>
                 </motion.div>
             }
@@ -71,10 +55,17 @@ export default function GitGraph() {
      * FUNCTIONS
      */
     async function fetchRepoData(repo: string) {
-        const req = await octokit.request('GET /repos/{owner}/{repo}/commits', {
+        const octokitOptions = {
             owner: 'bryanhain97',
-            repo,
-        });
+            repo
+        }
+        const [req, req2] = await Promise.all([
+            octokit.request('GET /repos/{owner}/{repo}/commits', octokitOptions),
+            octokit.request('GET /repos/{owner}/{repo}', octokitOptions)
+        ]) // Promise.all([fetch1,fetch2]) improves request time over doing 2 single requests
+        const { description: reqDescription } = req2.data;
+        const description = reqDescription || 'no description';
+
         setData(req.data);
     }
 }

@@ -1,5 +1,5 @@
-@import "../variables.module.scss";
-@import "../mixins.scss";
+@import '../variables.module.scss';
+@import '../mixins.scss';
 
 .canvasContainer {
   position: fixed;
@@ -13,7 +13,6 @@
   @include container;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 .headline1_dark,
