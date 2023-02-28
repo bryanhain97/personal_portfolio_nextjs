@@ -33,7 +33,7 @@ const EmailModal = () => {
 
 
     return (
-        <Container p='15px' m='0' maxW='450px' border='1px solid black' my='1rem'>
+        <Container p='15px' m='0' maxW='450px' my='1rem' className={styles.emailModal}>
             <Text color='blue.700' fontSize='4xl'>Message me</Text>
             <form onSubmit={(e) => sendEmail(e, email)}>
                 <FormControl>

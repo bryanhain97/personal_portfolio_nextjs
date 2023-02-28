@@ -1,19 +1,22 @@
 .gitGraph {
+  background-color: #ffffffef;
+  border-radius: 12px;
   max-width: 450px;
   padding: 15px;
-  border: 1px solid rgb(0, 0, 0);
+  border: 3px solid rgb(25, 25, 144);
   align-self: flex-start;
   ::-webkit-scrollbar {
     display: none;
   }
 }
 .gitBranch {
-  padding: 3px 0;
+  padding: 3px;
   display: flex;
   align-items: center;
+  border-radius: 3px;
   transition: background-color 0.1s ease;
   &:hover {
-    background-color: #ececec;
+    background-color: #ecececab;
   }
 }
 .logo {
@@ -46,6 +49,9 @@
   margin-left: 2px;
   @media (max-width: 425px) {
     max-width: fit-content;
+  }
+  @media (min-width: 426px) {
+    max-width: 210px;
   }
 }
 .commitDate {

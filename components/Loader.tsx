@@ -1,16 +1,14 @@
 /* eslint-disable no-use-before-define */
 import styles from '../styles/partials/_Loader.module.scss';
-import { useRef, useState, useContext, useEffect } from 'react';
+import { useRef, useContext } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LoaderContext } from './layout';
-
 
 export const LOADER_TRANSITION_TIME = {
     FAST: 0.25,
     NORMAL: 0.33,
     SLOW: 0.45
 } as const;
-
 
 const Loader = ({
     transitionTime = LOADER_TRANSITION_TIME.FAST,
@@ -20,6 +18,7 @@ const Loader = ({
     const loaderRef = useRef<HTMLDivElement | null>(null);
     const ctx = useContext(LoaderContext)
     const startExperience = () => ctx.setShowLoader!(false);
+
     return (
         <AnimatePresence>
             {
@@ -42,6 +41,10 @@ const Loader = ({
             }
         </AnimatePresence>
     )
+
+    /**
+     * FUNCTIONS
+     */
 }
 
 

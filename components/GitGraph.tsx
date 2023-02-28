@@ -40,7 +40,7 @@ export default function GitGraph() {
                             <DiGithubBadge className={styles.githubLogo} />
                         </a>
                     </Box>
-                    <Select mb={3} size='sm' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value)}>
+                    <Select mb={3} size='md' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value)}>
                         {options}
                     </Select>
                     <Container display='flex' flexDirection='column' p='0' rowGap='5px' maxHeight='200px' overflowY='scroll'>

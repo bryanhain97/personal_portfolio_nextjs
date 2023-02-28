@@ -6,8 +6,6 @@ import {
   Container,
 } from '@chakra-ui/react';
 
-const { navHeight } = exportedScss;
-
 const Navbar: FC = () => {
   return (
     <Container

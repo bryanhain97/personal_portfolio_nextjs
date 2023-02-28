@@ -1,14 +1,6 @@
 @import '../variables.module.scss';
 @import '../mixins.scss';
 
-.canvasContainer {
-  position: fixed;
-  top: $NavHeight;
-  left: 0;
-  height: 100%;
-  width: 100%;
-}
-
 .container {
   @include container;
   display: flex;

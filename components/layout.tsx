@@ -2,6 +2,8 @@ import { createContext, FC, ReactNode, SetStateAction, useState, Dispatch } from
 import styles from '../styles/partials/_Layout.module.scss'
 import Navbar from './Navbar'
 import Loader, { LOADER_TRANSITION_TIME } from './Loader'
+import BufferPoints from '../components/three/background'
+import { Canvas } from '@react-three/fiber'
 interface LAYOUT {
     children: ReactNode | ReactNode[]
 }
@@ -18,8 +20,12 @@ const Layout: FC<LAYOUT> = ({ children }) => {
     const [showLoader, setShowLoader] = useState(true);
     return (
         <>
+
             <LoaderContext.Provider value={{ showLoader, setShowLoader }}>
                 <Loader transitionTime={LOADER_TRANSITION_TIME.SLOW} />
+                <Canvas style={{ position: 'absolute' }}>
+                    <BufferPoints />
+                </Canvas>
                 <div className={styles.layoutContainer}>
                     <Navbar />
                     <main className={styles.pageContent}>
