@@ -28,6 +28,9 @@ const EmailModal = () => {
         from_name: '',
         message: ''
     });
+    console.log(NEXT_PUBLIC_EMAILJS_APIKEY)
+    console.log(NEXT_PUBLIC_EMAILJS_SERVICE_ID)
+    console.log(NEXT_PUBLIC_EMAILJS_TEMPLATE_ID)
     const textareaPlaceholder = `Hey Bryan, i really like your website.`;
     const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { setEmail({ ...email, [e.target.name]: e.target.value }) };
 
