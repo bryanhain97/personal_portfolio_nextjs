@@ -8,10 +8,8 @@
 
 .logo {
   @include anchorTag;
-  color: #8e8e8e;
+  color: #404040;
   font-size: 2rem;
-  text-transform: uppercase;
-  letter-spacing: 10px;
   font-weight: 800;
 }
 
