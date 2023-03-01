@@ -10,7 +10,7 @@ const Navbar: FC = () => {
   return (
     <Container
       p='0'
-      mt='5'
+      my='5'
       display='flex'
       justifyContent='center'
     >

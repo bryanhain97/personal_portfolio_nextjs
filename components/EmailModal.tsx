@@ -33,18 +33,19 @@ const EmailModal = () => {
 
 
     return (
-        <Container p='15px' m='0' maxW='450px' my='1rem' className={styles.emailModal}>
+        <Container p='15px' m='0' width='450px' className={styles.emailModal}>
             <Text color='blue.700' fontSize='4xl'>Message me</Text>
             <form onSubmit={(e) => sendEmail(e, email)}>
                 <FormControl>
                     <FormLabel htmlFor='from'>From</FormLabel>
-                    <Input type='text' id='from' name='from_name' onChange={handleInputChange} value={email.from_name} isRequired />
+                    <Input type='text' placeholder='Ash Ketchum' id='from' name='from_name' onChange={handleInputChange} value={email.from_name} isRequired />
                 </FormControl>
                 <FormControl mt='3'>
                     <FormLabel htmlFor='message'>Message</FormLabel>
                     <Textarea placeholder={textareaPlaceholder} fontSize='sm' id='message' name='message' onChange={handleInputChange} value={email.message} isRequired />
                 </FormControl>
                 <Button type='submit' mt='1rem' rightIcon={<MdMail />} bgColor='blue.700' color='white'>Send</Button>
+                <p className={styles.modalInfo}>with <a href='https://www.emailjs.com/' target='_blank' rel='noreferrer'>EmailJS</a></p>
             </form>
             <ToastContainer />
         </Container >

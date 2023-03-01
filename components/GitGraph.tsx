@@ -46,6 +46,9 @@ export default function GitGraph() {
                     <Container display='flex' flexDirection='column' p='0' rowGap='5px' maxHeight='200px' overflowY='scroll'>
                         {branches}
                     </Container>
+                    <p className={styles.modalInfo}>
+                        with <a href='https://docs.github.com/en/rest/' rel='noreferrer' target='_blank'>GitHub REST API</a>
+                    </p>
                 </motion.div>
             }
         </>
@@ -64,7 +67,6 @@ export default function GitGraph() {
             octokit.request('GET /repos/{owner}/{repo}', octokitOptions)
         ]) // Promise.all([fetch1,fetch2]) improves request time over doing 2 single requests
         const { description: reqDescription } = req2.data;
-        const description = reqDescription || 'no description';
 
         setData(req.data);
     }

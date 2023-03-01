@@ -23,7 +23,7 @@ const Layout: FC<LAYOUT> = ({ children }) => {
 
             <LoaderContext.Provider value={{ showLoader, setShowLoader }}>
                 <Loader transitionTime={LOADER_TRANSITION_TIME.SLOW} />
-                <Canvas style={{ position: 'absolute' }}>
+                <Canvas style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh' }}>
                     <BufferPoints />
                 </Canvas>
                 <div className={styles.layoutContainer}>
