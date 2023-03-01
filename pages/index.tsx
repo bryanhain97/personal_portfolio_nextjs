@@ -23,12 +23,6 @@ const Home: FC<NextPage> = () => {
       >
         <ProfileCard />
         <div className={styles.contentContainer}>
-          <Image
-            src='https://github-readme-stats.vercel.app/api/top-langs/?username=bryanhain97&layout=compact'
-            alt='github stats'
-            width='450'
-            height='250'
-          />
           <GitGraph />
           <EmailModal />
         </div>
