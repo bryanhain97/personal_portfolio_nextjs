@@ -6,11 +6,12 @@ import {
     Textarea,
     Button,
     Text,
+    useMediaQuery
 } from '@chakra-ui/react';
 import { MdMail } from 'react-icons/md'
 import { useState, ChangeEvent, FormEvent } from 'react';
 import emailjs from '@emailjs/browser';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import styles from '../styles/partials/_EmailModal.module.scss';
 
@@ -28,13 +29,14 @@ const EmailModal = () => {
         from_name: '',
         message: ''
     })
+    const [smallerThan425] = useMediaQuery('(max-width: 425px)');
     const textareaPlaceholder = `Hey Bryan, i really like your website.`;
     const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => { setEmail({ ...email, [e.target.name]: e.target.value }) };
-
+    const fontSize = smallerThan425 ? '3xl' : '4xl'
 
     return (
-        <Container p='15px' m='0' width='450px' className={styles.emailModal}>
-            <Text color='blue.700' fontSize='4xl'>Message me</Text>
+        <Container p='15px' m='0' width={smallerThan425 ? '380px' : '420px'} className={styles.emailModal}>
+            <Text color='blue.700' fontSize={fontSize}>Message me</Text>
             <form onSubmit={(e) => sendEmail(e, email)}>
                 <FormControl>
                     <FormLabel htmlFor='from'>From</FormLabel>
@@ -45,9 +47,8 @@ const EmailModal = () => {
                     <Textarea placeholder={textareaPlaceholder} fontSize='sm' id='message' name='message' onChange={handleInputChange} value={email.message} isRequired />
                 </FormControl>
                 <Button type='submit' mt='1rem' rightIcon={<MdMail />} bgColor='blue.700' color='white'>Send</Button>
-                <p className={styles.modalInfo}>with <a href='https://www.emailjs.com/' target='_blank' rel='noreferrer'>EmailJS</a></p>
             </form>
-            <ToastContainer />
+            <p className={styles.modalInfo}>with <a href='https://www.emailjs.com/' target='_blank' rel='noreferrer'>EmailJS</a></p>
         </Container >
     )
 

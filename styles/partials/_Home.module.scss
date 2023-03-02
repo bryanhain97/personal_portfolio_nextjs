@@ -10,7 +10,11 @@
 }
 .contentContainer {
   display: grid;
-  grid-template-columns: 450px 450px;
+  grid-template-columns: 420px 420px;
+  justify-items: center;
   grid-template-rows: auto;
   gap: 1rem;
+  @media (max-width: 900px) {
+    grid-template-columns: 390px;
+  }
 }

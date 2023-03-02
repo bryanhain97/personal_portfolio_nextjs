@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import styles from '../styles/partials/_GitGraph.module.scss'
 import GitBranch from './GitBranch';
 import { Octokit } from 'octokit';
-import { Container, Select, Text, Box } from '@chakra-ui/react';
+import { Container, Select, Text, Box, useMediaQuery } from '@chakra-ui/react';
 import { LoaderContext } from './layout';
 import { DiGithubBadge } from 'react-icons/di';
 
@@ -21,7 +21,7 @@ export default function GitGraph() {
     const [repo, setRepo] = useState<string>('my-remix-test');
     const [data, setData] = useState<any[] | null>(null);
     const TRANSITION_DELAY = 0.08 // Change this with framer-motion's staggerChildren
-
+    const [isSmallerThan425] = useMediaQuery('(max-width: 425px)');
     useEffect(() => {
         fetchRepoData(repo) // change for React 18 use + Suspense + ErrorBoundary
     }, [repo])
@@ -34,21 +34,23 @@ export default function GitGraph() {
         <>
             {!showLoader &&
                 <motion.div className={styles.gitGraph} animate={{ opacity: [0, 1] }}>
-                    <Box display='flex' mb='1'>
-                        <Text color='blue.700' fontSize='4xl'>Latest commits</Text>
-                        <a href='https://github.com/' target='_blank' rel='noreferrer' className={styles.github}>
-                            <DiGithubBadge className={styles.githubLogo} />
-                        </a>
-                    </Box>
-                    <Select mb={3} size='md' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value)}>
-                        {options}
-                    </Select>
-                    <Container display='flex' flexDirection='column' p='0' rowGap='5px' maxHeight='200px' overflowY='scroll'>
-                        {branches}
+                    <Container p='15' m='0' w={isSmallerThan425 ? '380px' : '420px'}>
+                        <Box display='flex' mb='1'>
+                            <Text color='blue.700' fontSize='4xl'>Latest commits</Text>
+                            <a href='https://github.com/' target='_blank' rel='noreferrer' className={styles.github}>
+                                <DiGithubBadge className={styles.githubLogo} />
+                            </a>
+                        </Box>
+                        <Select mb={3} size='md' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value)}>
+                            {options}
+                        </Select>
+                        <Container display='flex' flexDirection='column' p='0' rowGap='5px' maxHeight='200px' overflowY='scroll'>
+                            {branches}
+                        </Container>
+                        <p className={styles.modalInfo}>
+                            with <a href='https://docs.github.com/en/rest/' rel='noreferrer' target='_blank'>GitHub REST API</a>
+                        </p>
                     </Container>
-                    <p className={styles.modalInfo}>
-                        with <a href='https://docs.github.com/en/rest/' rel='noreferrer' target='_blank'>GitHub REST API</a>
-                    </p>
                 </motion.div>
             }
         </>

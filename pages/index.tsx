@@ -4,6 +4,7 @@ import { FC } from 'react'
 import Head from 'next/head'
 import { Box } from '@chakra-ui/react'
 import ProfileCard from '../components/ProfileCard'
+import { ToastContainer } from 'react-toastify'
 import GitGraph from '../components/GitGraph'
 import EmailModal from '../components/EmailModal'
 import styles from '../styles/partials/_Home.module.scss';
@@ -26,6 +27,7 @@ const Home: FC<NextPage> = () => {
           <GitGraph />
           <EmailModal />
         </div>
+        <ToastContainer />
       </Box>
     </>
   )

@@ -1,21 +1,30 @@
-import { Box, Container, Text } from '@chakra-ui/react';
+import { Box, Container, Text, useMediaQuery } from '@chakra-ui/react';
 import Image from 'next/image';
 import styles from '../styles/partials/_ProfileCard.module.scss';
 
 const ProfileCard = () => {
+    const [smallerThan425] = useMediaQuery('(max-width: 425px)');
+    const imageDim = smallerThan425 ? '180px' : '200px'
 
     return (
-        <Container m='0' p='0' display='flex' w='450px' justifyContent='space-between' alignItems='center'>
+        <Container
+            m='0'
+            p='0'
+            display='flex'
+            w={smallerThan425 ? 390 : 440}
+            justifyContent='space-evenly'
+            alignItems='center'
+        >
             <Image
                 className={styles.image}
                 src='/images/me.jpeg'
                 alt='picture of me'
-                width='200'
-                height='200'
+                width={imageDim}
+                height={imageDim}
             />
             <Box>
                 <Text
-                    fontSize='xl'
+                    fontSize={smallerThan425 ? 'md' : 'xl'}
                     px='1rem'
                     backgroundColor='blue.700'
                     color='white'

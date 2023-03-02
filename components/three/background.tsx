@@ -4,7 +4,7 @@ import { useFrame, useLoader } from '@react-three/fiber'
 
 
 function BufferPoints({ count = 400, color = '#777' }: any) {
-    const rotationSpeed = 0.0008
+    const rotationSpeed = 0.001
     const particleSize: number = 0.4
     const pointsRef = useRef<Points | null>(null)
     const textureMap = useLoader(TextureLoader, '/particles/circle_02.png')
@@ -13,7 +13,7 @@ function BufferPoints({ count = 400, color = '#777' }: any) {
         return new BufferAttribute(new Float32Array(p), 3)
     }, [count])
 
-    useFrame((): void => {
+    useFrame(() => {
         if (pointsRef !== null) {
             pointsRef.current!.rotation.y += rotationSpeed
         }

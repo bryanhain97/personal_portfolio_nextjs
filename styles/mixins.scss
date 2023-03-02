@@ -38,6 +38,7 @@
   color: white;
 }
 @mixin modalInfo() {
+  line-height: 14px;
   margin-top: 8px;
   margin-left: auto;
   width: fit-content;
