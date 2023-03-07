@@ -4,15 +4,16 @@ import styles from '../styles/partials/_ProfileCard.module.scss';
 
 const ProfileCard = () => {
     const [smallerThan425] = useMediaQuery('(max-width: 425px)');
-    const imageDim = smallerThan425 ? '160px' : '200px'
+    const imageDim = smallerThan425 ? '160px' : '180px'
 
     return (
         <Container
             m='0'
+            mt='5'
             p='0'
             display='flex'
-            w={smallerThan425 ? 360 : 440}
-            justifyContent='space-evenly'
+            w={smallerThan425 ? 360 : 420}
+            justifyContent='space-around'
             alignItems='center'
         >
             <Image
@@ -27,6 +28,7 @@ const ProfileCard = () => {
                     fontSize={smallerThan425 ? 'md' : 'xl'}
                     px='1rem'
                     backgroundColor='blue.700'
+                    borderRadius={2}
                     color='white'
                 >
                     Frontend Developer

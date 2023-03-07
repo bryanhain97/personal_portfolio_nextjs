@@ -10,14 +10,15 @@ const Navbar: FC = () => {
   return (
     <Container
       p='0'
-      my='7'
+      mt='7'
       display='flex'
       justifyContent='center'
     >
       <Link href='/'>
         <a className={styles.logo}>
           <Text
-            fontSize='2xl'
+            color='blue.700'
+            fontSize='4xl'
             letterSpacing={5}
             textTransform='uppercase'
             fontWeight='semibold'>thatguybryan</Text>

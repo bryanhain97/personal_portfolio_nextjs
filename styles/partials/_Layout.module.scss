@@ -1,24 +1,5 @@
 @import '../variables.module.scss';
 
-.layoutContainer {
-  position: relative;
-  width: 95%;
-  height: 100%;
-  display: flex;
-  z-index: 3;
-  flex-direction: column;
-  @include belowViewport(768px) {
-    width: 90%;
-  }
-
-  @include belowViewport(425px) {
-    width: 95%;
-  }
-
-  margin: 0 auto;
-  height: min-content;
-}
-
 .pageContent {
   position: relative;
   margin-bottom: 2rem;
