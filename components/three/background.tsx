@@ -3,11 +3,11 @@ import { BufferAttribute, TextureLoader, AdditiveBlending, Points, Vector3 } fro
 import { useFrame, useLoader } from '@react-three/fiber'
 
 
-function BufferPoints({ count = 400, color = '#777' }: any) {
+function BufferPoints({ count = 400, color = '#ccc' }: any) {
     const rotationSpeed = 0.0005
     const particleSize = 0.4
     const pointsRef = useRef<Points | null>(null)
-    const textureMap = useLoader(TextureLoader, '/particles/icons8-html-96.png')
+    const textureMap = useLoader(TextureLoader, '/particles/icons8-html-55.png')
     const points = useMemo(() => {
         const p = new Array(count).fill(0).map((v) => (0.5 - Math.random()) * 12)
         return new BufferAttribute(new Float32Array(p), 3)
