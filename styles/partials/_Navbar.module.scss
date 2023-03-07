@@ -1,22 +1,5 @@
 @import '../variables.module.scss';
 
-@mixin anchorTag {
-  font-size: 1rem;
-  letter-spacing: 1px;
-}
-
-.logo {
-  @include anchorTag;
-  color: #333333;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-}
-
-.a {
-  @include anchorTag;
-  text-decoration: underline;
-}
-
 .MoonIcon {
   color: $MoonIconColor;
 }

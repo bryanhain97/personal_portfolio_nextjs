@@ -34,7 +34,7 @@ export default function GitGraph() {
         <>
             {!showLoader &&
                 <motion.div className={styles.gitGraph} animate={{ opacity: [0, 1] }}>
-                    <Container p='15' m='0' w={isSmallerThan425 ? '380px' : '420px'}>
+                    <Container p='15' m='0' w={isSmallerThan425 ? '360px' : '420px'}>
                         <Box display='flex' mb='1'>
                             <Text color='blue.700' fontSize='4xl'>Latest commits</Text>
                             <a href='https://github.com/' target='_blank' rel='noreferrer' className={styles.github}>

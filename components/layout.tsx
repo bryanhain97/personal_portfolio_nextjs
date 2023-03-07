@@ -20,7 +20,6 @@ const Layout: FC<LAYOUT> = ({ children }) => {
     const [showLoader, setShowLoader] = useState(true);
     return (
         <>
-
             <LoaderContext.Provider value={{ showLoader, setShowLoader }}>
                 <Loader transitionTime={LOADER_TRANSITION_TIME.SLOW} />
                 <Canvas style={{ position: 'absolute', top: 0, left: 0, width: '100vw', height: '100vh' }}>

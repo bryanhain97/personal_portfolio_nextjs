@@ -35,7 +35,7 @@ const EmailModal = () => {
     const fontSize = smallerThan425 ? '3xl' : '4xl'
 
     return (
-        <Container p='15px' m='0' width={smallerThan425 ? '380px' : '420px'} className={styles.emailModal}>
+        <Container p='15px' m='0' width={smallerThan425 ? '360px' : '420px'} className={styles.emailModal}>
             <Text color='blue.700' fontSize={fontSize}>Message me</Text>
             <form onSubmit={(e) => sendEmail(e, email)}>
                 <FormControl>

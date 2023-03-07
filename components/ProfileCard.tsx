@@ -4,14 +4,14 @@ import styles from '../styles/partials/_ProfileCard.module.scss';
 
 const ProfileCard = () => {
     const [smallerThan425] = useMediaQuery('(max-width: 425px)');
-    const imageDim = smallerThan425 ? '180px' : '200px'
+    const imageDim = smallerThan425 ? '160px' : '200px'
 
     return (
         <Container
             m='0'
             p='0'
             display='flex'
-            w={smallerThan425 ? 390 : 440}
+            w={smallerThan425 ? 360 : 440}
             justifyContent='space-evenly'
             alignItems='center'
         >
