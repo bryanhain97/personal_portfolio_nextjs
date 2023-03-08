@@ -14,11 +14,13 @@ const githubProjects = [
     { repository: 'personal_portfolio_nextjs', title: 'Personal Portfolio' },
     { repository: 'Image-Text-Recognizer', title: 'Image Text Recognizer' },
     { repository: 'apple_desk', title: 'Apple Desk UI' },
-]
+] as const;
+
+type GithubRepository = typeof githubProjects[number]['repository'];
 
 export default function GitGraph() {
     const { showLoader } = useContext(LoaderContext)
-    const [repo, setRepo] = useState<string>('my-remix-test');
+    const [repo, setRepo] = useState<GithubRepository>('personal_portfolio_nextjs');
     const [data, setData] = useState<any[] | null>(null);
     const TRANSITION_DELAY = 0.08 // Change this with framer-motion's staggerChildren
     const [isSmallerThan425] = useMediaQuery('(max-width: 425px)');
@@ -41,7 +43,7 @@ export default function GitGraph() {
                                 <DiGithubBadge className={styles.githubLogo} />
                             </a>
                         </Box>
-                        <Select mb={3} size='md' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value)}>
+                        <Select mb={3} size='md' fontWeight={600} value={repo} aria-label='Select Repository' onChange={(e) => setRepo(e.target.value as GithubRepository)}>
                             {options}
                         </Select>
                         <Container display='flex' flexDirection='column' p='0' rowGap='5px' maxHeight='200px' overflowY='scroll'>
