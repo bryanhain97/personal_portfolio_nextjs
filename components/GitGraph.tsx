@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useMemo } from 'react';
 import { motion } from 'framer-motion';
 import styles from '../styles/partials/_GitGraph.module.scss'
 import GitBranch from './GitBranch';
@@ -16,19 +16,21 @@ const githubProjects = [
     { repository: 'apple_desk', title: 'Apple Desk UI' },
 ] as const;
 
+type GitHubProject = typeof githubProjects[number];
 type GithubRepository = typeof githubProjects[number]['repository'];
 
 export default function GitGraph() {
     const { showLoader } = useContext(LoaderContext)
     const [repo, setRepo] = useState<GithubRepository>('personal_portfolio_nextjs');
     const [data, setData] = useState<any[] | null>(null);
-    const TRANSITION_DELAY = 0.08 // Change this with framer-motion's staggerChildren
     const [isSmallerThan425] = useMediaQuery('(max-width: 425px)');
+    const TRANSITION_DELAY = 0.08 // Change this with framer-motion's staggerChildren
+
     useEffect(() => {
         fetchRepoData(repo) // change for React 18 use + Suspense + ErrorBoundary
     }, [repo])
 
-    const options = githubProjects.map(({ repository, title }, idx) => <option value={repository} key={idx} aria-label={title}>{title}</option>)
+    const options = useMemo(() => githubProjects.map(({ repository, title }: GitHubProject, idx) => <option value={repository} key={idx} aria-label={title}>{title}</option>), [])
     const branches = data && data.map(({ sha, commit, html_url: url }, idx) =>
         (<GitBranch key={sha} commit={sha.substring(0, 7)} commitMessage={commit.message} url={url} delay={idx * TRANSITION_DELAY} date={commit.author.date} />))
 
