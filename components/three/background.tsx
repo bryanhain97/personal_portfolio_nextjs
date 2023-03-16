@@ -1,5 +1,5 @@
 import React, { useMemo, useRef } from 'react';
-import { BufferAttribute, TextureLoader, AdditiveBlending, Points, Vector3 } from 'three';
+import { BufferAttribute, TextureLoader, CustomBlending, Points, OneMinusSrcAlphaFactor } from 'three';
 import { useFrame, useLoader } from '@react-three/fiber'
 
 
@@ -28,7 +28,8 @@ function BufferPoints({ count = 400, color = '#ccc' }: any) {
                 color={color}
                 map={textureMap}
                 depthWrite={false}
-                blending={AdditiveBlending}
+                blending={CustomBlending}
+                blendDst={OneMinusSrcAlphaFactor}
                 sizeAttenuation={true}
             />
         </points>
