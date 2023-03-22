@@ -10,6 +10,7 @@ import { DiGithubBadge } from 'react-icons/di';
 const octokit = new Octokit({});
 
 const githubProjects = [
+    { repository: 'dg-frontend-task-solution', title: 'De Gruyter Task' },
     { repository: 'my-remix-test', title: 'My Remix Test' },
     { repository: 'personal_portfolio_nextjs', title: 'Personal Portfolio' },
     { repository: 'Image-Text-Recognizer', title: 'Image Text Recognizer' },
