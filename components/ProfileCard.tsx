@@ -18,7 +18,7 @@ const ProfileCard = () => {
         >
             <Image
                 className={styles.image}
-                src='/images/me.jpeg'
+                src='/images/me.webp'
                 alt='picture of me'
                 width={imageDim}
                 height={imageDim}
